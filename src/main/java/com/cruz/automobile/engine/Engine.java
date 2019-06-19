@@ -22,11 +22,14 @@
 package com.cruz.automobile.engine;
 
 /**
- * 
- *
  * TODO Auto-generated Comment
  */
 public interface Engine
 {
-
+	/**
+	 * Total torque provided by this engine.
+	 * 
+	 * @return torque
+	 */
+	public double torque();
 }

@@ -26,15 +26,18 @@ import java.io.Serializable;
 import com.cruz.automobile.engine.Engine;
 import com.cruz.automobile.tire.Tire;
 
+import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.Setter;
 
 /**
  * TODO Auto-generated Comment
  */
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode
@@ -48,25 +51,42 @@ public abstract class AbstractAutomobile implements Serializable
 	/**
 	 * Engine theEngine
 	 */
+	@NonNull
 	private Engine theEngine;
 
 	/**
 	 * Tire frontLeft
 	 */
+	@NonNull
 	private Tire frontLeft;
 
 	/**
 	 * Tire frontRight
 	 */
+	@NonNull
 	private Tire frontRight;
 
 	/**
 	 * Tire backLeft
 	 */
+	@NonNull
 	private Tire backLeft;
 
 	/**
 	 * Tire backRight
 	 */
+	@NonNull
 	private Tire backRight;
+
+	/**
+	 * The speed of this automobile in a race. TODO should this be acceleration?
+	 */
+	public double getSpeed()
+	{
+		double torque = this.theEngine.torque();
+
+		double wheel = this.frontLeft.size() + this.frontRight.size() + this.backLeft.size() + this.backRight.size();
+
+		return torque * wheel;
+	}
 }

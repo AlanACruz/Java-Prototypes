@@ -22,11 +22,13 @@
 package com.cruz.automobile.tire;
 
 /**
- * 
- *
  * TODO Auto-generated Comment
  */
 public class SmallTire implements Tire
 {
-
+	@Override
+	public double size()
+	{
+		return 14d;
+	}
 }

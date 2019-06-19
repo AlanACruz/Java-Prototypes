@@ -21,12 +21,23 @@
  */
 package com.cruz.automobile.engine;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
- * 
- *
  * TODO Auto-generated Comment
  */
+@NoArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode
 public class EightCylinder implements Engine
 {
-
+	@Override
+	public double torque()
+	{
+		return 8d;
+	}
 }

@@ -19,25 +19,40 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.cruz.automobile.engine;
+package com.cruz.automobile;
 
+import com.cruz.automobile.engine.Engine;
+import com.cruz.automobile.tire.Tire;
+
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.NonNull;
 
 /**
  * TODO Auto-generated Comment
  */
 @NoArgsConstructor
-@Getter
-@Setter
-@EqualsAndHashCode
-public class FourCylinder implements Engine
+@EqualsAndHashCode(callSuper = true)
+public class Car extends AbstractAutomobile
 {
-	@Override
-	public double torque()
+	/**
+	 * @param theEngine
+	 * @param frontLeft
+	 * @param frontRight
+	 * @param backLeft
+	 * @param backRight
+	 */
+	@Builder
+	public Car(@NonNull Engine theEngine, @NonNull Tire frontLeft, @NonNull Tire frontRight, @NonNull Tire backLeft,
+			@NonNull Tire backRight)
 	{
-		return 4d;
+		super(theEngine, frontLeft, frontRight, backLeft, backRight);
+		// TODO Auto-generated constructor stub
 	}
+
+	/**
+	 * long serialVersionUID
+	 */
+	private static final long serialVersionUID = -4093608498144878677L;
 }

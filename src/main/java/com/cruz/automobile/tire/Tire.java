@@ -22,11 +22,14 @@
 package com.cruz.automobile.tire;
 
 /**
- * 
- *
  * TODO Auto-generated Comment
  */
 public interface Tire
 {
-
+	/**
+	 * Inches in size
+	 * 
+	 * @return size in inches
+	 */
+	public double size();
 }
