@@ -21,40 +21,32 @@
  */
 package com.cruz.automobile;
 
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-import com.cruz.automobile.engine.Engine;
-import com.cruz.automobile.tire.Tire;
-
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import com.cruz.automobile.engine.EightCylinder;
+import com.cruz.automobile.engine.FourCylinder;
+import com.cruz.automobile.tire.LargeTire;
+import com.cruz.automobile.tire.SmallTire;
 
 /**
- * TODO Auto-generated Comment
+ * Configuration for testing Car's
  */
-@NoArgsConstructor
-@EqualsAndHashCode(callSuper = true)
-@Component
-public class Car extends AbstractAutomobile
+@Configuration
+@ComponentScan(basePackages = "com.cruz.automobile")
+public class TestCarConfig
 {
-	/**
-	 * @param theEngine
-	 * @param frontLeft
-	 * @param frontRight
-	 * @param backLeft
-	 * @param backRight
-	 */
-	@Builder
-	public Car(@NonNull Engine theEngine, @NonNull Tire frontLeft, @NonNull Tire frontRight, @NonNull Tire backLeft,
-			@NonNull Tire backRight)
+	@Bean
+	public Car familyCar()
 	{
-		super(theEngine, frontLeft, frontRight, backLeft, backRight);
+		return new Car(new FourCylinder(), new SmallTire(), new SmallTire(), new SmallTire(), new SmallTire());
 	}
 
-	/**
-	 * long serialVersionUID
-	 */
-	private static final long serialVersionUID = -4093608498144878677L;
+	@Bean
+	public Car raceCar()
+	{
+		return new Car(new EightCylinder(), new LargeTire(), new LargeTire(), new LargeTire(), new LargeTire());
+	}
+
 }

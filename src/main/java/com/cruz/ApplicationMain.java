@@ -19,42 +19,23 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.cruz.automobile;
+package com.cruz;
 
-import org.springframework.stereotype.Component;
-
-import com.cruz.automobile.engine.Engine;
-import com.cruz.automobile.tire.Tire;
-
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * TODO Auto-generated Comment
  */
-@NoArgsConstructor
-@EqualsAndHashCode(callSuper = true)
-@Component
-public class Car extends AbstractAutomobile
+@SpringBootApplication
+public class ApplicationMain
 {
 	/**
-	 * @param theEngine
-	 * @param frontLeft
-	 * @param frontRight
-	 * @param backLeft
-	 * @param backRight
+	 * @param args
 	 */
-	@Builder
-	public Car(@NonNull Engine theEngine, @NonNull Tire frontLeft, @NonNull Tire frontRight, @NonNull Tire backLeft,
-			@NonNull Tire backRight)
+	public static void main(String[] args)
 	{
-		super(theEngine, frontLeft, frontRight, backLeft, backRight);
+		SpringApplication.run(ApplicationMain.class, args);
 	}
 
-	/**
-	 * long serialVersionUID
-	 */
-	private static final long serialVersionUID = -4093608498144878677L;
 }
