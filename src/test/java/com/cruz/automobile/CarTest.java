@@ -24,12 +24,11 @@ package com.cruz.automobile;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.context.annotation.ComponentScan;
 
 import com.cruz.automobile.engine.EightCylinder;
 import com.cruz.automobile.engine.FourCylinder;
@@ -39,7 +38,8 @@ import com.cruz.automobile.tire.SmallTire;
 /**
  * Test for demonstrating Lombok Builder vs Spring Beans
  */
-@RunWith(SpringRunner.class)
+@ComponentScan(basePackages = "com.cruz.automobile")
+//@ExtendWith(SpringExtension.class)
 @SpringBootTest
 public class CarTest
 {
@@ -75,11 +75,19 @@ public class CarTest
 	public void test_LombokRace()
 	{
 		// Lombok Builder
-		a = Car.builder().theEngine(new EightCylinder()).frontLeft(new SmallTire()).frontRight(new SmallTire())
-				.backLeft(new SmallTire()).backRight(new SmallTire()).build();
+		a = Car.builder().theEngine(new EightCylinder())
+				.frontLeft(new SmallTire())
+				.frontRight(new SmallTire())
+				.backLeft(new SmallTire())
+				.backRight(new SmallTire())
+				.build();
 
-		b = Car.builder().theEngine(new FourCylinder()).frontLeft(new LargeTire()).frontRight(new LargeTire())
-				.backLeft(new LargeTire()).backRight(new LargeTire()).build();
+		b = Car.builder().theEngine(new FourCylinder())
+				.frontLeft(new LargeTire())
+				.frontRight(new LargeTire())
+				.backLeft(new LargeTire())
+				.backRight(new LargeTire())
+				.build();
 
 		assertTrue(a.getSpeed() > b.getSpeed());
 
