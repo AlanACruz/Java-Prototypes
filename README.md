@@ -1,1 +1,1 @@
-# cruz-proto
+# cruz-jee-proto
