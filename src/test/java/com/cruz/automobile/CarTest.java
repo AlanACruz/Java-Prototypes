@@ -39,7 +39,6 @@ import com.cruz.automobile.tire.SmallTire;
  * Test for demonstrating Lombok Builder vs Spring Beans
  */
 @ComponentScan(basePackages = "com.cruz.automobile")
-//@ExtendWith(SpringExtension.class)
 @SpringBootTest
 public class CarTest
 {
