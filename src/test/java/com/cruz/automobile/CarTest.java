@@ -28,7 +28,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
 
 import com.cruz.automobile.engine.EightCylinder;
 import com.cruz.automobile.engine.FourCylinder;
@@ -38,7 +37,6 @@ import com.cruz.automobile.tire.SmallTire;
 /**
  * Test for demonstrating Lombok Builder vs Spring Beans
  */
-@ComponentScan(basePackages = "com.cruz.automobile")
 @SpringBootTest
 public class CarTest
 {
