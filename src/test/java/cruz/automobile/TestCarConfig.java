@@ -19,25 +19,35 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.cruz.automobile.engine;
+package cruz.automobile;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import cruz.automobile.Car;
+import cruz.automobile.engine.EightCylinder;
+import cruz.automobile.engine.FourCylinder;
+import cruz.automobile.tire.LargeTire;
+import cruz.automobile.tire.SmallTire;
 
 /**
- * TODO Auto-generated Comment
+ * Configuration for testing Car's
  */
-@NoArgsConstructor
-@Getter
-@Setter
-@EqualsAndHashCode
-public class EightCylinder implements Engine
+@Configuration
+@ComponentScan(basePackages = "com.cruz.automobile")
+public class TestCarConfig
 {
-	@Override
-	public double torque()
+	@Bean
+	public Car familyCar()
 	{
-		return 8d;
+		return new Car(new FourCylinder(), new SmallTire(), new SmallTire(), new SmallTire(), new SmallTire());
 	}
+
+	@Bean
+	public Car raceCar()
+	{
+		return new Car(new EightCylinder(), new LargeTire(), new LargeTire(), new LargeTire(), new LargeTire());
+	}
+
 }

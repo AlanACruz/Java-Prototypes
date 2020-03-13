@@ -19,16 +19,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.cruz.automobile.tire;
+package cruz.automobile.engine;
 
 /**
  * TODO Auto-generated Comment
  */
-public class SmallTire implements Tire
+public interface Engine
 {
-	@Override
-	public double size()
-	{
-		return 14d;
-	}
+	/**
+	 * Total torque provided by this engine.
+	 * 
+	 * @return torque
+	 */
+	public double torque();
 }

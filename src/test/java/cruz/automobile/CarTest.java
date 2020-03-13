@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.cruz.automobile;
+package cruz.automobile;
 
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
@@ -29,10 +29,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.cruz.automobile.engine.EightCylinder;
-import com.cruz.automobile.engine.FourCylinder;
-import com.cruz.automobile.tire.LargeTire;
-import com.cruz.automobile.tire.SmallTire;
+import cruz.automobile.Car;
+import cruz.automobile.engine.EightCylinder;
+import cruz.automobile.engine.FourCylinder;
+import cruz.automobile.tire.LargeTire;
+import cruz.automobile.tire.SmallTire;
 
 /**
  * Test for demonstrating Lombok Builder vs Spring Beans

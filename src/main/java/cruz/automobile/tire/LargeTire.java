@@ -19,17 +19,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.cruz.automobile.tire;
+package cruz.automobile.tire;
 
 /**
  * TODO Auto-generated Comment
  */
-public interface Tire
+public class LargeTire implements Tire
 {
-	/**
-	 * Inches in size
-	 * 
-	 * @return size in inches
-	 */
-	public double size();
+	@Override
+	public double size()
+	{
+		return 20d;
+	}
 }

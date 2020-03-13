@@ -19,23 +19,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.cruz;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+package cruz.automobile.tire;
 
 /**
  * TODO Auto-generated Comment
  */
-@SpringBootApplication
-public class ApplicationMain
+public class SmallTire implements Tire
 {
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args)
+	@Override
+	public double size()
 	{
-		SpringApplication.run(ApplicationMain.class, args);
+		return 14d;
 	}
-
 }

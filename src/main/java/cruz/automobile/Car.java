@@ -19,13 +19,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.cruz.automobile;
+package cruz.automobile;
 
 import org.springframework.stereotype.Component;
 
-import com.cruz.automobile.engine.Engine;
-import com.cruz.automobile.tire.Tire;
-
+import cruz.automobile.engine.Engine;
+import cruz.automobile.tire.Tire;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;

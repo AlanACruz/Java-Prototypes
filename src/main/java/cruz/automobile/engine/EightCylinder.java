@@ -19,17 +19,25 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.cruz.automobile.engine;
+package cruz.automobile.engine;
+
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  * TODO Auto-generated Comment
  */
-public interface Engine
+@NoArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode
+public class EightCylinder implements Engine
 {
-	/**
-	 * Total torque provided by this engine.
-	 * 
-	 * @return torque
-	 */
-	public double torque();
+	@Override
+	public double torque()
+	{
+		return 8d;
+	}
 }

@@ -19,34 +19,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.cruz.automobile;
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-
-import com.cruz.automobile.engine.EightCylinder;
-import com.cruz.automobile.engine.FourCylinder;
-import com.cruz.automobile.tire.LargeTire;
-import com.cruz.automobile.tire.SmallTire;
+package cruz.automobile.tire;
 
 /**
- * Configuration for testing Car's
+ * TODO Auto-generated Comment
  */
-@Configuration
-@ComponentScan(basePackages = "com.cruz.automobile")
-public class TestCarConfig
+public interface Tire
 {
-	@Bean
-	public Car familyCar()
-	{
-		return new Car(new FourCylinder(), new SmallTire(), new SmallTire(), new SmallTire(), new SmallTire());
-	}
-
-	@Bean
-	public Car raceCar()
-	{
-		return new Car(new EightCylinder(), new LargeTire(), new LargeTire(), new LargeTire(), new LargeTire());
-	}
-
+	/**
+	 * Inches in size
+	 * 
+	 * @return size in inches
+	 */
+	public double size();
 }
