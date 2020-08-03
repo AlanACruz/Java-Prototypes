@@ -10,24 +10,31 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class Note
 {
-	LetterNames letterName;
-	Octaves     octave;
+	private LetterNames letterName;
+	private Octaves     octave;
 
+	/**
+	 * Formula 1 : k is the fret number f-sub(0) = f-naught = open string = 0th fret
+	 *
+	 * @implSpec f-sub(k) = r^(k) * f-sub(0)
+	 *
+	 * @return
+	 */
 	public BigDecimal getFreqHz()
 	{
-		int midiNumber = this.getMidiNumber();
-		int midiOffset = 12;
+		int        k        = this.getIntdexNumber();
+		BigDecimal r        = LuthierConstants.R;
+		BigDecimal baseFreq = A440.C0.getPitchFreqHz();
 
-		BigDecimal R = LuthierConstants.findR();
-
-		return null;
+		return (r.pow(k)).multiply(baseFreq);
 	}
 
 	/**
 	 * @return
 	 */
-	public int getMidiNumber()
+	public int getIntdexNumber()
 	{
-		return MidiPitchNotation.getMidiNoteNumber(letterName, octave);
+		int midiOffset = 12;
+		return MidiPitchNotation.getMidiNoteNumber(letterName, octave) - midiOffset;
 	}
 }

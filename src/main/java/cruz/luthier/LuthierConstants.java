@@ -20,7 +20,7 @@ public class LuthierConstants
 	 *
 	 * @return 2^(1/12)
 	 */
-	public static BigDecimal findR()
+	private static BigDecimal findR()
 	{
 		BigDecimal twelve = BigDecimal.valueOf(12d);
 		BigDecimal two    = BigDecimal.valueOf(2d);
@@ -31,12 +31,6 @@ public class LuthierConstants
 	BigDecimal twelveHundred = new BigDecimal("1200");
 
 	BigDecimal cent = BigDecimal.ONE.divide(twelveHundred);
-
-	/**
-	 * Formula 1 : k is the fret number f-sub(0) = f-naught = open string = 0th fret
-	 *
-	 * @implSpec f-sub(k) = r^(k) * f-sub(0)
-	 */
 
 	/**
 	 * Formula 2: the length of the string when it is fretted at the k-th fret is
