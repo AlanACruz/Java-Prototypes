@@ -5,5 +5,15 @@ package cruz.luthier;
  */
 public enum Octaves
 {
-	ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN;
+	ZERO, 
+	ONE, 
+	TWO, 
+	THREE, 
+	FOUR, 
+	FIVE, 
+	SIX, 
+	SEVEN, 
+	EIGHT, 
+	NINE, 
+	TEN;
 }

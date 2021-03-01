@@ -21,6 +21,6 @@ public class MidiPitchNotation
 		int noteOrdinal   = note.ordinal();
 		int octaveOrdinal = octave.ordinal();
 
-		return (12 * (octaveOrdinal + 1)) + noteOrdinal;
+		return (12 * (octaveOrdinal)) + noteOrdinal;
 	}
 }
