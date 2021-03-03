@@ -1,4 +1,4 @@
-package cruz.luthier;
+package cruz.music;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,6 +15,10 @@ import javax.sound.midi.Synthesizer;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import cruz.music.interval.Interval;
+import cruz.music.interval.IntervalConstants;
+import cruz.music.interval.Steps;
 
 public class MidiPlaybackTest {
 
@@ -62,18 +66,18 @@ public class MidiPlaybackTest {
 		int initialVelocity = 100;
 		
 		Interval[] scaleArray = {
-				Interval.PERFECT_UNITY,
-//				Interval.MINOR_SECOND,
-				Interval.MAJOR_SECOND,
-//				Interval.MINOR_THIRD,
-				Interval.MAJOR_THIRD,
-				Interval.PERFECT_FOURTH,
-//				Interval.SHARP_FOURTH_FLAT_FIFTH,
-				Interval.PERFECT_FIFT,
-//				Interval.MINOR_SIXTH,
-				Interval.MAJOR_SIXTH,
-//				Interval.MINOR_SEVENTH,
-//				Interval.MAJOR_SEVENTH
+				IntervalConstants.PERFECT_UNITY,
+//				IntervalList.MINOR_SECOND,
+				IntervalConstants.MAJOR_SECOND,
+//				IntervalList.MINOR_THIRD,
+				IntervalConstants.MAJOR_THIRD,
+				IntervalConstants.PERFECT_FOURTH,
+//				IntervalList.DIMINISHED_FIFTH,
+				IntervalConstants.PERFECT_FIFTH,
+//				IntervalList.AUGMENTED_FIFTH,
+				IntervalConstants.MAJOR_SIXTH,
+//				IntervalList.MINOR_SEVENTH,
+//				IntervalList.MAJOR_SEVENTH
 		};
 		
 		
@@ -115,7 +119,7 @@ public class MidiPlaybackTest {
 			
 			for(int k = 0; k < 1000; k++)
 			{
-				int note;
+				int rndNote;
 								
 				int rnd = new Random().nextInt(scaleArray.length);
 				Interval interval = scaleArray[rnd];
@@ -124,50 +128,50 @@ public class MidiPlaybackTest {
 				
 					default:
 					case PERFECT_UNITY:
-						note = initialNote;
+						rndNote = initialNote;
 						break;
 						
 					case MINOR_SECOND:
-						note = initialNote + 1 * Steps.HALF;
+						rndNote = initialNote + 1 * Steps.HALF;
 						break;
 						
 					case MAJOR_SECOND:
-						note = initialNote + 2 * Steps.HALF;
+						rndNote = initialNote + 2 * Steps.HALF;
 						break;
 						
 					case MINOR_THIRD:
-						note = initialNote + 3 * Steps.HALF;
+						rndNote = initialNote + 3 * Steps.HALF;
 						break;
 					case MAJOR_THIRD:
-						note = initialNote + 4 * Steps.HALF;
+						rndNote = initialNote + 4 * Steps.HALF;
 						break;
 						
 					case PERFECT_FOURTH:
-						note = initialNote + 5 * Steps.HALF;
+						rndNote = initialNote + 5 * Steps.HALF;
 						break;
 						
-					case SHARP_FOURTH_FLAT_FIFTH:
-						note = initialNote + 6 * Steps.HALF;
+					case DIMINISHED_FIFTH:
+						rndNote = initialNote + 6 * Steps.HALF;
 						break;
 						
-					case PERFECT_FIFT:
-						note = initialNote + 7 * Steps.HALF;
+					case PERFECT_FIFTH:
+						rndNote = initialNote + 7 * Steps.HALF;
 						break;
 						
-					case MINOR_SIXTH:
-						note = initialNote + 8 * Steps.HALF;
+					case AUGMENTED_FIFTH:
+						rndNote = initialNote + 8 * Steps.HALF;
 						break;
 						
 					case MAJOR_SIXTH:
-						note = initialNote + 9 * Steps.HALF;
+						rndNote = initialNote + 9 * Steps.HALF;
 						break;
 						
 					case MINOR_SEVENTH:
-						note = initialNote + 10 * Steps.HALF;
+						rndNote = initialNote + 10 * Steps.HALF;
 						break;
 						
 					case MAJOR_SEVENTH:
-						note = initialNote + 11 * Steps.HALF;
+						rndNote = initialNote + 11 * Steps.HALF;
 						break;
 				
 				}
@@ -204,7 +208,7 @@ public class MidiPlaybackTest {
 					l = 0;
 				}
 				
-				mChannels[4].noteOn(note + 12, initialVelocity);
+				mChannels[4].noteOn(rndNote + 12, initialVelocity);
 				
 			  
 				try { 

@@ -1,7 +1,10 @@
-package cruz.luthier;
+package cruz.music.note;
 
 import java.math.BigDecimal;
 
+import cruz.music.A440;
+import cruz.music.MidiPitchNotation;
+import cruz.music.luthier.LuthierConstants;
 import lombok.AllArgsConstructor;
 
 /**

@@ -1,4 +1,7 @@
-package cruz.luthier;
+package cruz.music;
+
+import cruz.music.note.LetterNames;
+import cruz.music.note.Octaves;
 
 /**
  * https://en.wikipedia.org/wiki/Scientific_pitch_notation

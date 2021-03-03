@@ -1,4 +1,4 @@
-package cruz.luthier;
+package cruz.music;
 
 import java.math.BigDecimal;
 
