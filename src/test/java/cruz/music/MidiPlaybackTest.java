@@ -17,6 +17,14 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import cruz.music.interval.IntervalConstants;
+import cruz.music.mode.Aeolian;
+import cruz.music.mode.Dorian;
+import cruz.music.mode.Ionian;
+import cruz.music.mode.Locrian;
+import cruz.music.mode.Lydian;
+import cruz.music.mode.Mixolydian;
+import cruz.music.mode.Mode;
+import cruz.music.mode.Phrygian;
 
 public class MidiPlaybackTest {
 
@@ -58,27 +66,11 @@ public class MidiPlaybackTest {
 	public void playbackSynthTest() {
 		
 		int msPerMin = (int) 60e3;
-		int bpm = 60;
+		int bpm = 250;
 		int msPerBeat = msPerMin / bpm;
 		
 		int initialNote = 60;
 		int initialVelocity = 100;
-		
-		int[] scaleArray = {
-				IntervalConstants.PERFECT_UNITY,
-//				IntervalList.MINOR_SECOND,
-				IntervalConstants.MAJOR_SECOND,
-//				IntervalList.MINOR_THIRD,
-				IntervalConstants.MAJOR_THIRD,
-				IntervalConstants.PERFECT_FOURTH,
-//				IntervalList.DIMINISHED_FIFTH,
-				IntervalConstants.PERFECT_FIFTH,
-//				IntervalList.AUGMENTED_FIFTH,
-				IntervalConstants.MAJOR_SIXTH //,
-//				IntervalList.MINOR_SEVENTH,
-//				IntervalList.MAJOR_SEVENTH
-		};
-		
 		
 		try{
 			    	  
@@ -111,51 +103,159 @@ public class MidiPlaybackTest {
 			
 			//load an instrument
 			//midiSynth.loadInstrument(instArray[0]);
-			midiSynth.loadInstrument(instArray[222]);
+//			midiSynth.loadInstrument(instArray[222]);
 			//midiSynth.getAvailableInstruments()
 		  
 			int l = 0;
 			
-			for(int k = 0; k < 1000; k++)
-			{								
+			Mode mode = new Ionian();
+			
+			int lenghtOfTrack = 10000;
+			for(int k = 0; k < lenghtOfTrack; k++)
+			{
+				
+				int modeNum = 1;
+
+				if(0 <= l && l <= 7)
+				{
+					modeNum = 5;
+				} 
+				else if(8 <= l && l <= 15)
+				{
+					modeNum = 6;
+				} 
+				else if(16 <= l && l <= 23)
+				{
+					modeNum = 3;
+				}
+				else if(24 <= l && l <= 31)
+				{
+					modeNum = 4;
+				}
+				
+				switch (modeNum)
+				{
+					default:
+					case 1:
+						mode = new Ionian();
+						break;
+					case 2:
+						mode = new Dorian();
+						break;
+					case 3:
+						mode = new Phrygian();
+						break;
+					case 4:
+						mode = new Lydian();
+						break;
+					case 5:
+						mode = new Mixolydian();
+						break;
+					case 6:
+						mode = new Aeolian();
+						break;
+					case 7:
+						mode = new Locrian();
+						break;
+				}
+
+				int[] scaleArray = mode.getScale();
+				
 				int rnd = new Random().nextInt(scaleArray.length);
 				int interval = scaleArray[rnd];
+				int rndNote;
 				
-				int rndNote = initialNote + interval;
+				int melodyVelocity;
+				int chordVelocity;
+				int bassVelocity;
 				
-				//On channel 0, play note number 60 with velocity 100 
-				//mChannels[0].noteOn(initialNote - 12 , initialVelocity/2);
-				if(l == 0 || l == 1 || l == 2 || l == 3 )
+				
+				int restCutoff = 10;
+				int melodyCutoff;
+				int chordCutoff;
+				int bassCutoff;
+				
+				
+				int rndRest = new Random().nextInt(restCutoff);
+				
+				if(l == 0 || l == 8 || l == 16 || l == 24)
 				{
-					mChannels[1].noteOn(initialNote + (-12), initialVelocity);
-					mChannels[2].noteOn(initialNote + (-12 + 7), initialVelocity);
-					l = l + 1;	
-				} 
-				else  if(l == 4 || l == 5 || l == 6 || l == 7 )
-				{
-					mChannels[1].noteOn(initialNote + (-12 + 7), initialVelocity);
-					mChannels[2].noteOn(initialNote + (-12 + 7 + 7), initialVelocity);
-					l = l + 1;
-				} 
-				else if(l == 8 || l == 9 || l == 10 || l == 11 )
-				{
-					mChannels[1].noteOn(initialNote + (-12 + 9), initialVelocity);
-					mChannels[2].noteOn(initialNote + (-12 + 9 + 7), initialVelocity);
-					l = l + 1;
+					rndNote = initialNote + IntervalConstants.OCTAVE + mode.getFirst();
+					
+					melodyCutoff = restCutoff - 1;
+					chordCutoff = melodyCutoff;
+					bassCutoff = melodyCutoff;
 				}
-				else if(l == 12 || l == 13 || l == 14 || l == 15 )
+				else
 				{
-					mChannels[1].noteOn(initialNote + (-12 + 5), initialVelocity);
-					mChannels[2].noteOn(initialNote + (-12 + 5 + 7), initialVelocity);
-					l = l + 1;;
+					rndNote = initialNote + IntervalConstants.OCTAVE + interval;
+					
+					melodyCutoff = restCutoff - 5;
+					chordCutoff = 0;
+					bassCutoff = melodyCutoff - 1;
 				}
 				
-				if(l == 16)
+				
+				
+				// Melody Rest
+				if(rndRest <= melodyCutoff) 
+				{
+					melodyVelocity = initialVelocity;
+				}
+				else
+				{
+					melodyVelocity = 0;
+				}
+				
+				// Bass Rest
+				if(rndRest <= (bassCutoff))
+				{
+					bassVelocity = initialVelocity;
+				}
+				else
+				{
+					bassVelocity = 0;
+				}
+				
+				// Chord Rest
+				if(rndRest <= (chordCutoff))
+				{
+					chordVelocity = initialVelocity;
+				}
+				else
+				{
+					chordVelocity = 0;
+				}
+				
+				// Melody
+				mChannels[4].noteOn(rndNote, melodyVelocity);
+				
+				// Chord
+				mChannels[0].noteOn(initialNote - (IntervalConstants.OCTAVE) + mode.getFirst(), chordVelocity);
+				mChannels[1].noteOn(initialNote - (IntervalConstants.OCTAVE) + mode.getThird(), chordVelocity);
+				mChannels[2].noteOn(initialNote - (IntervalConstants.OCTAVE) + mode.getFifth(), chordVelocity);
+				mChannels[3].noteOn(initialNote - (IntervalConstants.OCTAVE) + mode.getSeventh(), chordVelocity);
+				
+				// Base Drone
+				mChannels[5].noteOn(initialNote - (2 * IntervalConstants.OCTAVE) + mode.getSeventh(), bassVelocity);
+				
+				
+				
+				System.out.println(
+						"Beat: \t" + l + 
+						"\tMode: \t" + mode.getRelativeTonic() + 
+						"\tChord Tonic: \t" + (initialNote + mode.getFirst()) +
+						"\tRandom Note: \t" + rndNote +
+						"\tMelody V: \t" + melodyVelocity +
+						"\tBass V: \t" + bassVelocity
+						);
+				
+				l = l + 1;
+				
+				if(l >= 32)
 				{
 					l = 0;
 				}
-				
-				mChannels[4].noteOn(rndNote + 12, initialVelocity);
 				
 			  
 				try { 
