@@ -16,9 +16,7 @@ import javax.sound.midi.Synthesizer;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import cruz.music.interval.Interval;
 import cruz.music.interval.IntervalConstants;
-import cruz.music.interval.Steps;
 
 public class MidiPlaybackTest {
 
@@ -44,11 +42,12 @@ public class MidiPlaybackTest {
             // Create sequence, the File must contain MIDI file data.
             Sequence sequence = MidiSystem.getSequence(new File(fileName));
             
-            sequencer.setSequence(sequence); // load it into sequencer
-            sequencer.start();  // start the playback
+            // load it into sequencer
+            sequencer.setSequence(sequence);
+            
+            // start the playback
+            sequencer.start();  
         
-            
-            
         } catch (MidiUnavailableException | InvalidMidiDataException | IOException ex) {
         	
             ex.printStackTrace();
@@ -58,14 +57,14 @@ public class MidiPlaybackTest {
 	@Test
 	public void playbackSynthTest() {
 		
-		int msPerMin = 60_000;
+		int msPerMin = (int) 60e3;
 		int bpm = 60;
 		int msPerBeat = msPerMin / bpm;
 		
 		int initialNote = 60;
 		int initialVelocity = 100;
 		
-		Interval[] scaleArray = {
+		int[] scaleArray = {
 				IntervalConstants.PERFECT_UNITY,
 //				IntervalList.MINOR_SECOND,
 				IntervalConstants.MAJOR_SECOND,
@@ -75,7 +74,7 @@ public class MidiPlaybackTest {
 //				IntervalList.DIMINISHED_FIFTH,
 				IntervalConstants.PERFECT_FIFTH,
 //				IntervalList.AUGMENTED_FIFTH,
-				IntervalConstants.MAJOR_SIXTH,
+				IntervalConstants.MAJOR_SIXTH //,
 //				IntervalList.MINOR_SEVENTH,
 //				IntervalList.MAJOR_SEVENTH
 		};
@@ -118,63 +117,11 @@ public class MidiPlaybackTest {
 			int l = 0;
 			
 			for(int k = 0; k < 1000; k++)
-			{
-				int rndNote;
-								
+			{								
 				int rnd = new Random().nextInt(scaleArray.length);
-				Interval interval = scaleArray[rnd];
+				int interval = scaleArray[rnd];
 				
-				switch(interval) {
-				
-					default:
-					case PERFECT_UNITY:
-						rndNote = initialNote;
-						break;
-						
-					case MINOR_SECOND:
-						rndNote = initialNote + 1 * Steps.HALF;
-						break;
-						
-					case MAJOR_SECOND:
-						rndNote = initialNote + 2 * Steps.HALF;
-						break;
-						
-					case MINOR_THIRD:
-						rndNote = initialNote + 3 * Steps.HALF;
-						break;
-					case MAJOR_THIRD:
-						rndNote = initialNote + 4 * Steps.HALF;
-						break;
-						
-					case PERFECT_FOURTH:
-						rndNote = initialNote + 5 * Steps.HALF;
-						break;
-						
-					case DIMINISHED_FIFTH:
-						rndNote = initialNote + 6 * Steps.HALF;
-						break;
-						
-					case PERFECT_FIFTH:
-						rndNote = initialNote + 7 * Steps.HALF;
-						break;
-						
-					case AUGMENTED_FIFTH:
-						rndNote = initialNote + 8 * Steps.HALF;
-						break;
-						
-					case MAJOR_SIXTH:
-						rndNote = initialNote + 9 * Steps.HALF;
-						break;
-						
-					case MINOR_SEVENTH:
-						rndNote = initialNote + 10 * Steps.HALF;
-						break;
-						
-					case MAJOR_SEVENTH:
-						rndNote = initialNote + 11 * Steps.HALF;
-						break;
-				
-				}
+				int rndNote = initialNote + interval;
 				
 				//On channel 0, play note number 60 with velocity 100 
 				//mChannels[0].noteOn(initialNote - 12 , initialVelocity/2);
