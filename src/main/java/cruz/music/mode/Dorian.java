@@ -6,7 +6,7 @@ import lombok.Getter;
 @Getter
 public class Dorian extends Mode {
 	
-	private final String relativeTonic = "ii";
+	private final String relativeTonicString = "ii";
 	
 	private final int first = IntervalConstants.MAJOR_SECOND;
 	private final int second = IntervalConstants.MAJOR_THIRD;
@@ -15,4 +15,14 @@ public class Dorian extends Mode {
 	private final int fifth = IntervalConstants.MAJOR_SIXTH;
 	private final int sixth = IntervalConstants.MAJOR_SEVENTH;
 	private final int seventh = IntervalConstants.PERFECT_EIGHTH;
+	
+	private final int eighth = IntervalConstants.MAJOR_NINTH;
+	private final int ninth = IntervalConstants.MAJOR_TENTH;
+	private final int tenth = IntervalConstants.PERFECT_ELEVENTH;
+	private final int eleventh = IntervalConstants.PERFECT_TWELFTH;
+	private final int twelfth = IntervalConstants.MAJOR_THIRTENTH;
+	private final int thirteenth = IntervalConstants.MAJOR_FOURTEENTH;
+	private final int fourteenth = IntervalConstants.PERFECT_FIFTEENTH;
+	
+	private final int fifteenth = IntervalConstants.MAJOR_SIXTEENTH;
 }

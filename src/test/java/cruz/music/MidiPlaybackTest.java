@@ -70,7 +70,7 @@ public class MidiPlaybackTest {
 		int msPerBeat = msPerMin / bpm;
 		
 		int initialNote = 60;
-		int initialVelocity = 100;
+		int initialVelocity = 50;
 		
 		try{
 			    	  
@@ -103,7 +103,7 @@ public class MidiPlaybackTest {
 			
 			//load an instrument
 			//midiSynth.loadInstrument(instArray[0]);
-//			midiSynth.loadInstrument(instArray[222]);
+			midiSynth.loadInstrument(instArray[222]);
 			//midiSynth.getAvailableInstruments()
 		  
 			int l = 0;
@@ -118,19 +118,19 @@ public class MidiPlaybackTest {
 
 				if(0 <= l && l <= 7)
 				{
-					modeNum = 5;
+					modeNum = 1;
 				} 
 				else if(8 <= l && l <= 15)
 				{
-					modeNum = 6;
+					modeNum = 4;
 				} 
 				else if(16 <= l && l <= 23)
 				{
-					modeNum = 3;
+					modeNum = 6;
 				}
 				else if(24 <= l && l <= 31)
 				{
-					modeNum = 4;
+					modeNum = 5;
 				}
 				
 				switch (modeNum)
@@ -190,7 +190,7 @@ public class MidiPlaybackTest {
 				{
 					rndNote = initialNote + IntervalConstants.OCTAVE + interval;
 					
-					melodyCutoff = restCutoff - 5;
+					melodyCutoff = restCutoff - 3;
 					chordCutoff = 0;
 					bassCutoff = melodyCutoff - 1;
 				}
@@ -235,7 +235,7 @@ public class MidiPlaybackTest {
 				mChannels[1].noteOn(initialNote - (IntervalConstants.OCTAVE) + mode.getThird(), chordVelocity);
 				mChannels[2].noteOn(initialNote - (IntervalConstants.OCTAVE) + mode.getFifth(), chordVelocity);
 				mChannels[3].noteOn(initialNote - (IntervalConstants.OCTAVE) + mode.getSeventh(), chordVelocity);
-				
+
 				// Base Drone
 				mChannels[5].noteOn(initialNote - (2 * IntervalConstants.OCTAVE) + mode.getSeventh(), bassVelocity);
 				
@@ -243,7 +243,7 @@ public class MidiPlaybackTest {
 				
 				System.out.println(
 						"Beat: \t" + l + 
-						"\tMode: \t" + mode.getRelativeTonic() + 
+						"\tMode: \t" + mode.getRelativeTonicString() + 
 						"\tChord Tonic: \t" + (initialNote + mode.getFirst()) +
 						"\tRandom Note: \t" + rndNote +
 						"\tMelody V: \t" + melodyVelocity +
