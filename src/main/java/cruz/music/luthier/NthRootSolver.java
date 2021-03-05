@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 /**
+ * @author CruzA
+ * 
  * https://stackoverflow.com/questions/22695654/computing-the-nth-root-of-p-using-bigdecimals
  */
 public class NthRootSolver

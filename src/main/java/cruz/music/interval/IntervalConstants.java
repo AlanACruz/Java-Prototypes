@@ -1,5 +1,8 @@
 package cruz.music.interval;
 
+/**
+ * @author CruzA
+ */
 public class IntervalConstants {
 	
 	/* Steps */

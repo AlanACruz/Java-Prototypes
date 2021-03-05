@@ -1,9 +1,11 @@
 package cruz.music;
 
-import cruz.music.note.LetterNames;
-import cruz.music.note.Octaves;
+import cruz.music.note.value.LetterNames;
+import cruz.music.note.value.Octaves;
 
 /**
+ * @author CruzA
+ * 
  * https://en.wikipedia.org/wiki/Scientific_pitch_notation
  */
 public class MidiPitchNotation
@@ -17,12 +19,12 @@ public class MidiPitchNotation
 	 * @return
 	 */
 	public static int getMidiNoteNumber(
-			LetterNames note,
-			Octaves octave
+			int note,
+			int octave
 	)
 	{
-		int noteOrdinal   = note.ordinal();
-		int octaveOrdinal = octave.ordinal();
+		int noteOrdinal   = LetterNames.C;
+		int octaveOrdinal = Octaves.ZERO;
 
 		return (12 * (octaveOrdinal)) + noteOrdinal;
 	}

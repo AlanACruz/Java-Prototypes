@@ -17,14 +17,14 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import cruz.music.interval.IntervalConstants;
-import cruz.music.mode.Aeolian;
-import cruz.music.mode.Dorian;
-import cruz.music.mode.Ionian;
-import cruz.music.mode.Locrian;
-import cruz.music.mode.Lydian;
-import cruz.music.mode.Mixolydian;
-import cruz.music.mode.Mode;
-import cruz.music.mode.Phrygian;
+import cruz.music.tone.mode.Aeolian;
+import cruz.music.tone.mode.Dorian;
+import cruz.music.tone.mode.Ionian;
+import cruz.music.tone.mode.Locrian;
+import cruz.music.tone.mode.Lydian;
+import cruz.music.tone.mode.Mixolydian;
+import cruz.music.tone.mode.Mode;
+import cruz.music.tone.mode.Phrygian;
 
 public class MidiPlaybackTest {
 

@@ -5,6 +5,8 @@ import java.math.BigDecimal;
 import cruz.music.A440;
 import cruz.music.MidiPitchNotation;
 import cruz.music.luthier.LuthierConstants;
+import cruz.music.note.value.LetterNames;
+import cruz.music.note.value.Octaves;
 import lombok.AllArgsConstructor;
 
 /**
@@ -38,6 +40,8 @@ public class Note
 	public int getIntdexNumber()
 	{
 		int midiOffset = 12;
-		return MidiPitchNotation.getMidiNoteNumber(letterName, octave) - midiOffset;
+		// return MidiPitchNotation.getMidiNoteNumber(letterName, octave) - midiOffset;
+	
+		return 0;
 	}
 }

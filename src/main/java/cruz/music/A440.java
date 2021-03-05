@@ -5,6 +5,8 @@ import java.math.BigDecimal;
 import lombok.Getter;
 
 /**
+ * @author CruzA
+ * 
  * https://en.wikipedia.org/wiki/Equal_temperament
  * https://en.wikipedia.org/wiki/12_equal_temperament
  * https://en.wikipedia.org/wiki/Scientific_pitch
