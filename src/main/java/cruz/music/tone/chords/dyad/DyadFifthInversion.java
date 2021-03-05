@@ -6,13 +6,13 @@ import cruz.music.tone.mode.Mode;
 /**
  * @author CruzA
  */
-public class DyadSecond extends ChordVistitor {
+public class DyadFifthInversion extends ChordVistitor {
 
 	public int[] play(Mode mode)
 	{
 		return new int[] {
-			mode.getFirst(),
-			mode.getSecond()
+			mode.getFifth(),
+			mode.getEighth()
 		};
 	}
 }
