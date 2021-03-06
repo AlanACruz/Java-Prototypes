@@ -1,7 +1,7 @@
 package cruz.music.tone.chords.hexa;
 
 import cruz.music.tone.chords.ChordVistitor;
-import cruz.music.tone.mode.Mode;
+import cruz.music.tone.scale.Diatonic;
 
 /**
  * @author CruzA
@@ -9,7 +9,7 @@ import cruz.music.tone.mode.Mode;
 public class Hexachord extends ChordVistitor {
 	
 	@Override
-	public int[] play(Mode mode)
+	public int[] play(Diatonic mode)
 	{
 		return new int[] {
 			mode.getFirst(),

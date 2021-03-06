@@ -1,12 +1,9 @@
-package cruz.music.note;
+package cruz.luthier;
 
 import java.math.BigDecimal;
 
-import cruz.music.A440;
-import cruz.music.MidiPitchNotation;
-import cruz.music.luthier.LuthierConstants;
 import cruz.music.note.value.LetterNames;
-import cruz.music.note.value.Octaves;
+import cruz.music.interval.Octave;
 import lombok.AllArgsConstructor;
 
 /**
@@ -16,7 +13,7 @@ import lombok.AllArgsConstructor;
 public class Note
 {
 	private LetterNames letterName;
-	private Octaves     octave;
+	private Octave     octave;
 
 	/**
 	 * Formula 1 : k is the fret number f-sub(0) = f-naught = open string = 0th fret

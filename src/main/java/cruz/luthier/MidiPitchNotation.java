@@ -1,7 +1,7 @@
-package cruz.music;
+package cruz.luthier;
 
 import cruz.music.note.value.LetterNames;
-import cruz.music.note.value.Octaves;
+import cruz.music.interval.Octave;
 
 /**
  * @author CruzA
@@ -24,7 +24,7 @@ public class MidiPitchNotation
 	)
 	{
 		int noteOrdinal   = LetterNames.C;
-		int octaveOrdinal = Octaves.ZERO;
+		int octaveOrdinal = Octave.ZERO;
 
 		return (12 * (octaveOrdinal)) + noteOrdinal;
 	}

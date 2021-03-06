@@ -1,9 +1,9 @@
-package cruz.music.tone.mode;
+package cruz.music.tone.scale;
 
 /**
  * @author CruzA
  */
-public abstract class Mode {
+public abstract class Diatonic extends Scale {
 	
 	public abstract String getFeelingString();
 	

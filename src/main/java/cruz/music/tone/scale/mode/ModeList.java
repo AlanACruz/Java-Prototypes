@@ -1,11 +1,13 @@
-package cruz.music.tone.mode;
+package cruz.music.tone.scale.mode;
 
 import java.util.ArrayList;
+
+import cruz.music.tone.scale.Diatonic;
 
 /**
  * @author CruzA
  */
-public class ModeList extends ArrayList<Mode>
+public class ModeList extends ArrayList<Diatonic>
 {
 
 	/**

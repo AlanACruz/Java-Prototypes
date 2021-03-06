@@ -16,15 +16,16 @@ import javax.sound.midi.Synthesizer;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import cruz.music.interval.IntervalConstants;
-import cruz.music.tone.mode.Aeolian;
-import cruz.music.tone.mode.Dorian;
-import cruz.music.tone.mode.Ionian;
-import cruz.music.tone.mode.Locrian;
-import cruz.music.tone.mode.Lydian;
-import cruz.music.tone.mode.Mixolydian;
-import cruz.music.tone.mode.Mode;
-import cruz.music.tone.mode.Phrygian;
+import cruz.music.interval.Interval;
+import cruz.music.interval.Octave;
+import cruz.music.tone.scale.Diatonic;
+import cruz.music.tone.scale.mode.Aeolian;
+import cruz.music.tone.scale.mode.Dorian;
+import cruz.music.tone.scale.mode.Ionian;
+import cruz.music.tone.scale.mode.Locrian;
+import cruz.music.tone.scale.mode.Lydian;
+import cruz.music.tone.scale.mode.Mixolydian;
+import cruz.music.tone.scale.mode.Phrygian;
 
 public class MidiPlaybackTest {
 
@@ -108,7 +109,7 @@ public class MidiPlaybackTest {
 		  
 			int l = 0;
 			
-			Mode mode = new Ionian();
+			Diatonic mode = new Ionian();
 			
 			int lenghtOfTrack = 10000;
 			for(int k = 0; k < lenghtOfTrack; k++)
@@ -180,7 +181,7 @@ public class MidiPlaybackTest {
 				
 				if(l == 0 || l == 8 || l == 16 || l == 24)
 				{
-					rndNote = initialNote + IntervalConstants.OCTAVE + mode.getFirst();
+					rndNote = initialNote +  Octave.ONE + mode.getFirst();
 					
 					melodyCutoff = restCutoff - 1;
 					chordCutoff = melodyCutoff;
@@ -188,7 +189,7 @@ public class MidiPlaybackTest {
 				}
 				else
 				{
-					rndNote = initialNote + IntervalConstants.OCTAVE + interval;
+					rndNote = initialNote +  Octave.ONE + interval;
 					
 					melodyCutoff = restCutoff - 3;
 					chordCutoff = 0;
@@ -231,13 +232,13 @@ public class MidiPlaybackTest {
 				mChannels[4].noteOn(rndNote, melodyVelocity);
 				
 				// Chord
-				mChannels[0].noteOn(initialNote - (IntervalConstants.OCTAVE) + mode.getFirst(), chordVelocity);
-				mChannels[1].noteOn(initialNote - (IntervalConstants.OCTAVE) + mode.getThird(), chordVelocity);
-				mChannels[2].noteOn(initialNote - (IntervalConstants.OCTAVE) + mode.getFifth(), chordVelocity);
-				mChannels[3].noteOn(initialNote - (IntervalConstants.OCTAVE) + mode.getSeventh(), chordVelocity);
+				mChannels[0].noteOn(initialNote + Octave.ONE_DOWN + mode.getFirst(), chordVelocity);
+				mChannels[1].noteOn(initialNote + Octave.ONE_DOWN + mode.getThird(), chordVelocity);
+				mChannels[2].noteOn(initialNote + Octave.ONE_DOWN + mode.getFifth(), chordVelocity);
+				mChannels[3].noteOn(initialNote + Octave.ONE_DOWN + mode.getSeventh(), chordVelocity);
 
 				// Base Drone
-				mChannels[5].noteOn(initialNote - (2 * IntervalConstants.OCTAVE) + mode.getSeventh(), bassVelocity);
+				mChannels[5].noteOn(initialNote + Octave.TWO_DOWN + mode.getSeventh(), bassVelocity);
 				
 				
 				
