@@ -7,5 +7,5 @@ import cruz.music.tone.scale.Diatonic;
  */
 public abstract class ChordVistitor {
 
-	public abstract int[] play(Diatonic mode);
+	public abstract int[] play(Diatonic scale);
 }
