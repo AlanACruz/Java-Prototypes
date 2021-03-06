@@ -4,6 +4,9 @@ import cruz.music.interval.Interval;
 import cruz.music.tone.scale.Diatonic;
 import lombok.Getter;
 
+/**
+ * @author CruzA
+ */
 @Getter
 public class Mixolydian extends Diatonic {
 	
