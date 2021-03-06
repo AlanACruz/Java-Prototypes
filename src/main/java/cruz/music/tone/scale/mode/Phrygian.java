@@ -10,6 +10,8 @@ import lombok.Getter;
 @Getter
 public class Phrygian extends Diatonic {
 	
+	private final int scaleLength = 8;
+	
 	private final String feelingString = "Flamenco";
 	private final String relativeTonicString = "iii";
 	private final String triSuffixString = "minor";

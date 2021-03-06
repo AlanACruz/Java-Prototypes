@@ -5,4 +5,5 @@ package cruz.music.tone.scale;
  */
 public abstract class Scale {
 	
+	public abstract int getScaleLength();
 }

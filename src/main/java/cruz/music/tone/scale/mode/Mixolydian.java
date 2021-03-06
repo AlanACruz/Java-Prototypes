@@ -7,6 +7,8 @@ import lombok.Getter;
 @Getter
 public class Mixolydian extends Diatonic {
 	
+	private final int scaleLength = 8;
+	
 	private final String feelingString = "Bluesy";
 	private final String relativeTonicString = "V";
 	private final String triSuffixString = "Major";

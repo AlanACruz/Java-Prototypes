@@ -10,6 +10,8 @@ import lombok.Getter;
 @Getter
 public class Lydian extends Diatonic {
 	
+	private final int scaleLength = 8;
+	
 	private final String feelingString = "Bright";
 	private final String relativeTonicString = "IV";
 	private final String triSuffixString = "Major";

@@ -10,6 +10,8 @@ import lombok.Getter;
 @Getter
 public class Dorian extends Diatonic {
 	
+	private final int scaleLength = 8;
+	
 	private final String feelingString = "Soulful";
 	private final String relativeTonicString = "ii";
 	private final String triSuffixString = "minor";
