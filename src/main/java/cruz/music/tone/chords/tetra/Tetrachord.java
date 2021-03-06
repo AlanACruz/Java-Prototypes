@@ -9,13 +9,14 @@ import cruz.music.tone.scale.Diatonic;
 public class Tetrachord extends ChordVistitor {
 	
 	@Override
-	public int[] play(Diatonic mode)
+	public int[] play(Diatonic scale)
 	{
 		return new int[] {
-			mode.getFirst(),
-			mode.getThird(),
-			mode.getFifth(),
-			mode.getSeventh()
+				
+				scale.getFirst(),
+				scale.getThird(),
+				scale.getFifth(),
+				scale.getSeventh()
 		};
 	}
 }

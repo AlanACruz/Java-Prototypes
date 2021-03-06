@@ -9,12 +9,13 @@ import cruz.music.tone.scale.Diatonic;
 public class Trichord extends ChordVistitor {
 
 	@Override
-	public int[] play(Diatonic mode)
+	public int[] play(Diatonic scale)
 	{
 		return new int[] {
-			mode.getFirst(),
-			mode.getThird(),
-			mode.getFifth()
+				
+				scale.getFirst(),
+				scale.getThird(),
+				scale.getFifth()
 		};
 	}
 }

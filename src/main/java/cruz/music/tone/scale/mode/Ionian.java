@@ -10,10 +10,10 @@ import lombok.Getter;
 @Getter
 public class Ionian extends Diatonic{
 
-	private final int scaleLength = 8;
+	private final int scaleLength = 7;
 	
 	private final String feelingString = "Happy";
-	private final String relativeTonicString = "I";
+	private final String getScaleName = "I";
 	private final String triSuffixString = "Major";
 	private final String seventhSuffixString = "Major 7";
 	

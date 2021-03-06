@@ -37,7 +37,8 @@ public class MidiPlaybackTest {
 		
         try {
         	
-            Sequencer sequencer = MidiSystem.getSequencer(); // Get the default Sequencer
+        	// Get the default Sequencer
+            Sequencer sequencer = MidiSystem.getSequencer(); 
             
             if (sequencer==null) {
             
@@ -51,10 +52,10 @@ public class MidiPlaybackTest {
             // Create sequence, the File must contain MIDI file data.
             Sequence sequence = MidiSystem.getSequence(new File(fileName));
             
-            // load it into sequencer
+            // Load it into sequencer
             sequencer.setSequence(sequence);
             
-            // start the playback
+            // Start the playback
             sequencer.start();  
         
         } catch (MidiUnavailableException | InvalidMidiDataException | IOException ex) {
@@ -244,7 +245,7 @@ public class MidiPlaybackTest {
 				
 				System.out.println(
 						"Beat: \t" + l + 
-						"\tMode: \t" + mode.getRelativeTonicString() + 
+						"\tMode: \t" + mode.getScaleName() + 
 						"\tChord Tonic: \t" + (initialNote + mode.getFirst()) +
 						"\tRandom Note: \t" + rndNote +
 						"\tMelody V: \t" + melodyVelocity +

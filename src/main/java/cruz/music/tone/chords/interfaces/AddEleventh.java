@@ -5,5 +5,7 @@ package cruz.music.tone.chords.interfaces;
  */
 public interface AddEleventh {
 
-	public int getEleventh();
+	public int[] getScale();
+	
+	public int addtEleventh();
 }

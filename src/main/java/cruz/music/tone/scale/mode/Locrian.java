@@ -10,10 +10,10 @@ import lombok.Getter;
 @Getter
 public class Locrian extends Diatonic {
 	
-	private final int scaleLength = 8;
+	private final int scaleLength = 7;
 	
 	private final String feelingString = "Sinister";
-	private final String relativeTonicString = "vii";
+	private final String getScaleName = "vii";
 	private final String triSuffixString = "Half-Diminished";
 	private final String seventhSuffixString = "Diminished";
 	

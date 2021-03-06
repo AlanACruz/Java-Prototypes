@@ -1,5 +1,6 @@
 package cruz.music.tone.chords.hepta;
 
+import cruz.music.interval.Octave;
 import cruz.music.tone.chords.ChordVistitor;
 import cruz.music.tone.scale.Diatonic;
 
@@ -9,16 +10,17 @@ import cruz.music.tone.scale.Diatonic;
 public class Heptachord extends ChordVistitor {
 	
 	@Override
-	public int[] play(Diatonic mode)
+	public int[] play(Diatonic scale)
 	{
 		return new int[] {
-			mode.getFirst(),
-			mode.getThird(),
-			mode.getFifth(),
-			mode.getSeventh(),
-			mode.getNinth(),
-			mode.getEleventh(),
-			mode.getThirteenth()
+				
+				scale.getFirst(),
+				scale.getThird(),
+				scale.getFifth(),
+				scale.getSeventh(),
+				scale.getSecond() + Octave.ONE,
+				scale.getFourth() + Octave.ONE,
+				scale.getSixth() + Octave.ONE
 		};
 	}
 }

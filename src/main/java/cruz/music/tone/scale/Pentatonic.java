@@ -9,17 +9,15 @@ import lombok.NoArgsConstructor;
  */
 @Getter
 @NoArgsConstructor
-public class Diatonic extends Scale {
+public class Pentatonic extends Scale {
 	
-	private final int scaleLength = 7;
+	private final int scaleLength = 5;
 	
 	private final int first = Interval.PERFECT_UNITY;
 	private final int second = Interval.MAJOR_SECOND;
 	private final int third = Interval.MAJOR_THIRD;
-	private final int fourth = Interval.PERFECT_FOURTH;
-	private final int fifth = Interval.PERFECT_FIFTH;
-	private final int sixth = Interval.MAJOR_SIXTH;
-	private final int seventh = Interval.MAJOR_SEVENTH;
+	private final int fourth = Interval.PERFECT_FIFTH;
+	private final int fifth = Interval.MAJOR_SIXTH;
 	
 	/**
 	 * Return all tones in a scale.
@@ -33,9 +31,7 @@ public class Diatonic extends Scale {
 				getSecond(),
 				getThird(),
 				getFourth(),
-				getFifth(),
-				getSixth(),
-				getSeventh()
+				getFifth()
 		};
 	}
 }

@@ -10,10 +10,10 @@ import lombok.Getter;
 @Getter
 public class Aeolian extends Diatonic {
 	
-	private final int scaleLength = 8;
+	private final int scaleLength = 7;
 	
 	private final String feelingString = "Sad";
-	private final String relativeTonicString = "vi";
+	private final String getScaleName = "vi";
 	private final String triSuffixString = "minor";
 	private final String seventhSuffixString = "minor 7";
 	

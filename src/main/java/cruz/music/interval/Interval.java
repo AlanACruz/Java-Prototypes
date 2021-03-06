@@ -65,6 +65,11 @@ public class Interval {
 	public static final int AUGMENTED_FIFTH = Semitone.EIGHT;
 
 	/**
+	 * Eight Semitones
+	 */
+	public static final int MINOR_SIXTH = AUGMENTED_FIFTH;
+	
+	/**
 	 * Nine Semitones
 	 */
 	public static final int MAJOR_SIXTH = Semitone.NINE;
@@ -125,6 +130,11 @@ public class Interval {
 	 * Twenty Semitones
 	 */
 	public static final int AUGMENTED_TWELFTH = PERFECT_FIFTH + SHARP + Octave.ONE;
+	
+	/**
+	 * Twenty Semitones
+	 */
+	public static final int MINOR_THIRTENTH = AUGMENTED_TWELFTH;
 	
 	/** 
 	 * Twenty One Semitones
@@ -187,6 +197,11 @@ public class Interval {
 	 * Thirty Second Semitones
 	 */
 	public static final int AUGMENTED_NINETEENTH = AUGMENTED_FIFTH + Octave.TWO;
+	
+	/**
+	 * Thirty Second Semitones
+	 */
+	public static final int MINOR_TWENTIETH = AUGMENTED_NINETEENTH;
 	
 	/** 
 	 * Thirty Third Semitones

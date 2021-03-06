@@ -70,7 +70,6 @@ public class Semitone {
 	 */
 	public static final int TWELEVE = 12; ;
 	
-	
 	/* Steps */
 	
 	/**

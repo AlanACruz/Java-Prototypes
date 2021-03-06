@@ -8,11 +8,12 @@ import cruz.music.tone.scale.Diatonic;
  */
 public class DyadSeventh extends ChordVistitor {
 
-	public int[] play(Diatonic mode)
+	public int[] play(Diatonic scale)
 	{
 		return new int[] {
-			mode.getFirst(),
-			mode.getSeventh()
+				
+				scale.getFirst(),
+				scale.getSeventh()
 		};
 	}
 }

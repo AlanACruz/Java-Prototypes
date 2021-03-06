@@ -8,11 +8,12 @@ import cruz.music.tone.scale.Diatonic;
  */
 public class DyadFourth extends ChordVistitor {
 
-	public int[] play(Diatonic mode)
+	public int[] play(Diatonic scale)
 	{
 		return new int[] {
-			mode.getFirst(),
-			mode.getFourth()
+				
+				scale.getFirst(),
+				scale.getFourth()
 		};
 	}
 }

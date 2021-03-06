@@ -1,5 +1,6 @@
 package cruz.music.tone.chords.penta;
 
+import cruz.music.interval.Octave;
 import cruz.music.tone.chords.ChordVistitor;
 import cruz.music.tone.scale.Diatonic;
 
@@ -9,14 +10,15 @@ import cruz.music.tone.scale.Diatonic;
 public class Pentachord extends ChordVistitor {
 	
 	@Override
-	public int[] play(Diatonic mode)
+	public int[] play(Diatonic scale)
 	{
 		return new int[] {
-			mode.getFirst(),
-			mode.getThird(),
-			mode.getFifth(),
-			mode.getSeventh(),
-			mode.getNinth()
+				
+				scale.getFirst(),
+				scale.getThird(),
+				scale.getFifth(),
+				scale.getSeventh(),
+				scale.getSecond() + Octave.ONE
 		};
 	}
 }

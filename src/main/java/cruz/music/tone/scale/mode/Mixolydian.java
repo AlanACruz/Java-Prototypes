@@ -7,10 +7,10 @@ import lombok.Getter;
 @Getter
 public class Mixolydian extends Diatonic {
 	
-	private final int scaleLength = 8;
+	private final int scaleLength = 7;
 	
 	private final String feelingString = "Bluesy";
-	private final String relativeTonicString = "V";
+	private final String getScaleName = "V";
 	private final String triSuffixString = "Major";
 	private final String seventhSuffixString = "Dominant 7";
 	

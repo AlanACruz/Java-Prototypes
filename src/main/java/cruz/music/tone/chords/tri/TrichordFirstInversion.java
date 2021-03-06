@@ -1,5 +1,6 @@
 package cruz.music.tone.chords.tri;
 
+import cruz.music.interval.Octave;
 import cruz.music.tone.chords.ChordVistitor;
 import cruz.music.tone.scale.Diatonic;
 
@@ -9,12 +10,13 @@ import cruz.music.tone.scale.Diatonic;
 public class TrichordFirstInversion extends ChordVistitor {
 
 	@Override
-	public int[] play(Diatonic mode)
+	public int[] play(Diatonic scale)
 	{
 		return new int[] {
-			mode.getThird(),
-			mode.getFifth(),
-			mode.getEighth()
+				
+				scale.getThird(),
+				scale.getFifth(),
+				scale.getFirst() + Octave.ONE
 		};
 	}
 }

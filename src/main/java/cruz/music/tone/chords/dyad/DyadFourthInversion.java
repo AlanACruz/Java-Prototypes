@@ -1,5 +1,6 @@
 package cruz.music.tone.chords.dyad;
 
+import cruz.music.interval.Octave;
 import cruz.music.tone.chords.ChordVistitor;
 import cruz.music.tone.scale.Diatonic;
 
@@ -8,11 +9,12 @@ import cruz.music.tone.scale.Diatonic;
  */
 public class DyadFourthInversion extends ChordVistitor {
 
-	public int[] play(Diatonic mode)
+	public int[] play(Diatonic scale)
 	{
 		return new int[] {
-			mode.getFourth(),
-			mode.getEighth()
+				
+				scale.getFourth(),
+				scale.getFirst() + Octave.ONE
 		};
 	}
 }
