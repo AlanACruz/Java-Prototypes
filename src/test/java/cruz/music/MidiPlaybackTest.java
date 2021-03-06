@@ -118,15 +118,15 @@ public class MidiPlaybackTest {
 
 				if(0 <= l && l <= 7)
 				{
-					modeNum = 1;
+					modeNum = 2;
 				} 
 				else if(8 <= l && l <= 15)
 				{
-					modeNum = 4;
+					modeNum = 6;
 				} 
 				else if(16 <= l && l <= 23)
 				{
-					modeNum = 6;
+					modeNum = 7;
 				}
 				else if(24 <= l && l <= 31)
 				{

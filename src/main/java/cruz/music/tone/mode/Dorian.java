@@ -9,7 +9,10 @@ import lombok.Getter;
 @Getter
 public class Dorian extends Mode {
 	
+	private final String feelingString = "Soulful";
 	private final String relativeTonicString = "ii";
+	private final String triSuffixString = "minor";
+	private final String seventhSuffixString = "minor 7";
 	
 	private final int first = IntervalConstants.MAJOR_SECOND;
 	private final int second = IntervalConstants.MAJOR_THIRD;

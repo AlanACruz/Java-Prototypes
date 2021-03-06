@@ -9,7 +9,10 @@ import lombok.Getter;
 @Getter
 public class Ionian extends Mode{
 
+	private final String feelingString = "Happy";
 	private final String relativeTonicString = "I";
+	private final String triSuffixString = "Major";
+	private final String seventhSuffixString = "Major 7";
 	
 	private final int first = IntervalConstants.PERFECT_UNITY;
 	private final int second = IntervalConstants.MAJOR_SECOND;

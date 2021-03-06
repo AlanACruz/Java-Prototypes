@@ -9,7 +9,10 @@ import lombok.Getter;
 @Getter
 public class Lydian extends Mode {
 	
+	private final String feelingString = "Bright";
 	private final String relativeTonicString = "IV";
+	private final String triSuffixString = "Major";
+	private final String seventhSuffixString = "Major 7";
 	
 	private final int first = IntervalConstants.PERFECT_FOURTH;
 	private final int second = IntervalConstants.PERFECT_FIFTH;

@@ -9,7 +9,10 @@ import lombok.Getter;
 @Getter
 public class Phrygian extends Mode {
 	
+	private final String feelingString = "Flamenco";
 	private final String relativeTonicString = "iii";
+	private final String triSuffixString = "minor";
+	private final String seventhSuffixString = "minor 7";
 	
 	private final int first = IntervalConstants.MAJOR_THIRD;
 	private final int second = IntervalConstants.PERFECT_FOURTH;

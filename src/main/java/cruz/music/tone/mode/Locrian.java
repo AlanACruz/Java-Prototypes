@@ -9,7 +9,10 @@ import lombok.Getter;
 @Getter
 public class Locrian extends Mode {
 	
-	private String relativeTonicString = "viiø";
+	private final String feelingString = "Sinister";
+	private final String relativeTonicString = "vii";
+	private final String triSuffixString = "Half-Diminished";
+	private final String seventhSuffixString = "Diminished";
 	
 	private final int first = IntervalConstants.MAJOR_SEVENTH;
 	private final int second = IntervalConstants.PERFECT_EIGHTH;

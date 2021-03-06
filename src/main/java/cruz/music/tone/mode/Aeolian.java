@@ -9,7 +9,10 @@ import lombok.Getter;
 @Getter
 public class Aeolian extends Mode {
 	
+	private final String feelingString = "Sad";
 	private final String relativeTonicString = "vi";
+	private final String triSuffixString = "minor";
+	private final String seventhSuffixString = "minor 7";
 	
 	private final int first = IntervalConstants.MAJOR_SIXTH;
 	private final int second = IntervalConstants.MAJOR_SEVENTH;

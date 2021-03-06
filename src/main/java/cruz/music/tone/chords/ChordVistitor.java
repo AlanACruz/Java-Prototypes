@@ -1,4 +1,4 @@
-package cruz.music.tone.chords.abstracts;
+package cruz.music.tone.chords;
 
 import cruz.music.tone.mode.Mode;
 

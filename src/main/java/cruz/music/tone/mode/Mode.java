@@ -5,8 +5,14 @@ package cruz.music.tone.mode;
  */
 public abstract class Mode {
 	
+	public abstract String getFeelingString();
+	
 	public abstract String getRelativeTonicString();
 
+	public abstract String getTriSuffixString();
+	
+	public abstract String getSeventhSuffixString();
+	
 	/* First Octave */
 	
 	public abstract int getFirst();
@@ -67,58 +73,6 @@ public abstract class Mode {
 				getThirteenth(),
 				getFourteenth(),
 				getFifteenth()
-		};
-	}
-	
-	/**
-	 * Return all tones in a scale. First & Third.
-	 * 
-	 * @return scale array
-	 */
-	public int[] getDyad() {
-
-		return new int[] {
-				getFirst(),
-				getThird()
-		};
-	}
-	
-	/**
-	 * Return all tones in a scale. Third & Eighth
-	 * 
-	 * @return scale array
-	 */
-	public int[] getDyadInversion() {
-
-		return new int[] {
-				getThird(),
-				getEighth()
-		};
-	}
-	
-	/**
-	 * Return all tones in a scale. First & Fifth
-	 * 
-	 * @return scale array
-	 */
-	public int[] getPowerChord() {
-
-		return new int[] {
-				getFirst(),
-				getFifth()
-		};
-	}
-	
-	/**
-	 * Return all tones in a scale. Fifth & Eighth
-	 * 
-	 * @return scale array
-	 */
-	public int[] getPowerChordInversion() {
-
-		return new int[] {
-				getFifth(),
-				getEighth()
 		};
 	}
 }
