@@ -1,4 +1,4 @@
-package cruz.music.tone.chords.dyad;
+package cruz.music.tone.chords.tri;
 
 import cruz.music.interval.Octave;
 import cruz.music.interval.Semitone;
@@ -7,13 +7,15 @@ import cruz.music.tone.chords.ChordVistitor;
 /**
  * @author CruzA
  */
-public class DyadThirdInversion extends ChordVistitor {
+public class Suspended2FirstInversion extends ChordVistitor {
 
+	@Override
 	public int[] play()
 	{
 		return new int[] {
 				
-				Semitone.FOUR,
+				Semitone.TWO,
+				Semitone.SEVEN,
 				Semitone.ZERO + Octave.ONE
 		};
 	}

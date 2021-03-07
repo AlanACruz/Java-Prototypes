@@ -1,4 +1,4 @@
-package cruz.music.tone.chords.dyad;
+package cruz.music.tone.chords.tri;
 
 import cruz.music.interval.Semitone;
 import cruz.music.tone.chords.ChordVistitor;
@@ -6,14 +6,16 @@ import cruz.music.tone.chords.ChordVistitor;
 /**
  * @author CruzA
  */
-public class DyadSixth extends ChordVistitor {
+public class Major extends ChordVistitor {
 
+	@Override
 	public int[] play()
 	{
 		return new int[] {
 				
 				Semitone.ZERO,
-				Semitone.NINE
+				Semitone.FOUR,
+				Semitone.SEVEN
 		};
 	}
 }

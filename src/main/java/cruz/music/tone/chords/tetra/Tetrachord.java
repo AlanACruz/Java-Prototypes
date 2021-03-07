@@ -1,7 +1,7 @@
 package cruz.music.tone.chords.tetra;
 
+import cruz.music.interval.Semitone;
 import cruz.music.tone.chords.ChordVistitor;
-import cruz.music.tone.scale.Diatonic;
 
 /**
  * @author CruzA
@@ -9,14 +9,14 @@ import cruz.music.tone.scale.Diatonic;
 public class Tetrachord extends ChordVistitor {
 	
 	@Override
-	public int[] play(Diatonic scale)
+	public int[] play()
 	{
 		return new int[] {
 				
-				scale.getFirst(),
-				scale.getThird(),
-				scale.getFifth(),
-				scale.getSeventh()
+				Semitone.ZERO,
+				Semitone.FOUR,
+				Semitone.SEVEN,
+				Semitone.ELEVEN
 		};
 	}
 }
