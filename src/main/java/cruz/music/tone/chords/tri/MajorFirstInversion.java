@@ -7,7 +7,7 @@ import cruz.music.tone.chords.Chord;
 /**
  * Diatonic Interval:	3	5	8
  * Diatonic Steps:		W	W	H
- * Semitone Steps:		4	7	12
+ * Semitone Interval:	4	7	12
  * 
  * @author CruzA
  */
