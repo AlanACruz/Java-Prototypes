@@ -5,6 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /**
+ * Diatonic Interval:	1	2	♭3	4	5	6	7	8
+ * Diatonic Steps:		R	1	½	1	1	1	1	½
+ * Semitone Steps:		0	2	3	5	7	9	11	12
+ * 
  * @author CruzA
  */
 @Getter

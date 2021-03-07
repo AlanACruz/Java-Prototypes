@@ -3,7 +3,7 @@ package cruz.music.tone.chords;
 /**
  * @author CruzA
  */
-public abstract class ChordVistitor {
+public abstract class Chord {
 
 	public abstract int[] play();
 }

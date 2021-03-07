@@ -2,12 +2,16 @@ package cruz.music.tone.chords.dyad;
 
 import cruz.music.interval.Octave;
 import cruz.music.interval.Semitone;
-import cruz.music.tone.chords.ChordVistitor;
+import cruz.music.tone.chords.Chord;
 
 /**
+ * Diatonic Interval:	2	8
+ * Diatonic Steps:		W	H
+ * Semitone Steps:		2	12
+ * 
  * @author CruzA
  */
-public class DyadSecondInversion extends ChordVistitor {
+public class DyadSecondInversion extends Chord {
 
 	public int[] play()
 	{
