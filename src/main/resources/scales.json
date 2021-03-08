@@ -1,0 +1,67 @@
+{
+	"Diatonic": {
+		"Diatonic Interval"	:	[	1,		2,		3,		4,		5,		6,		7,		8,		9,		10,		11,		12,		13,		14,		15	],
+		"Mode Interval"		:	[	1,		2,		3,		4,		5,		6,		7,		8,		9,		10,		11,		12,		13,		14,		15	],
+		"Wholetone Steps"	:	[	0,		1,		1,		0.5,	1,		1,		1,		0.5,	1,		1,		0.5,	1,		1,		1,		0.5	],
+		"Semitone Interval"	:	[	0,		2,		4,		5,		7,		9,		11,		12,		14,		16,		17,		19,		21,		23,		24	],
+		"Semitone Steps"	:	[	0,		2,		2,		1,		2,		2,		2,		1,		2,		2,		1,		2,		2,		2,		1	],
+	
+		"modes"	:	{ 
+			"Diatonic-Ionian": {
+				"Diatonic Interval"	:	[	1,		2,		3,		4,		5,		6,		7,		8	],
+				"Mode Interval"		:	[	1,		2,		3,		4,		5,		6,		7,		8	],
+				"Wholetone Steps"	:	[	0,		1,		1,		0.5,	1,		1,		1,		0.5	],
+				"Semitone Interval"	:	[	0,		2,		4,		5,		7,		9,		11,		12	],
+				"Semitone Steps"	:	[	0,		2,		2,		1,		2,		2,		2,		1	]
+			},
+			
+			"Diatonic-Dorian": {
+				"Diatonic Interval"	:	[	2,		3,		4,		5,		6,		7,		8		9	],
+				"Mode Interval"		:	[	1,		2,		3,		4,		5,		6,		7,		8	],
+				"Wholetone Steps"	:	[	0,		1,		0.5,	1,		1,		1,		0.5,	1	],
+				"Semitone Interval"	:	[	0		4,		5,		7,		9,		11,		12,		14	],
+				"Semitone Steps"	:	[	0,		2,		1,		2,		2,		2,		1,		2	]
+			},
+
+			"Diatonic-Phrygian": {
+				"Diatonic Interval"	:	[	3,		4,		5,		6,		7,		8,		9,		10	],
+				"Mode Interval"		:	[	1,		2,		3,		4,		5,		6,		7,		8	],
+				"Wholetone Steps"	:	[	0,		0.5,	1,		1,		1,		0.5,	1,		1	],
+				"Semitone Interval"	:	[	0,		5,		7,		9,		11,		12,		14,		16	],
+				"Semitone Steps"	:	[	0,		1,		2,		2,		2,		1,		2,		2	]
+			},
+
+			"Diatonic-Lydian": {
+				"Diatonic Interval"	:	[	4,		5,		6,		7,		8,		9,		10,		11	],
+				"Mode Interval"		:	[	1,		2,		3,		4,		5,		6,		7,		8	],
+				"Wholetone Steps"	:	[	0,		1,		1,		1,		0.5,	1,		1,		0.5	],
+				"Semitone Interval"	:	[	0,		7,		9,		11,		12,		14,		16,		17	],
+				"Semitone Steps"	:	[	0,		2,		2,		2,		1,		2,		2,		1	]
+			},
+			
+			"Diatonic-Mixolydian": {
+				"Diatonic Interval"	:	[	5,		6,		7,		8,		9,		10,		11,		12	],
+				"Mode Interval"		:	[	1,		2,		3,		4,		5,		6,		7,		8	],
+				"Wholetone Steps"	:	[	0,		1,		1,		0.5,	1,		1,		0.5,	1	],
+				"Semitone Interval"	:	[	0,		9,		11,		12,		14,		16,		17,		19	],
+				"Semitone Steps"	:	[	0,		2,		2,		1,		2,		2,		1,		2	]
+			},
+			
+			"Diatonic-Aeolian": {
+				"Diatonic Interval"	:	[	6,		7,		8,		9,		10,		11,		12,		13	],
+				"Mode Interval"		:	[	1,		2,		3,		4,		5,		6,		7,		8	],
+				"Wholetone Steps"	:	[	0,		1,		0.5,	1,		1,		0.5,	1,		1	],
+				"Semitone Interval"	:	[	0,		11,		12,		14,		16,		17,		19,		21	],
+				"Semitone Steps"	:	[	0,		2,		1,		2,		2,		1,		2,		2	]
+			},
+			
+			"Diatonic-Locrian": {
+				"Diatonic Interval"	:	[	7,		8,		9,		10,		11,		12,		13,		14	],
+				"Mode Interval"		:	[	1,		2,		3,		4,		5,		6,		7,		8	],
+				"Wholetone Steps"	:	[	0,		0.5,	1,		1,		0.5,	1,		1,		1	],
+				"Semitone Interval"	:	[	0,		12,		14,		16,		17,		19,		21,		23	],
+				"Semitone Steps"	:	[	0,		1,		2,		2,		1,		2,		2,		2	]
+			}
+		}
+	}
+}

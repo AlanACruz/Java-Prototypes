@@ -27,9 +27,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /**
- * Diatonic Interval:	1	2	3	4	5	6	7	8
- * Diatonic Steps:		R	1	1	½	1	1	1	½
- * Semitone Interval:	0	2	4	5	7	9	11	12
+ * Diatonic Interval:	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15
+ * Scale Interval:		1	2	3	4	5	6	7	8	9	10	11	12	13	14	15
+ * Wholetone Steps:		R	1	1	½	1	1	1	½	1	1	½	1	1	1	½	
+ * Semitone Interval:	0	2	4	5	7	9	11	12	14	16	17	19	21	23	24
+ * Semitone Steps:		0	2	2	1	2	2	2	1	2	2	1	2	2	2	1
  * 
  * @author CruzA
  */
@@ -50,6 +52,12 @@ public class Diatonic extends Scale {
 	/**
 	 * Return all tones in an Ionian mode (I).
 	 * 
+	 * Diatonic Interval:	1	2	3	4	5	6	7	8
+	 * Scale Interval:		1	2	3	4	5	6	7	8
+	 * Wholetone Steps:		R	1	1	½	1	1	1	½
+	 * Semitone Interval:	0	2	4	5	7	9	11	12
+	 * Semitone Steps:		0	2	2	1	2	2	2	1
+	 * 
 	 * @return scale array
 	 */
 	public int[] getIonian() {
@@ -67,6 +75,12 @@ public class Diatonic extends Scale {
 	
 	/**
 	 * Return all tones in a Dorian mode (ii).
+	 * 
+	 * Diatonic Interval:	2	3	4	5	6	7	8	9
+	 * Scale Interval:		1	2	3	4	5	6	7	8
+	 * Wholetone Steps:		R	1	½	1	1	1	½	1
+	 * Semitone Interval:	2	4	5	7	9	11	12	14
+	 * Semitone Steps:		0	2	1	2	2	2	1	2
 	 * 
 	 * @return scale array
 	 */
@@ -89,6 +103,12 @@ public class Diatonic extends Scale {
 	/**
 	 * Return all tones in a Phrygian mode (iii).
 	 * 
+	 * Diatonic Interval:	3	4	5	6	7	8	9	10
+	 * Scale Interval:		1	2	3	4	5	6	7	8
+	 * Wholetone Steps:		R	½	1	1	1	½	1	1	
+	 * Semitone Interval:	4	5	7	9	11	12	14	16
+	 * Semitone Steps:		0	1	2	2	2	1	2	2
+	 * 
 	 * @return scale array
 	 */
 	public int[] getPhrygian() {
@@ -109,6 +129,12 @@ public class Diatonic extends Scale {
 	
 	/**
 	 * Return all tones in a Lydian mode (IV).
+	 * 
+	 * Diatonic Interval:	4	5	6	7	8	9	10	11
+	 * Scale Interval:		1	2	3	4	5	6	7	8
+	 * Wholetone Steps:		R	1	1	1	½	1	1	½
+	 * Semitone Interval:	5	7	9	11	12	14	16	17
+	 * Semitone Steps:		0	2	2	2	1	2	2	1
 	 * 
 	 * @return scale array
 	 */
@@ -131,6 +157,12 @@ public class Diatonic extends Scale {
 	/**
 	 * Return all tones in a Mixolydian mode (V).
 	 * 
+	 * Diatonic Interval:	5	6	7	8	9	10	11	12
+	 * Scale Interval:		1	2	3	4	5	6	7	8
+	 * Wholetone Steps:		R	1	1	½	1	1	½	1
+	 * Semitone Interval:	7	9	11	12	14	16	17	19
+	 * Semitone Steps:		0	2	2	1	2	2	1	2
+	 * 
 	 * @return scale array
 	 */
 	public int[] getMixolydian() {
@@ -152,6 +184,12 @@ public class Diatonic extends Scale {
 	/**
 	 * Return all tones in a Aeolian mode (vi).
 	 * 
+	 * Diatonic Interval:	6	7	8	9	10	11	12	13
+	 * Scale Interval:		1	2	3	4	5	6	7	8
+	 * Wholetone Steps:		R	1	½	1	1	½	1	1
+	 * Semitone Interval:	9	11	12	14	16	17	19	21
+	 * Semitone Steps:		0	2	1	2	2	1	2	2
+	 * 
 	 * @return scale array
 	 */
 	public int[] getAeolian() {
@@ -172,6 +210,12 @@ public class Diatonic extends Scale {
 	
 	/**
 	 * Return all tones in a Locrian mode (vii).
+	 * 
+	 * Diatonic Interval:	7	8	9	10	11	12	13	14
+	 * Scale Interval:		1	2	3	4	5	6	7	8
+	 * Wholetone Steps:		R	½	1	1	½	1	1	1
+	 * Semitone Interval:	11	12	14	16	17	19	21	23
+	 * Semitone Steps:		0	1	2	2	1	2	2	2
 	 * 
 	 * @return scale array
 	 */
