@@ -16,16 +16,8 @@ import javax.sound.midi.Synthesizer;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import cruz.music.interval.Interval;
 import cruz.music.interval.Octave;
 import cruz.music.tone.scale.Diatonic;
-import cruz.music.tone.scale.mode.Aeolian;
-import cruz.music.tone.scale.mode.Dorian;
-import cruz.music.tone.scale.mode.Ionian;
-import cruz.music.tone.scale.mode.Locrian;
-import cruz.music.tone.scale.mode.Lydian;
-import cruz.music.tone.scale.mode.Mixolydian;
-import cruz.music.tone.scale.mode.Phrygian;
 
 public class MidiPlaybackTest {
 
@@ -110,7 +102,8 @@ public class MidiPlaybackTest {
 		  
 			int l = 0;
 			
-			Diatonic mode = new Ionian();
+			Diatonic mode = new Diatonic();
+			int[] scaleArray = {};
 			
 			int lenghtOfTrack = 10000;
 			for(int k = 0; k < lenghtOfTrack; k++)
@@ -139,29 +132,27 @@ public class MidiPlaybackTest {
 				{
 					default:
 					case 1:
-						mode = new Ionian();
+						scaleArray = mode.getIonian();
 						break;
 					case 2:
-						mode = new Dorian();
+						scaleArray = mode.getDorian();
 						break;
 					case 3:
-						mode = new Phrygian();
+						scaleArray = mode.getPhrygian();
 						break;
 					case 4:
-						mode = new Lydian();
+						scaleArray = mode.getLydian();
 						break;
 					case 5:
-						mode = new Mixolydian();
+						scaleArray = mode.getMixolydian();
 						break;
 					case 6:
-						mode = new Aeolian();
+						scaleArray = mode.getAeolian();
 						break;
 					case 7:
-						mode = new Locrian();
+						scaleArray = mode.getLocrian();
 						break;
 				}
-
-				int[] scaleArray = mode.getScale();
 				
 				int rnd = new Random().nextInt(scaleArray.length);
 				int interval = scaleArray[rnd];

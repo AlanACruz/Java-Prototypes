@@ -1,6 +1,6 @@
 package cruz.music.tone.scale;
 
-import cruz.music.interval.Interval;
+import cruz.music.interval.Semitone;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -17,11 +17,11 @@ public class Pentatonic extends Scale {
 	
 	private final int scaleLength = 5;
 	
-	private final int first = Interval.PERFECT_UNITY;
-	private final int second = Interval.MAJOR_SECOND;
-	private final int third = Interval.MAJOR_THIRD;
-	private final int fourth = Interval.PERFECT_FIFTH;
-	private final int fifth = Interval.MAJOR_SIXTH;
+	private final int first = Semitone.ZERO;
+	private final int second = Semitone.TWO;
+	private final int third = Semitone.FOUR;
+	private final int fourth = Semitone.SEVEN;
+	private final int fifth = Semitone.NINE;
 	
 	/**
 	 * Return all tones in a scale.

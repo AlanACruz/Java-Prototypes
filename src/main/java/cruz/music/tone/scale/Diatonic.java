@@ -171,7 +171,7 @@ public class Diatonic extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a major.
+	 * Return all tones in a major scale.
 	 * 
 	 * @return scale array
 	 */
