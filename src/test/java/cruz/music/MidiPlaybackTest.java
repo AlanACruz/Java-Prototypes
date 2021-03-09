@@ -153,25 +153,25 @@ public class MidiPlaybackTest {
 				{
 					default:
 					case 1:
-						scaleArray = mode.asI();
+						scaleArray = mode.asDiatonicI();
 						break;
 					case 2:
-						scaleArray = mode.asII();
+						scaleArray = mode.asDiatonicII();
 						break;
 					case 3:
-						scaleArray = mode.asIII();
+						scaleArray = mode.asDiatonicIII();
 						break;
 					case 4:
-						scaleArray = mode.asIV();
+						scaleArray = mode.asDiatonicIV();
 						break;
 					case 5:
-						scaleArray = mode.asV();
+						scaleArray = mode.asDiatonicV();
 						break;
 					case 6:
-						scaleArray = mode.asVI();
+						scaleArray = mode.asDiatonicVI();
 						break;
 					case 7:
-						scaleArray = mode.asVII();
+						scaleArray = mode.asDiatonicVII();
 						break;
 				}
 				
