@@ -27,13 +27,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /**
+ * Scale Position:		1	2	3	4	5	6	7	8	9	10	11	12	13
  * 
- * Scale Position:		1	2	3	4	5	6	7	8	9	10	11	12
- * 
- * Diatonic Interval:	1	2	♭3	3	5	6	8	9	♭10	10	13	15
- * Wholetone Steps:		0	1	½	½	1½	1	1½	1	½	½	1½	1
- * Semitone Steps:		0	2	1	1	3	2	3	2	1	1	3	3
- * Semitone Interval:	0	2	3	4	7	9	12	14	15	16	19	24
+ * Diatonic Interval:	1	2	♭3	3	5	6	8	9	♭10	10	12	13	15
+ * Wholetone Steps:		0	1	½	½	1½	1	1½	1	½	½	1½	1	1½
+ * Semitone Steps:		0	2	1	1	3	2	3	2	1	1	3	2	3
+ * Semitone Interval:	0	2	3	4	7	9	12	14	15	16	19	21	24
  * 
  * @author CruzA
  */
@@ -51,8 +50,6 @@ public class Blues extends Scale {
 	private final int sixth = Semitone.NINE;
 	
 	/**
-	 * Return all tones in a major blues scale.
-	 * 
 	 * Scale Position:		1	2	3	4	5	6	7
 	 * 
 	 * Diatonic Interval:	1	2	♭3	3	5	6	8
@@ -60,9 +57,10 @@ public class Blues extends Scale {
 	 * Semitone Steps:		0	2	1	1	3	2	3
 	 * Semitone Interval:	0	2	3	4	7	9	12
 	 * 
+	 * 
 	 * @return scale array
 	 */
-	public int[] asMajor() {
+	public int[] asSemitoneZero() {
 
 		return new int[] {
 				getFirst(),
@@ -75,21 +73,120 @@ public class Blues extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a minor blues scale.
+	 * Scale Position:		1	2	3	4	5	6	7
 	 * 
+	 * Diatonic Interval:	2	♭3	3	5	6	8	9
+	 * Wholetone Steps:		0	½	½	1½	1	1½	1
+	 * Semitone Steps:		0	1	1	3	2	3	2
+	 * Semitone Interval:	0	3	4	7	9	12	14
+	 * 
+	 * 
+	 * @return scale array
+	 */
+	public int[] asSemitoneTwo() {
+
+		int modeOffset = getSecond();
+		
+		return new int[] {
+				
+				getSecond() - modeOffset,
+				getThird() - modeOffset,
+				getFourth() - modeOffset,
+				getFifth() - modeOffset,
+				getSixth() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE
+		};
+	}
+	
+	/**
+	 * Scale Position:		1	2	3	4	5	6	7
+	 * 
+	 * Diatonic Interval:	♭3	3	5	6	8	9	♭10
+	 * Wholetone Steps:		0	½	1½	1	1½	1	½
+	 * Semitone Steps:		0	1	3	2	3	2	1
+	 * Semitone Interval:	0	4	7	9	12	14	15
+	 * 
+	 * @return scale array
+	 */
+	public int[] asSemitoneThree() {
+
+		int modeOffset = getThird();
+		
+		return new int[] {
+				
+				getThird() - modeOffset,
+				getFourth() - modeOffset,
+				getFifth() - modeOffset,
+				getSixth() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE,
+				getSecond() - modeOffset + Octave.ONE
+		};
+	}
+	
+	/**
+	 * Scale Position:		1	2	3	4	5	6	7
+	 * 
+	 * Diatonic Interval:	3	5	6	8	9	♭10	10
+	 * Wholetone Steps:		0	1½	1	1½	1	½	½
+	 * Semitone Steps:		0	3	2	3	2	1	1
+	 * Semitone Interval:	0	7	9	12	14	15	16
+	 * 
+	 * @return scale array
+	 */
+	public int[] asSemitonFour() {
+
+		int modeOffset = getFourth();
+		
+		return new int[] {
+				
+				getFourth() - modeOffset,
+				getFifth() - modeOffset,
+				getSixth() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE,
+				getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE
+		};
+	}
+	
+	/**
+	 * Scale Position:		1	2	3	4	5	6	7
+	 * 
+	 * Diatonic Interval:	5	6	8	9	♭10	10	12
+	 * Wholetone Steps:		0	1	1½	1	½	½	1½
+	 * Semitone Steps:		0	2	3	2	1	1	3
+	 * Semitone Interval:	0	9	12	14	15	16	19
+	 * 
+	 * @return scale array
+	 */
+	public int[] asSemitonSeven() {
+
+		int modeOffset = getFifth();
+		
+		return new int[] {
+				
+				getFifth() - modeOffset,
+				getSixth() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE,
+				getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE,
+				getFourth() - modeOffset + Octave.ONE
+		};
+	}
+	
+	/**
 	 * Scale Position:		1	2	3	4	5	6	7
 	 * 
 	 * Diatonic Interval:	6	8	9	♭10	10	12	13
 	 * Wholetone Steps:		0	1½	1	½	½	1½	1
 	 * Semitone Steps:		0	3	2	1	1	3	2
-	 * Semitone Interval:	9	12	14	15	16	19	21
+	 * Semitone Interval:	0	12	14	15	16	19	21
 	 * 
 	 * @return scale array
 	 */
-	public int[] asMinor() {
+	public int[] asSemitonNine() {
 
 		int modeOffset = getSixth();
-		
+				
 		return new int[] {
 
 			getSixth() - modeOffset,
@@ -99,6 +196,27 @@ public class Blues extends Scale {
 			getFourth() - modeOffset + Octave.ONE,
 			getFifth() - modeOffset + Octave.ONE
 		};
+	}
+	
+	/**
+	 * Return all tones in a major blues scale.
+	 * 
+	 * @return scale array
+	 */
+	public int[] asMajor() {
+
+		return asSemitoneZero();
+	}
+	
+	/**
+	 * Return all tones in a minor blues scale.
+	 * 
+	 * @return scale array
+	 */
+	public int[] asMinor() {
+
+		
+		return asSemitonNine();
 	}
 	
 	/**
