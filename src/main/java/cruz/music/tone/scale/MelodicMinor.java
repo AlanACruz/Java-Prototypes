@@ -21,16 +21,18 @@
  ******************************************************************************/
 package cruz.music.tone.scale;
 
+import cruz.music.interval.Octave;
 import cruz.music.interval.Semitone;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /**
- * Diatonic Interval:	1	2	♭3	4	5	6	7	8	9	♭10	11	12	13	14	15
- * Scale Interval:		1	2	3	4	5	6	7	8	9	10	11	12	13	14	15
- * Wholetone Steps:		R	1	½	1	1	1	1	½	1	½	1	1	1	1	½	
- * Semitone Interval:	0	2	3	5	7	9	11	12	14	15	17	19	21	23	24
- * Semitone Steps:		0	2	1	2	2	2	3	1	2	1	2	2	2	3	1
+ * Scale Position:		1	2	3	4	5	6	7	8	9	10	11	12	13	14	15
+ * Common:									1	2	♭3	4	5	6	7	8
+ * Diatonic Interval:	1	2	3	♯4	♯5	6	7	8	9	10	♯11	♯12	13	14	15
+ * Wholetone Steps:		R	1	1	1	1	1	1	½	1	1	1	1	1	1	½	
+ * Semitone Interval:	0	2	4	6	8	9	11	12  14	16	18	20	21	23	24
+ * Semitone Steps:		0	2	2	2	2	1	2	1	2	2	2	2	1	2	1
  * 
  * @author CruzA
  */
@@ -42,18 +44,25 @@ public class MelodicMinor extends Scale {
 	
 	private final int first = Semitone.ZERO;
 	private final int second = Semitone.TWO;
-	private final int third = Semitone.THREE;
-	private final int fourth = Semitone.FIVE;
-	private final int fifth = Semitone.SEVEN;
+	private final int third = Semitone.FOUR;
+	private final int fourth = Semitone.SIX;
+	private final int fifth = Semitone.EIGHT;
 	private final int sixth = Semitone.NINE;
 	private final int seventh = Semitone.ELEVEN;
 	
 	/**
-	 * Return all tones in a scale.
+	 * Return all tones in a major scale.
+	 * 
+	 * Scale Position:		1	2	3	4	5	6	7	8
+	 * 
+	 * Diatonic Interval:	1	2	3	♯4	♯5	6	7	8
+	 * Wholetone Steps:		R	1	1	1	1	1	1	½
+	 * Semitone Interval:	0	2	4	6	8	9	11	12
+	 * Semitone Steps:		0	2	2	2	2	1	2	1
 	 * 
 	 * @return scale array
 	 */
-	public int[] getScale() {
+	public int[] getMajor() {
 
 		return new int[] {
 				getFirst(),
@@ -64,5 +73,42 @@ public class MelodicMinor extends Scale {
 				getSixth(),
 				getSeventh()
 		};
+	}
+	
+	/**
+	 * Return all tones in a minor scale.
+	 * 
+	 * Scale Position:		1	2	3	4	5	6	7	8
+	 * 
+	 * Diatonic Interval:	6	7	8	9	10	♯11	♯12	13	
+	 * Wholetone Steps:		R	1	½	1	1	1	1	1
+	 * Semitone Interval:	9	11	12  14	16	18	20	21
+	 * Semitone Steps:		0	2	1	2	2	2	2	1
+	 * 
+	 * @return scale array
+	 */
+	public int[] getMinor() {
+
+		int modeOffset = getSixth();
+		
+		return new int[] {
+				getSixth() - modeOffset,
+				getSeventh() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE,
+				getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE,
+				getFourth() - modeOffset + Octave.ONE,
+				getFifth() - modeOffset + Octave.ONE
+		};
+	}
+	
+	/**
+	 * Return all tones in a scale.
+	 * 
+	 * @return scale array
+	 */
+	public int[] getScale() {
+
+		return getMinor();
 	}
 }

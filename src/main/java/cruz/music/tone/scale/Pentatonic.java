@@ -21,16 +21,18 @@
  ******************************************************************************/
 package cruz.music.tone.scale;
 
+import cruz.music.interval.Octave;
 import cruz.music.interval.Semitone;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /**
- * Diatonic Interval:	1	2	3	5	6	8	9	10	12	13	15
- * Scale Interval:		1	2	3	5	6	8	9	10	12	13	15
- * Wholetone Steps:		R	1	1	1	1	½	1	1	1	1	½	
+ * Scale Position:		1	2	3	4	5	6	7	8	9	10	11
+ * 	
+ * Diatonic Interval:	1	2	3	5	6	8	9 	10	12	13	15
+ * Wholetone Steps:		R	1	1	1½	1	1½	1	1	1½	1	1½	
  * Semitone Interval:	0	2	4	7	9	12	14	16	19	21	24
- * Semitone Steps:		0	2	2	2	2	1	2	2	2	2	1
+ * Semitone Steps:		0	2	2	3	2	3	2	2	3	2	3
  * 
  * @author CruzA
  */
@@ -47,24 +49,60 @@ public class Pentatonic extends Scale {
 	private final int fifth = Semitone.NINE;
 	
 	/**
-	 * Return all tones in a scale.
+	 * Return all tones in a major scale.
+	 * 
+	 * Scale Position:		1	2	3	4	5	6
 	 * 
 	 * Diatonic Interval:	1	2	3	5	6	8
-	 * Scale Interval:		1	2	3	5	6	8
-	 * Wholetone Steps:		R	1	1	1	1	½
+	 * Wholetone Steps:		R	1	1	1½	1	1½
 	 * Semitone Interval:	0	2	4	7	9	12
-	 * Semitone Steps:		0	2	2	2	2	1
+	 * Semitone Steps:		0	2	2	3	2	3
 	 * 
 	 * @return scale array
 	 */
-	public int[] getScale() {
+	public int[] getMajor() {
 
 		return new int[] {
 				getFirst(),
 				getSecond(),
 				getThird(),
 				getFourth(),
-				getFifth()
+				getFifth(),
 		};
+	}
+	
+	/**
+	 * Return all tones in a minor scale.
+	 * 
+	 * Scale Position:		1	2	3	4	5	6
+	 * 
+	 * Diatonic Interval:	6	8	9	10	12	13
+	 * Wholetone Steps:		R	1½	1	1	1½	1
+	 * Semitone Interval:	9	12	14	16	19	21
+	 * Semitone Steps:		0	3	2	2	3	2
+	 * 
+	 * @return scale array
+	 */
+	public int[] getMinor() {
+
+		int modeOffset = getFifth();
+		
+		return new int[] {
+				getFifth() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE,
+				getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE,
+				getFourth() - modeOffset + Octave.ONE
+		};
+	}
+	
+	/**
+	 * Return all tones in a scale.
+	 * 
+	 * @return scale array
+	 */
+	public int[] getScale() {
+
+		return getMinor();
 	}
 }
