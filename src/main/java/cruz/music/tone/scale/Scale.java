@@ -31,7 +31,7 @@ public abstract class Scale {
 	
 	public abstract int getScaleLength();
 	
-	public abstract int[] getScale();
+	public abstract int[] asScale();
 	
 	public String getScaleName() {
 		

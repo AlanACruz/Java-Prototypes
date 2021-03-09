@@ -62,7 +62,7 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] getIonian() {
+	public int[] asI() {
 
 		return new int[] {
 				getFirst(),
@@ -87,7 +87,7 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] getDorian() {
+	public int[] asII() {
 
 		int modeOffset = getSecond();
 		
@@ -115,7 +115,7 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] getPhrygian() {
+	public int[] asIII() {
 
 		int modeOffset = getThird();
 		
@@ -143,7 +143,7 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] getLydian() {
+	public int[] asIV() {
 
 		int modeOffset = getFourth();
 		
@@ -171,7 +171,7 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] getMixolydian() {
+	public int[] asV() {
 
 		int modeOffset = getFifth();
 		
@@ -199,7 +199,7 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] getAeolian() {
+	public int[] asVI() {
 
 		int modeOffset = getSixth();
 		
@@ -227,7 +227,7 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] getLocrian() {
+	public int[] asVII() {
 
 		int modeOffset = getSeventh();
 		
@@ -248,9 +248,9 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] getMajor() {
+	public int[] asMajor() {
 
-		return getIonian();
+		return asI();
 	}
 	
 	/**
@@ -258,9 +258,9 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] getMinor() {
+	public int[] asMinor() {
 
-		return getAeolian();
+		return asVI();
 	}
 	
 	/**
@@ -268,8 +268,8 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] getScale() {
+	public int[] asScale() {
 
-		return getMajor();
+		return asI();
 	}
 }

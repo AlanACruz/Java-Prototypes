@@ -60,7 +60,7 @@ public class Pentatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] getMajor() {
+	public int[] asMajor() {
 
 		return new int[] {
 				getFirst(),
@@ -83,7 +83,7 @@ public class Pentatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] getMinor() {
+	public int[] asMinor() {
 
 		int modeOffset = getFifth();
 		
@@ -101,8 +101,8 @@ public class Pentatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] getScale() {
+	public int[] asScale() {
 
-		return getMinor();
+		return asMinor();
 	}
 }
