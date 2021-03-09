@@ -30,9 +30,9 @@ import lombok.NoArgsConstructor;
  * Scale Position:		1	2	3	4	5	6	7	8	9	10	11	12	13	14	15
  * 
  * Diatonic Interval:	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15
- * Wholetone Steps:		R	1	1	½	1	1	1	½	1	1	½	1	1	1	½	
- * Semitone Interval:	0	2	4	5	7	9	11	12	14	16	17	19	21	23	24
+ * Wholetone Steps:		0	1	1	½	1	1	1	½	1	1	½	1	1	1	½	
  * Semitone Steps:		0	2	2	1	2	2	2	1	2	2	1	2	2	2	1
+ * Semitone Interval:	0	2	4	5	7	9	11	12	14	16	17	19	21	23	24
  * 
  * @author CruzA
  */
@@ -50,19 +50,17 @@ public class Diatonic extends Scale {
 	private final int sixth = Semitone.NINE;
 	private final int seventh = Semitone.ELEVEN;
 	
-	/**
-	 * Return all tones in an Ionian mode (I).
-	 * 
+	/** 
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
 	 * Diatonic Interval:	1	2	3	4	5	6	7	8
-	 * Wholetone Steps:		R	1	1	½	1	1	1	½
-	 * Semitone Interval:	0	2	4	5	7	9	11	12
+	 * Wholetone Steps:		0	1	1	½	1	1	1	½
 	 * Semitone Steps:		0	2	2	1	2	2	2	1
+	 * Semitone Interval:	0	2	4	5	7	9	11	12
 	 * 
 	 * @return scale array
 	 */
-	public int[] asI() {
+	public int[] asSemitoneZero() {
 
 		return new int[] {
 				getFirst(),
@@ -76,18 +74,16 @@ public class Diatonic extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a Dorian mode (ii).
-	 * 
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
 	 * Diatonic Interval:	2	3	4	5	6	7	8	9
-	 * Wholetone Steps:		R	1	½	1	1	1	½	1
-	 * Semitone Interval:	2	4	5	7	9	11	12	14
+	 * Wholetone Steps:		0	1	½	1	1	1	½	1
 	 * Semitone Steps:		0	2	1	2	2	2	1	2
+	 * Semitone Interval:	2	4	5	7	9	11	12	14
 	 * 
 	 * @return scale array
 	 */
-	public int[] asII() {
+	public int[] asSemitoneTwo() {
 
 		int modeOffset = getSecond();
 		
@@ -104,18 +100,16 @@ public class Diatonic extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a Phrygian mode (iii).
-	 * 
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
 	 * Diatonic Interval:	3	4	5	6	7	8	9	10
-	 * Wholetone Steps:		R	½	1	1	1	½	1	1	
-	 * Semitone Interval:	4	5	7	9	11	12	14	16
+	 * Wholetone Steps:		0	½	1	1	1	½	1	1
 	 * Semitone Steps:		0	1	2	2	2	1	2	2
+	 * Semitone Interval:	4	5	7	9	11	12	14	16
 	 * 
 	 * @return scale array
 	 */
-	public int[] asIII() {
+	public int[] asSemitoneFour() {
 
 		int modeOffset = getThird();
 		
@@ -132,18 +126,16 @@ public class Diatonic extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a Lydian mode (IV).
-	 * 
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
 	 * Diatonic Interval:	4	5	6	7	8	9	10	11
-	 * Wholetone Steps:		R	1	1	1	½	1	1	½
-	 * Semitone Interval:	5	7	9	11	12	14	16	17
+	 * Wholetone Steps:		0	1	1	1	½	1	1	½
 	 * Semitone Steps:		0	2	2	2	1	2	2	1
+	 * Semitone Interval:	5	7	9	11	12	14	16	17
 	 * 
 	 * @return scale array
 	 */
-	public int[] asIV() {
+	public int[] asSemitoneFive() {
 
 		int modeOffset = getFourth();
 		
@@ -160,18 +152,16 @@ public class Diatonic extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a Mixolydian mode (V).
-	 * 
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
 	 * Diatonic Interval:	5	6	7	8	9	10	11	12
-	 * Wholetone Steps:		R	1	1	½	1	1	½	1
-	 * Semitone Interval:	7	9	11	12	14	16	17	19
+	 * Wholetone Steps:		0	1	1	½	1	1	½	1
 	 * Semitone Steps:		0	2	2	1	2	2	1	2
+	 * Semitone Interval:	7	9	11	12	14	16	17	19
 	 * 
 	 * @return scale array
 	 */
-	public int[] asV() {
+	public int[] asSemitoneSeven() {
 
 		int modeOffset = getFifth();
 		
@@ -188,18 +178,16 @@ public class Diatonic extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a Aeolian mode (vi).
-	 * 
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
 	 * Diatonic Interval:	6	7	8	9	10	11	12	13
-	 * Wholetone Steps:		R	1	½	1	1	½	1	1
-	 * Semitone Interval:	9	11	12	14	16	17	19	21
+	 * Wholetone Steps:		0	1	½	1	1	½	1	1
 	 * Semitone Steps:		0	2	1	2	2	1	2	2
+	 * Semitone Interval:	9	11	12	14	16	17	19	21
 	 * 
 	 * @return scale array
 	 */
-	public int[] asVI() {
+	public int[] asSemitoneNine() {
 
 		int modeOffset = getSixth();
 		
@@ -216,18 +204,16 @@ public class Diatonic extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a Locrian mode (vii).
-	 * 
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
 	 * Diatonic Interval:	7	8	9	10	11	12	13	14
-	 * Wholetone Steps:		R	½	1	1	½	1	1	1
-	 * Semitone Interval:	11	12	14	16	17	19	21	23
+	 * Wholetone Steps:		0	½	1	1	½	1	1	1
 	 * Semitone Steps:		0	1	2	2	1	2	2	2
+	 * Semitone Interval:	11	12	14	16	17	19	21	23
 	 * 
 	 * @return scale array
 	 */
-	public int[] asVII() {
+	public int[] asSemitoneEleven() {
 
 		int modeOffset = getSeventh();
 		
@@ -244,13 +230,84 @@ public class Diatonic extends Scale {
 	}
 	
 	/**
+	 * Return all tones in an Ionian mode (I).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asDiatonicI() {
+
+		return asSemitoneZero();
+	}
+	
+	/**
+	 * Return all tones in a Dorian mode (ii).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asDiatonicII() {
+
+		return asSemitoneTwo();
+	}
+	
+	/**
+	 * Return all tones in a Phrygian mode (iii).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asDiatonicIII() {
+		
+		return asSemitoneFour();
+	}
+	
+	/**
+	 * Return all tones in a Lydian mode (IV).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asDiatonicIV() {
+
+		return asSemitoneFive();
+	}
+	
+	/**
+	 * Return all tones in a Mixolydian mode (V).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asDiatonicV() {
+
+		return asSemitoneSeven();
+	}
+	
+	/**
+	 * Return all tones in a Aeolian mode (vi).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asDiatonicVI() {
+
+		return asSemitoneNine();
+	}
+	
+	/**
+	 * Return all tones in a Locrian mode (vii).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asDiatonicVII() {
+
+		return asSemitoneEleven();
+	}
+	
+	
+	/**
 	 * Return all tones in a major scale.
 	 * 
 	 * @return scale array
 	 */
 	public int[] asMajor() {
 
-		return asI();
+		return asDiatonicI();
 	}
 	
 	/**
@@ -260,7 +317,7 @@ public class Diatonic extends Scale {
 	 */
 	public int[] asMinor() {
 
-		return asVI();
+		return asDiatonicVI();
 	}
 	
 	/**
@@ -270,6 +327,6 @@ public class Diatonic extends Scale {
 	 */
 	public int[] asScale() {
 
-		return asI();
+		return asMajor();
 	}
 }

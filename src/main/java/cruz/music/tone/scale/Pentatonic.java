@@ -30,9 +30,9 @@ import lombok.NoArgsConstructor;
  * Scale Position:		1	2	3	4	5	6	7	8	9	10	11
  * 	
  * Diatonic Interval:	1	2	3	5	6	8	9 	10	12	13	15
- * Wholetone Steps:		R	1	1	1½	1	1½	1	1	1½	1	1½	
- * Semitone Interval:	0	2	4	7	9	12	14	16	19	21	24
+ * Wholetone Steps:		0	1	1	1½	1	1½	1	1	1½	1	1½
  * Semitone Steps:		0	2	2	3	2	3	2	2	3	2	3
+ * Semitone Interval:	0	2	4	7	9	12	14	16	19	21	24
  * 
  * @author CruzA
  */
@@ -54,9 +54,9 @@ public class Pentatonic extends Scale {
 	 * Scale Position:		1	2	3	4	5	6
 	 * 
 	 * Diatonic Interval:	1	2	3	5	6	8
-	 * Wholetone Steps:		R	1	1	1½	1	1½
-	 * Semitone Interval:	0	2	4	7	9	12
+	 * Wholetone Steps:		0	1	1	1½	1	1½
 	 * Semitone Steps:		0	2	2	3	2	3
+	 * Semitone Interval:	0	2	4	7	9	12
 	 * 
 	 * @return scale array
 	 */
@@ -77,9 +77,9 @@ public class Pentatonic extends Scale {
 	 * Scale Position:		1	2	3	4	5	6
 	 * 
 	 * Diatonic Interval:	6	8	9	10	12	13
-	 * Wholetone Steps:		R	1½	1	1	1½	1
-	 * Semitone Interval:	9	12	14	16	19	21
+	 * Wholetone Steps:		0	1½	1	1	1½	1
 	 * Semitone Steps:		0	3	2	2	3	2
+	 * Semitone Interval:	9	12	14	16	19	21
 	 * 
 	 * @return scale array
 	 */
