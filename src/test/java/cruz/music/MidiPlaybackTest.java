@@ -153,25 +153,25 @@ public class MidiPlaybackTest {
 				{
 					default:
 					case 1:
-						scaleArray = mode.getIonian();
+						scaleArray = mode.asI();
 						break;
 					case 2:
-						scaleArray = mode.getDorian();
+						scaleArray = mode.asII();
 						break;
 					case 3:
-						scaleArray = mode.getPhrygian();
+						scaleArray = mode.asIII();
 						break;
 					case 4:
-						scaleArray = mode.getLydian();
+						scaleArray = mode.asIV();
 						break;
 					case 5:
-						scaleArray = mode.getMixolydian();
+						scaleArray = mode.asV();
 						break;
 					case 6:
-						scaleArray = mode.getAeolian();
+						scaleArray = mode.asVI();
 						break;
 					case 7:
-						scaleArray = mode.getLocrian();
+						scaleArray = mode.asVII();
 						break;
 				}
 				
