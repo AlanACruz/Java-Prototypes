@@ -199,7 +199,7 @@ public class Blues extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a major blues scale.
+	 * Return all tones in a major scale.
 	 * 
 	 * @return scale array
 	 */
@@ -209,7 +209,7 @@ public class Blues extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a minor blues scale.
+	 * Return all tones in a minor scale.
 	 * 
 	 * @return scale array
 	 */
@@ -220,12 +220,12 @@ public class Blues extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a minor blues scale.
+	 * Return all tones in a minor scale.
 	 * 
 	 * @return scale array
 	 */
 	public int[] asScale() {
 
-		return asMajor();
+		return asMinor();
 	}
 }

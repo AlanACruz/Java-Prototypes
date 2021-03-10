@@ -97,7 +97,7 @@ public class Pentatonic extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a scale.
+	 * Return all tones in a minor scale.
 	 * 
 	 * @return scale array
 	 */

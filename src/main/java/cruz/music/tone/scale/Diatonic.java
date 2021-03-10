@@ -321,12 +321,12 @@ public class Diatonic extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a scale.
+	 * Return all tones in a minor scale.
 	 * 
 	 * @return scale array
 	 */
 	public int[] asScale() {
 
-		return asMajor();
+		return asMinor();
 	}
 }

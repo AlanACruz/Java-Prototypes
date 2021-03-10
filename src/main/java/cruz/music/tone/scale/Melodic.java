@@ -39,7 +39,7 @@ import lombok.NoArgsConstructor;
  */
 @Getter
 @NoArgsConstructor
-public class MelodicMinor extends Scale {
+public class Melodic extends Scale {
 	
 	private final int scaleLength = 7;
 	
@@ -104,7 +104,7 @@ public class MelodicMinor extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a scale.
+	 * Return all tones in a minor scale.
 	 * 
 	 * @return scale array
 	 */
