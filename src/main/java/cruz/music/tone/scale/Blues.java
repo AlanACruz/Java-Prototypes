@@ -78,7 +78,7 @@ public class Blues extends Scale {
 	 * Diatonic Interval:	2	♭3	3	5	6	8	9
 	 * Wholetone Steps:		0	½	½	1½	1	1½	1
 	 * Semitone Steps:		0	1	1	3	2	3	2
-	 * Semitone Interval:	0	3	4	7	9	12	14
+	 * Semitone Interval:	2	3	4	7	9	12	14
 	 * 
 	 * 
 	 * @return scale array
@@ -104,7 +104,7 @@ public class Blues extends Scale {
 	 * Diatonic Interval:	♭3	3	5	6	8	9	♭10
 	 * Wholetone Steps:		0	½	1½	1	1½	1	½
 	 * Semitone Steps:		0	1	3	2	3	2	1
-	 * Semitone Interval:	0	4	7	9	12	14	15
+	 * Semitone Interval:	3	4	7	9	12	14	15
 	 * 
 	 * @return scale array
 	 */
@@ -129,7 +129,7 @@ public class Blues extends Scale {
 	 * Diatonic Interval:	3	5	6	8	9	♭10	10
 	 * Wholetone Steps:		0	1½	1	1½	1	½	½
 	 * Semitone Steps:		0	3	2	3	2	1	1
-	 * Semitone Interval:	0	7	9	12	14	15	16
+	 * Semitone Interval:	4	7	9	12	14	15	16
 	 * 
 	 * @return scale array
 	 */
@@ -154,7 +154,7 @@ public class Blues extends Scale {
 	 * Diatonic Interval:	5	6	8	9	♭10	10	12
 	 * Wholetone Steps:		0	1	1½	1	½	½	1½
 	 * Semitone Steps:		0	2	3	2	1	1	3
-	 * Semitone Interval:	0	9	12	14	15	16	19
+	 * Semitone Interval:	7	9	12	14	15	16	19
 	 * 
 	 * @return scale array
 	 */
@@ -179,7 +179,7 @@ public class Blues extends Scale {
 	 * Diatonic Interval:	6	8	9	♭10	10	12	13
 	 * Wholetone Steps:		0	1½	1	½	½	1½	1
 	 * Semitone Steps:		0	3	2	1	1	3	2
-	 * Semitone Interval:	0	12	14	15	16	19	21
+	 * Semitone Interval:	9	12	14	15	16	19	21
 	 * 
 	 * @return scale array
 	 */

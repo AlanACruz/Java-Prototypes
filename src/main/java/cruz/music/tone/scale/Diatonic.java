@@ -307,7 +307,7 @@ public class Diatonic extends Scale {
 	 */
 	public int[] asMajor() {
 
-		return asDiatonicI();
+		return asSemitoneZero();
 	}
 	
 	/**
@@ -317,7 +317,7 @@ public class Diatonic extends Scale {
 	 */
 	public int[] asMinor() {
 
-		return asDiatonicVI();
+		return asSemitoneNine();
 	}
 	
 	/**

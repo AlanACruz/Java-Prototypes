@@ -52,20 +52,19 @@ public class Harmonic extends Scale {
 	private final int seventh = Semitone.ELEVEN;
 
 	/**
-	 * Return all tones in a major scale.
-	 *
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
 	 * Diatonic Interval:	1	2	3	4	♯5	6	7	8
-	 * Wholetone Steps:		0	1	1	½	1½	1	1	½
+	 * Wholetone Steps:		0	1	1	½	1½	½	1	½
 	 * Semitone Steps:		0	2	2	1	3	1	2	1
 	 * Semitone Interval:	0	2	4	5	8	9	11	12
  	 *
 	 * @return scale array
 	 */
-	public int[] asMajor() {
+	public int[] asSemitoneZero() {
 
 		return new int[] {
+				
 				getFirst(),
 				getSecond(),
 				getThird(),
@@ -77,22 +76,123 @@ public class Harmonic extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a minor scale.
-	 * 
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
-	 * Diatonic Interval:	6	7	8	9	10	♯11	♯12	13	
-	 * Wholetone Steps:		0	1	½	1	1	½	1½	1
+	 * Diatonic Interval:	2	3	4	♯5	6	7	8	9
+	 * Wholetone Steps:		0	1	½	1½	½	1	½	1
+	 * Semitone Steps:		0	2	1	3	1	2	1	2
+	 * Semitone Interval:	2	4	5	8	9	11	12	14
+ 	 *
+	 * @return scale array
+	 */
+	public int[] asSemitoneTwo() {
+
+		int modeOffset = getSecond();
+		
+		return new int[] {
+				
+				getSecond() - modeOffset,
+				getThird() - modeOffset,
+				getFourth() - modeOffset,
+				getFifth() - modeOffset,
+				getSixth() - modeOffset,
+				getSeventh() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE
+		};
+	}
+	
+	/**
+	 * Scale Position:		1	2	3	4	5	6	7	8
+	 * 
+	 * Diatonic Interval:	3	4	♯5	6	7	8	9	10
+	 * Wholetone Steps:		0	½	1½	½	1	½	1	1
+	 * Semitone Steps:		0	1	3	1	2	1	2	2
+	 * Semitone Interval:	4	5	8	9	11	12	14	16
+ 	 *
+	 * @return scale array
+	 */
+	public int[] asSemitoneFour() {
+
+		int modeOffset = getThird();
+		
+		return new int[] {
+
+				getThird() - modeOffset,
+				getFourth() - modeOffset,
+				getFifth() - modeOffset,
+				getSixth() - modeOffset,
+				getSeventh() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE,
+				getSecond() - modeOffset + Octave.ONE
+		};
+	}
+	/**
+	 * Scale Position:		1	2	3	4	5	6	7	8
+	 * 
+	 * Diatonic Interval:	4	♯5	6	7	8	9	10	11
+	 * Wholetone Steps:		0	1½	½	1	½	1	1	½
+	 * Semitone Steps:		0	3	1	2	1	2	2	1
+	 * Semitone Interval:	5	8	9	11	12	14	16	17
+ 	 *
+	 * @return scale array
+	 */
+	public int[] asSemitoneFive() {
+
+		int modeOffset = getFourth();
+		
+		return new int[] {
+				
+				getFourth() - modeOffset,				
+				getFifth() - modeOffset,
+				getSixth() - modeOffset,
+				getSeventh() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE,
+				getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset	+ Octave.ONE			
+		};
+	}
+	/**
+	 * Scale Position:		1	2	3	4	5	6	7	8
+	 * 
+	 * Diatonic Interval:	♯5	6	7	8	9	10	11	♯12
+	 * Wholetone Steps:		0	½	1	½	1	1	½	1½
+	 * Semitone Steps:		0	1	2	1	2	2	1	3
+	 * Semitone Interval:	8	9	11	12	14	16	17	20
+ 	 *
+	 * @return scale array
+	 */
+	public int[] asSemitoneEight() {
+
+		int modeOffset = getFifth();
+		
+		return new int[] {
+				
+				getFifth() - modeOffset,
+				getSixth() - modeOffset,
+				getSeventh() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE,
+				getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE,
+				getFourth() - modeOffset + Octave.ONE,
+		};
+	}
+	
+	/**
+	 * Scale Position:		1	2	3	4	5	6	7	8
+	 * 
+	 * Diatonic Interval:	6	7	8	9	10	11	♯12	13
+	 * Wholetone Steps:		0	1	½	1	1	½	1½	½
 	 * Semitone Steps:		0	2	1	2	2	1	3	1
-	 * Semitone Interval:	9	11	12  14	16	17	20	21
+	 * Semitone Interval:	9	11	12	14	16	17	20	21
 	 * 
 	 * @return scale array
 	 */
-	public int[] asMinor() {
+	public int[] asSemitoneNine() {
 
 		int modeOffset = getSixth();
 		
 		return new int[] {
+				
 				getSixth() - modeOffset,
 				getSeventh() - modeOffset,
 				getFirst() - modeOffset + Octave.ONE,
@@ -101,6 +201,52 @@ public class Harmonic extends Scale {
 				getFourth() - modeOffset + Octave.ONE,
 				getFifth() - modeOffset + Octave.ONE
 		};
+	}
+	
+	/**
+	 * Scale Position:		1	2	3	4	5	6	7	8
+	 * 
+	 * Diatonic Interval:	7	8	9	10	11	♯12	13	14
+	 * Wholetone Steps:		0	½	1	1	½	1½	½	1
+	 * Semitone Steps:		0	1	2	2	1	3	1	2
+	 * Semitone Interval:	11	12	14	16	17	20	21	23
+ 	 *
+	 * @return scale array
+	 */
+	public int[] asSemitoneEleven() {
+
+		int modeOffset = getSeventh();
+		
+		return new int[] {
+				
+				getSeventh() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE,
+				getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE,
+				getFourth() - modeOffset + Octave.ONE,
+				getFifth() - modeOffset + Octave.ONE,
+				getSixth() - modeOffset + Octave.ONE,
+		};
+	}
+	
+	/**
+	 * Return all tones in a major scale.
+	 * 
+	 * @return scale array
+	 */
+	public int[] asMajor() {
+
+		return asSemitoneZero();
+	}
+	
+	/**
+	 * Return all tones in a minor scale.
+	 * 
+	 * @return scale array
+	 */
+	public int[] asMinor() {
+
+		return asSemitoneNine();
 	}
 	
 	/**
