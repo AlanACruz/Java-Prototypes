@@ -270,7 +270,7 @@ public class Melodic extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a Super Locrian mode (V).
+	 * Return all tones in a Super Locrian mode (♯V).
 	 * 
 	 * @return scale array
 	 */
@@ -280,7 +280,7 @@ public class Melodic extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a Melodic Minor / Jazz Minor mode (vi).
+	 * Return all tones in a Melodic Minor / Jazz Minor mode (♯vi).
 	 * 
 	 * @return scale array
 	 */

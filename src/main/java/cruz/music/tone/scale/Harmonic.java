@@ -280,7 +280,7 @@ public class Harmonic extends Scale {
 	}
 	
 	/**
-	 * Return all tones in a Harmonic Minor mode (vi).
+	 * Return all tones in a Harmonic Minor mode (♯vi).
 	 * 
 	 * @return scale array
 	 */

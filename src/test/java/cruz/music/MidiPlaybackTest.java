@@ -134,44 +134,44 @@ public class MidiPlaybackTest {
 
 				if(0 <= l && l <= 7)
 				{
-					modeNum = 2;
+					modeNum = 1;
 				} 
 				else if(8 <= l && l <= 15)
 				{
-					modeNum = 6;
+					modeNum = 5;
 				} 
 				else if(16 <= l && l <= 23)
 				{
-					modeNum = 7;
+					modeNum = 6;
 				}
 				else if(24 <= l && l <= 31)
 				{
-					modeNum = 5;
+					modeNum = 4;
 				}
 				
 				switch (modeNum)
 				{
 					default:
 					case 1:
-						scaleArray = mode.asDiatonicI();
+						scaleArray = mode.asIonian();
 						break;
 					case 2:
-						scaleArray = mode.asDiatonicII();
+						scaleArray = mode.asDorian();
 						break;
 					case 3:
-						scaleArray = mode.asDiatonicIII();
+						scaleArray = mode.asPhrygian();
 						break;
 					case 4:
-						scaleArray = mode.asDiatonicIV();
+						scaleArray = mode.asLydian();
 						break;
 					case 5:
-						scaleArray = mode.asDiatonicV();
+						scaleArray = mode.asMixolydian();
 						break;
 					case 6:
-						scaleArray = mode.asDiatonicVI();
+						scaleArray = mode.asAeolian();
 						break;
 					case 7:
-						scaleArray = mode.asDiatonicVII();
+						scaleArray = mode.asLocrian();
 						break;
 				}
 				
@@ -194,7 +194,7 @@ public class MidiPlaybackTest {
 				
 				if(l == 0 || l == 8 || l == 16 || l == 24)
 				{
-					rndNote = initialNote +  Octave.ONE + mode.getFirst();
+					rndNote = mode.getFirst();
 					
 					melodyCutoff = restCutoff - 1;
 					chordCutoff = melodyCutoff;
@@ -202,7 +202,7 @@ public class MidiPlaybackTest {
 				}
 				else
 				{
-					rndNote = initialNote +  Octave.ONE + interval;
+					rndNote = interval;
 					
 					melodyCutoff = restCutoff - 3;
 					chordCutoff = 0;
@@ -242,16 +242,16 @@ public class MidiPlaybackTest {
 				}
 				
 				// Melody
-				mChannels[4].noteOn(rndNote, melodyVelocity);
+				mChannels[4].noteOn(initialNote + interval + rndNote  + Octave.ONE, melodyVelocity);
 				
 				// Chord
-				mChannels[0].noteOn(initialNote + Octave.ONE_DOWN + mode.getFirst(), chordVelocity);
-				mChannels[1].noteOn(initialNote + Octave.ONE_DOWN + mode.getThird(), chordVelocity);
-				mChannels[2].noteOn(initialNote + Octave.ONE_DOWN + mode.getFifth(), chordVelocity);
-				mChannels[3].noteOn(initialNote + Octave.ONE_DOWN + mode.getSeventh(), chordVelocity);
+				mChannels[0].noteOn(initialNote + interval + mode.getFirst(), chordVelocity);
+				mChannels[1].noteOn(initialNote + interval + mode.getThird(), chordVelocity);
+				mChannels[2].noteOn(initialNote + interval + mode.getFifth(), chordVelocity);
+				mChannels[3].noteOn(initialNote + interval + mode.getSeventh(), chordVelocity);
 
 				// Base Drone
-				mChannels[5].noteOn(initialNote + Octave.TWO_DOWN + mode.getSeventh(), bassVelocity);
+				mChannels[5].noteOn(initialNote + interval + Octave.ONE_DOWN, bassVelocity);
 				
 				
 				
