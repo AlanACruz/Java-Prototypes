@@ -234,7 +234,7 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asDiatonicI() {
+	public int[] asIonian() {
 
 		return asSemitoneZero();
 	}
@@ -244,7 +244,7 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asDiatonicII() {
+	public int[] asDorian() {
 
 		return asSemitoneTwo();
 	}
@@ -254,7 +254,7 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asDiatonicIII() {
+	public int[] asPhrygian() {
 		
 		return asSemitoneFour();
 	}
@@ -264,7 +264,7 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asDiatonicIV() {
+	public int[] asLydian() {
 
 		return asSemitoneFive();
 	}
@@ -274,7 +274,7 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asDiatonicV() {
+	public int[] asMixolydian() {
 
 		return asSemitoneSeven();
 	}
@@ -284,7 +284,7 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asDiatonicVI() {
+	public int[] asAeolian() {
 
 		return asSemitoneNine();
 	}
@@ -294,7 +294,7 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asDiatonicVII() {
+	public int[] asLocrian() {
 
 		return asSemitoneEleven();
 	}

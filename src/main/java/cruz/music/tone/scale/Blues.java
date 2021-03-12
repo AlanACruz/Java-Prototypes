@@ -80,7 +80,6 @@ public class Blues extends Scale {
 	 * Semitone Steps:		0	1	1	3	2	3	2
 	 * Semitone Interval:	2	3	4	7	9	12	14
 	 * 
-	 * 
 	 * @return scale array
 	 */
 	public int[] asSemitoneTwo() {

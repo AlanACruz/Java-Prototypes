@@ -230,6 +230,77 @@ public class Harmonic extends Scale {
 	}
 	
 	/**
+	 * Return all tones in an Ionian ♯5 mode (I).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asIonianSharpFive() {
+
+		return asSemitoneZero();
+	}
+	
+	/**
+	 * Return all tones in a Dorian ♯11 mode (ii).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asDorianSharpEleven() {
+
+		return asSemitoneTwo();
+	}
+	
+	/**
+	 * Return all tones in a Phrygian Dominant mode (iii).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asPhrygianDominant() {
+		
+		return asSemitoneFour();
+	}
+	
+	/**
+	 * Return all tones in a Lydian ♯2 mode (IV).
+	 * 
+	 * @return scale array
+	 */
+	public int[] LydianSharpTwo() {
+
+		return asSemitoneFive();
+	}
+	
+	/**
+	 * Return all tones in a Super Locrian ♭♭7 mode (V).
+	 * 
+	 * @return scale array
+	 */
+	public int[] SuperLocrianFlatFlatSeven() {
+
+		return asSemitoneEight();
+	}
+	
+	/**
+	 * Return all tones in a Harmonic Minor mode (vi).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asHarmonicMinor() {
+
+		return asSemitoneNine();
+	}
+	
+	/**
+	 * Return all tones in a Locrian 13 / Locrian 6 mode (vii).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asLocrianThirteen() {
+
+		return asSemitoneEleven();
+	}
+	
+	
+	/**
 	 * Return all tones in a major scale.
 	 * 
 	 * @return scale array

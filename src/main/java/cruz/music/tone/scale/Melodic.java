@@ -230,6 +230,76 @@ public class Melodic extends Scale {
 	}
 	
 	/**
+	 * Return all tones in an Lydian Augmented mode (I).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asLydianAugmented() {
+
+		return asSemitoneZero();
+	}
+	
+	/**
+	 * Return all tones in a Lydian Dominant mode (ii).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asLydianDominat() {
+
+		return asSemitoneTwo();
+	}
+	
+	/**
+	 * Return all tones in a Mixolydian ♭13 (iii).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asMixolydianFlatThirteen() {
+		
+		return asSemitoneFour();
+	}
+	
+	/**
+	 * Return all tones in a Locrian ♯2 mode (IV).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asLocrianSharpTwo() {
+
+		return asSemitoneSix();
+	}
+	
+	/**
+	 * Return all tones in a Super Locrian mode (V).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asSuperLocrian() {
+
+		return asSemitoneEight();
+	}
+	
+	/**
+	 * Return all tones in a Melodic Minor / Jazz Minor mode (vi).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asMelodicMinor() {
+
+		return asSemitoneNine();
+	}
+	
+	/**
+	 * Return all tones in a Dorian ♭9 mode (vii).
+	 * 
+	 * @return scale array
+	 */
+	public int[] asDorianFlatNine() {
+
+		return asSemitoneEleven();
+	}
+	
+	/**
 	 * Return all tones in a major scale.
 	 * 
 	 * @return scale array
