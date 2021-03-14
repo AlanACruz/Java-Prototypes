@@ -23,8 +23,6 @@ package cruz.luthier;
 
 import java.math.BigDecimal;
 
-import cruz.music.note.value.LetterNames;
-import cruz.music.interval.Octave;
 import lombok.AllArgsConstructor;
 
 /**
@@ -33,9 +31,10 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class Note
 {
-	private LetterNames letterName;
-	private Octave     octave;
-
+	private int letterName;
+	private int octave;
+	
+	
 	/**
 	 * Formula 1 : k is the fret number f-sub(0) = f-naught = open string = 0th fret
 	 *
@@ -57,9 +56,6 @@ public class Note
 	 */
 	public int getIntdexNumber()
 	{
-		int midiOffset = 12;
-		// return MidiPitchNotation.getMidiNoteNumber(letterName, octave) - midiOffset;
-	
-		return 0;
+		return letterName + octave;
 	}
 }
