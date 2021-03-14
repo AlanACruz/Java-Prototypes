@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  ******************************************************************************/
-package cruz.util;
+package cruz.core.util;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
