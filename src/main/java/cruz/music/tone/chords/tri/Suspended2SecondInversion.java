@@ -32,16 +32,16 @@ import cruz.music.tone.chords.Chord;
  * 
  * @author CruzA
  */
-public class Suspended2SecondInversion extends Chord {
+public class Suspended2SecondInversion extends Chord
+{
 
 	@Override
 	public int[] play()
 	{
-		return new int[] {
-				
-				Semitone.SEVEN,
-				Semitone.ZERO + Octave.ONE,
-				Semitone.TWO + Octave.ONE
+		return new int[]
+		{
+
+				Semitone.SEVEN, Semitone.ZERO + Octave.ONE, Semitone.TWO + Octave.ONE
 		};
 	}
 }

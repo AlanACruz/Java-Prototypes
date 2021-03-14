@@ -72,14 +72,18 @@ public class CarTest
 	public void test_LombokRace()
 	{
 		// Lombok Builder
-		a = Car.builder().theEngine(new EightCylinder())
+		a = Car
+				.builder()
+				.theEngine(new EightCylinder())
 				.frontLeft(new SmallTire())
 				.frontRight(new SmallTire())
 				.backLeft(new SmallTire())
 				.backRight(new SmallTire())
 				.build();
 
-		b = Car.builder().theEngine(new FourCylinder())
+		b = Car
+				.builder()
+				.theEngine(new FourCylinder())
 				.frontLeft(new LargeTire())
 				.frontRight(new LargeTire())
 				.backLeft(new LargeTire())

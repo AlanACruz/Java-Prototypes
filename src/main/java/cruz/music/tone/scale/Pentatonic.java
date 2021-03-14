@@ -38,16 +38,17 @@ import lombok.NoArgsConstructor;
  */
 @Getter
 @NoArgsConstructor
-public class Pentatonic extends Scale {
-	
+public class Pentatonic extends Scale
+{
+
 	private final int scaleLength = 5;
-	
-	private final int first = Semitone.ZERO;
+
+	private final int first  = Semitone.ZERO;
 	private final int second = Semitone.TWO;
-	private final int third = Semitone.FOUR;
+	private final int third  = Semitone.FOUR;
 	private final int fourth = Semitone.SEVEN;
-	private final int fifth = Semitone.NINE;
-	
+	private final int fifth  = Semitone.NINE;
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6
 	 * 	
@@ -55,21 +56,19 @@ public class Pentatonic extends Scale {
 	 * Wholetone Steps:		0	1	1	1½	1	1½
 	 * Semitone Steps:		0	2	2	3	2	3
 	 * Semitone Interval:	0	2	4	7	9	12
- 	 *
+	 *
 	 * @return scale array
 	 */
-	public int[] asSemitoneZero() {
+	public int[] asSemitoneZero()
+	{
 
-		return new int[] {
-				
-				getFirst(),
-				getSecond(),
-				getThird(),
-				getFourth(),
-				getFifth(),
+		return new int[]
+		{
+
+				getFirst(), getSecond(), getThird(), getFourth(), getFifth(),
 		};
 	}
-	
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6
 	 * 	
@@ -77,23 +76,22 @@ public class Pentatonic extends Scale {
 	 * Wholetone Steps:		0	1	1½	1	1½	1
 	 * Semitone Steps:		0	2	3	2	3	2
 	 * Semitone Interval:	2	4	7	9	12	14
- 	 *
+	 *
 	 * @return scale array
 	 */
-	public int[] asSemitoneTwo() {
+	public int[] asSemitoneTwo()
+	{
 
 		int modeOffset = getSecond();
-		
-		return new int[] {
-				
-				getSecond() - modeOffset,
-				getThird() - modeOffset,
-				getFourth() - modeOffset,
-				getFifth() - modeOffset,
+
+		return new int[]
+		{
+
+				getSecond() - modeOffset, getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
 				getFirst() - modeOffset + Octave.ONE
 		};
 	}
-	
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6
 	 * 	
@@ -101,22 +99,22 @@ public class Pentatonic extends Scale {
 	 * Wholetone Steps:		0	1½	1	1½	1	1
 	 * Semitone Steps:		0	3	2	3	2	2
 	 * Semitone Interval:	4	7	9	12	14	16
- 	 *
+	 *
 	 * @return scale array
 	 */
-	public int[] asSemitoneFour() {
+	public int[] asSemitoneFour()
+	{
 
 		int modeOffset = getThird();
-		
-		return new int[] {
 
-				getThird() - modeOffset,
-				getFourth() - modeOffset,
-				getFifth() - modeOffset,
-				getFirst() - modeOffset + Octave.ONE,
-				getSecond() - modeOffset + Octave.ONE
+		return new int[]
+		{
+
+				getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE
 		};
 	}
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6
 	 * 	
@@ -127,19 +125,19 @@ public class Pentatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneSeven() {
+	public int[] asSemitoneSeven()
+	{
 
 		int modeOffset = getFourth();
-		
-		return new int[] {
-				
-				getFourth() - modeOffset,				
-				getFifth() - modeOffset,
-				getFirst() - modeOffset + Octave.ONE,
-				getSecond() - modeOffset + Octave.ONE,
-				getThird() - modeOffset	+ Octave.ONE			
+
+		return new int[]
+		{
+
+				getFourth() - modeOffset, getFifth() - modeOffset, getFirst() - modeOffset + Octave.ONE,
+				getSecond() - modeOffset + Octave.ONE, getThird() - modeOffset + Octave.ONE
 		};
 	}
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6
 	 * 	
@@ -147,50 +145,51 @@ public class Pentatonic extends Scale {
 	 * Wholetone Steps:		0	1½	1	1	1½	1
 	 * Semitone Steps:		0	3	2	2	3	2
 	 * Semitone Interval:	9	12	14	16	19	21
- 	 *
+	 *
 	 * @return scale array
 	 */
-	public int[] asSemitoneNine() {
+	public int[] asSemitoneNine()
+	{
 
 		int modeOffset = getFifth();
-		
-		return new int[] {
-				
-				getFifth() - modeOffset,
-				getFirst() - modeOffset + Octave.ONE,
-				getSecond() - modeOffset + Octave.ONE,
-				getThird() - modeOffset + Octave.ONE,
-				getFourth() - modeOffset + Octave.ONE,
+
+		return new int[]
+		{
+
+				getFifth() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
 		};
 	}
-	
-	
+
 	/**
 	 * Return all tones in a major scale.
 	 * 
 	 * @return scale array
 	 */
-	public int[] asMajor() {
+	public int[] asMajor()
+	{
 
 		return asSemitoneZero();
 	}
-	
+
 	/**
 	 * Return all tones in a minor scale.
 	 * 
 	 * @return scale array
 	 */
-	public int[] asMinor() {
+	public int[] asMinor()
+	{
 
 		return asSemitoneNine();
 	}
-	
+
 	/**
 	 * Return all tones in a minor scale.
 	 * 
 	 * @return scale array
 	 */
-	public int[] asScale() {
+	public int[] asScale()
+	{
 
 		return asMinor();
 	}

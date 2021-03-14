@@ -31,14 +31,15 @@ import cruz.music.tone.chords.Chord;
  * 
  * @author CruzA
  */
-public class DyadThird extends Chord {
+public class DyadThird extends Chord
+{
 
 	public int[] play()
 	{
-		return new int[] {
-				
-				Semitone.ZERO,
-				Semitone.FOUR
+		return new int[]
+		{
+
+				Semitone.ZERO, Semitone.FOUR
 		};
 	}
 }

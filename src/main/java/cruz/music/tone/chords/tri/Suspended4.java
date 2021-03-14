@@ -31,16 +31,16 @@ import cruz.music.tone.chords.Chord;
  * 
  * @author CruzA
  */
-public class Suspended4 extends Chord {
+public class Suspended4 extends Chord
+{
 
 	@Override
 	public int[] play()
 	{
-		return new int[] {
-				
-				Semitone.ZERO,
-				Semitone.FOUR,
-				Semitone.FIVE
+		return new int[]
+		{
+
+				Semitone.ZERO, Semitone.FOUR, Semitone.FIVE
 		};
 	}
 }

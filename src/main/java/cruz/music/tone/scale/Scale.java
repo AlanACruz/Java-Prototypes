@@ -27,14 +27,16 @@ import lombok.Getter;
  * @author CruzA
  */
 @Getter
-public abstract class Scale {
-	
+public abstract class Scale
+{
+
 	public abstract int getScaleLength();
-	
+
 	public abstract int[] asScale();
-	
-	public String getScaleName() {
-		
+
+	public String getScaleName()
+	{
+
 		return getClass().getSimpleName();
 	}
 }

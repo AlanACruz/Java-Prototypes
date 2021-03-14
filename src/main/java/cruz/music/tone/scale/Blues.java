@@ -38,17 +38,18 @@ import lombok.NoArgsConstructor;
  */
 @Getter
 @NoArgsConstructor
-public class Blues extends Scale {
-	
+public class Blues extends Scale
+{
+
 	private final int scaleLength = 6;
-	
-	private final int first = Semitone.ZERO;
+
+	private final int first  = Semitone.ZERO;
 	private final int second = Semitone.TWO;
-	private final int third = Semitone.THREE;
+	private final int third  = Semitone.THREE;
 	private final int fourth = Semitone.FOUR;
-	private final int fifth = Semitone.SEVEN;
-	private final int sixth = Semitone.NINE;
-	
+	private final int fifth  = Semitone.SEVEN;
+	private final int sixth  = Semitone.NINE;
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6	7
 	 * 
@@ -60,18 +61,15 @@ public class Blues extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneZero() {
+	public int[] asSemitoneZero()
+	{
 
-		return new int[] {
-				getFirst(),
-				getSecond(),
-				getThird(),
-				getFourth(),
-				getFifth(),
-				getSixth()
+		return new int[]
+		{
+				getFirst(), getSecond(), getThird(), getFourth(), getFifth(), getSixth()
 		};
 	}
-	
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6	7
 	 * 
@@ -82,21 +80,19 @@ public class Blues extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneTwo() {
+	public int[] asSemitoneTwo()
+	{
 
 		int modeOffset = getSecond();
-		
-		return new int[] {
-				
-				getSecond() - modeOffset,
-				getThird() - modeOffset,
-				getFourth() - modeOffset,
-				getFifth() - modeOffset,
-				getSixth() - modeOffset,
-				getFirst() - modeOffset + Octave.ONE
+
+		return new int[]
+		{
+
+				getSecond() - modeOffset, getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
+				getSixth() - modeOffset, getFirst() - modeOffset + Octave.ONE
 		};
 	}
-	
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6	7
 	 * 
@@ -107,21 +103,19 @@ public class Blues extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneThree() {
+	public int[] asSemitoneThree()
+	{
 
 		int modeOffset = getThird();
-		
-		return new int[] {
-				
-				getThird() - modeOffset,
-				getFourth() - modeOffset,
-				getFifth() - modeOffset,
-				getSixth() - modeOffset,
-				getFirst() - modeOffset + Octave.ONE,
-				getSecond() - modeOffset + Octave.ONE
+
+		return new int[]
+		{
+
+				getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE
 		};
 	}
-	
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6	7
 	 * 
@@ -132,21 +126,20 @@ public class Blues extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitonFour() {
+	public int[] asSemitonFour()
+	{
 
 		int modeOffset = getFourth();
-		
-		return new int[] {
-				
-				getFourth() - modeOffset,
-				getFifth() - modeOffset,
-				getSixth() - modeOffset,
-				getFirst() - modeOffset + Octave.ONE,
-				getSecond() - modeOffset + Octave.ONE,
+
+		return new int[]
+		{
+
+				getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
 				getThird() - modeOffset + Octave.ONE
 		};
 	}
-	
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6	7
 	 * 
@@ -157,21 +150,20 @@ public class Blues extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitonSeven() {
+	public int[] asSemitonSeven()
+	{
 
 		int modeOffset = getFifth();
-		
-		return new int[] {
-				
-				getFifth() - modeOffset,
-				getSixth() - modeOffset,
-				getFirst() - modeOffset + Octave.ONE,
-				getSecond() - modeOffset + Octave.ONE,
-				getThird() - modeOffset + Octave.ONE,
+
+		return new int[]
+		{
+
+				getFifth() - modeOffset, getSixth() - modeOffset, getFirst() - modeOffset + Octave.ONE,
+				getSecond() - modeOffset + Octave.ONE, getThird() - modeOffset + Octave.ONE,
 				getFourth() - modeOffset + Octave.ONE
 		};
 	}
-	
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6	7
 	 * 
@@ -182,48 +174,49 @@ public class Blues extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitonNine() {
+	public int[] asSemitonNine()
+	{
 
 		int modeOffset = getSixth();
-				
-		return new int[] {
 
-			getSixth() - modeOffset,
-			getFirst() - modeOffset + Octave.ONE,
-			getSecond() - modeOffset + Octave.ONE,
-			getThird() - modeOffset + Octave.ONE,
-			getFourth() - modeOffset + Octave.ONE,
-			getFifth() - modeOffset + Octave.ONE
+		return new int[]
+		{
+
+				getSixth() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
+				getFifth() - modeOffset + Octave.ONE
 		};
 	}
-	
+
 	/**
 	 * Return all tones in a major scale.
 	 * 
 	 * @return scale array
 	 */
-	public int[] asMajor() {
+	public int[] asMajor()
+	{
 
 		return asSemitoneZero();
 	}
-	
+
 	/**
 	 * Return all tones in a minor scale.
 	 * 
 	 * @return scale array
 	 */
-	public int[] asMinor() {
+	public int[] asMinor()
+	{
 
-		
 		return asSemitonNine();
 	}
-	
+
 	/**
 	 * Return all tones in a minor scale.
 	 * 
 	 * @return scale array
 	 */
-	public int[] asScale() {
+	public int[] asScale()
+	{
 
 		return asMinor();
 	}

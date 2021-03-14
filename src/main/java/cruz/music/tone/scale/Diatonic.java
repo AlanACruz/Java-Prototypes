@@ -38,18 +38,19 @@ import lombok.NoArgsConstructor;
  */
 @Getter
 @NoArgsConstructor
-public class Diatonic extends Scale {
-	
+public class Diatonic extends Scale
+{
+
 	private final int scaleLength = 7;
-	
-	private final int first = Semitone.ZERO;
-	private final int second = Semitone.TWO;
-	private final int third = Semitone.FOUR;
-	private final int fourth = Semitone.FIVE;
-	private final int fifth = Semitone.SEVEN;
-	private final int sixth = Semitone.NINE;
+
+	private final int first   = Semitone.ZERO;
+	private final int second  = Semitone.TWO;
+	private final int third   = Semitone.FOUR;
+	private final int fourth  = Semitone.FIVE;
+	private final int fifth   = Semitone.SEVEN;
+	private final int sixth   = Semitone.NINE;
 	private final int seventh = Semitone.ELEVEN;
-	
+
 	/** 
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
@@ -60,19 +61,15 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneZero() {
+	public int[] asSemitoneZero()
+	{
 
-		return new int[] {
-				getFirst(),
-				getSecond(),
-				getThird(),
-				getFourth(),
-				getFifth(),
-				getSixth(),
-				getSeventh()
+		return new int[]
+		{
+				getFirst(), getSecond(), getThird(), getFourth(), getFifth(), getSixth(), getSeventh()
 		};
 	}
-	
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
@@ -83,22 +80,19 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneTwo() {
+	public int[] asSemitoneTwo()
+	{
 
 		int modeOffset = getSecond();
-		
-		return new int[] {
-				
-			getSecond() - modeOffset,
-			getThird() - modeOffset,
-			getFourth() - modeOffset,
-			getFifth() - modeOffset,
-			getSixth() - modeOffset,
-			getSeventh() - modeOffset,
-			getFirst() - modeOffset + Octave.ONE
+
+		return new int[]
+		{
+
+				getSecond() - modeOffset, getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
+				getSixth() - modeOffset, getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE
 		};
 	}
-	
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
@@ -109,22 +103,19 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneFour() {
+	public int[] asSemitoneFour()
+	{
 
 		int modeOffset = getThird();
-		
-		return new int[] {
-				
-			getThird() - modeOffset,
-			getFourth() - modeOffset,
-			getFifth() - modeOffset,
-			getSixth() - modeOffset,
-			getSeventh() - modeOffset,
-			getFirst() - modeOffset + Octave.ONE,
-			getSecond() - modeOffset + Octave.ONE
+
+		return new int[]
+		{
+
+				getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset,
+				getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE
 		};
 	}
-	
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
@@ -135,22 +126,20 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneFive() {
+	public int[] asSemitoneFive()
+	{
 
 		int modeOffset = getFourth();
-		
-		return new int[] {
-				
-			getFourth() - modeOffset,
-			getFifth() - modeOffset,
-			getSixth() - modeOffset,
-			getSeventh() - modeOffset,
-			getFirst() - modeOffset + Octave.ONE,
-			getSecond() - modeOffset + Octave.ONE,
-			getThird() - modeOffset + Octave.ONE
+
+		return new int[]
+		{
+
+				getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset, getSeventh() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE
 		};
 	}
-	
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
@@ -161,22 +150,20 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneSeven() {
+	public int[] asSemitoneSeven()
+	{
 
 		int modeOffset = getFifth();
-		
-		return new int[] {
-				
-			getFifth() - modeOffset,
-			getSixth() - modeOffset,
-			getSeventh() - modeOffset,
-			getFirst() - modeOffset + Octave.ONE,
-			getSecond() - modeOffset + Octave.ONE,
-			getThird() - modeOffset + Octave.ONE,
-			getFourth() - modeOffset + Octave.ONE
+
+		return new int[]
+		{
+
+				getFifth() - modeOffset, getSixth() - modeOffset, getSeventh() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE
 		};
 	}
-	
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
@@ -187,22 +174,20 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneNine() {
+	public int[] asSemitoneNine()
+	{
 
 		int modeOffset = getSixth();
-		
-		return new int[] {
 
-			getSixth() - modeOffset,
-			getSeventh() - modeOffset,
-			getFirst() - modeOffset + Octave.ONE,
-			getSecond() - modeOffset + Octave.ONE,
-			getThird() - modeOffset + Octave.ONE,
-			getFourth() - modeOffset + Octave.ONE,
-			getFifth() - modeOffset + Octave.ONE
+		return new int[]
+		{
+
+				getSixth() - modeOffset, getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE,
+				getSecond() - modeOffset + Octave.ONE, getThird() - modeOffset + Octave.ONE,
+				getFourth() - modeOffset + Octave.ONE, getFifth() - modeOffset + Octave.ONE
 		};
 	}
-	
+
 	/**
 	 * Scale Position:		1	2	3	4	5	6	7	8
 	 * 
@@ -213,119 +198,126 @@ public class Diatonic extends Scale {
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneEleven() {
+	public int[] asSemitoneEleven()
+	{
 
 		int modeOffset = getSeventh();
-		
-		return new int[] {
 
-			getSeventh() - modeOffset,
-			getFirst() - modeOffset + Octave.ONE,
-			getSecond() - modeOffset + Octave.ONE,
-			getThird() - modeOffset + Octave.ONE,
-			getFourth() - modeOffset + Octave.ONE,
-			getFifth() - modeOffset + Octave.ONE,
-			getSixth() - modeOffset + Octave.ONE
+		return new int[]
+		{
+
+				getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
+				getFifth() - modeOffset + Octave.ONE, getSixth() - modeOffset + Octave.ONE
 		};
 	}
-	
+
 	/**
 	 * Return all tones in an Ionian mode (I).
 	 * 
 	 * @return scale array
 	 */
-	public int[] asIonian() {
+	public int[] asIonian()
+	{
 
 		return asSemitoneZero();
 	}
-	
+
 	/**
 	 * Return all tones in a Dorian mode (ii).
 	 * 
 	 * @return scale array
 	 */
-	public int[] asDorian() {
+	public int[] asDorian()
+	{
 
 		return asSemitoneTwo();
 	}
-	
+
 	/**
 	 * Return all tones in a Phrygian mode (iii).
 	 * 
 	 * @return scale array
 	 */
-	public int[] asPhrygian() {
-		
+	public int[] asPhrygian()
+	{
+
 		return asSemitoneFour();
 	}
-	
+
 	/**
 	 * Return all tones in a Lydian mode (IV).
 	 * 
 	 * @return scale array
 	 */
-	public int[] asLydian() {
+	public int[] asLydian()
+	{
 
 		return asSemitoneFive();
 	}
-	
+
 	/**
 	 * Return all tones in a Mixolydian mode (V).
 	 * 
 	 * @return scale array
 	 */
-	public int[] asMixolydian() {
+	public int[] asMixolydian()
+	{
 
 		return asSemitoneSeven();
 	}
-	
+
 	/**
 	 * Return all tones in a Aeolian mode (vi).
 	 * 
 	 * @return scale array
 	 */
-	public int[] asAeolian() {
+	public int[] asAeolian()
+	{
 
 		return asSemitoneNine();
 	}
-	
+
 	/**
 	 * Return all tones in a Locrian mode (vii).
 	 * 
 	 * @return scale array
 	 */
-	public int[] asLocrian() {
+	public int[] asLocrian()
+	{
 
 		return asSemitoneEleven();
 	}
-	
-	
+
 	/**
 	 * Return all tones in a major scale.
 	 * 
 	 * @return scale array
 	 */
-	public int[] asMajor() {
+	public int[] asMajor()
+	{
 
 		return asSemitoneZero();
 	}
-	
+
 	/**
 	 * Return all tones in a minor scale.
 	 * 
 	 * @return scale array
 	 */
-	public int[] asMinor() {
+	public int[] asMinor()
+	{
 
 		return asSemitoneNine();
 	}
-	
+
 	/**
 	 * Return all tones in a minor scale.
 	 * 
 	 * @return scale array
 	 */
-	public int[] asScale() {
+	public int[] asScale()
+	{
 
 		return asMinor();
 	}

@@ -31,16 +31,16 @@ import cruz.music.tone.chords.Chord;
  * 
  * @author CruzA
  */
-public class Minor extends Chord {
+public class Minor extends Chord
+{
 
 	@Override
 	public int[] play()
 	{
-		return new int[] {
-				
-				Semitone.ZERO,
-				Semitone.FIVE,
-				Semitone.SEVEN
+		return new int[]
+		{
+
+				Semitone.ZERO, Semitone.FIVE, Semitone.SEVEN
 		};
 	}
 }

@@ -29,20 +29,22 @@ import org.junit.jupiter.api.Test;
  * @author Alan
  *
  */
-public class SingletonTest {
-	
+public class SingletonTest
+{
+
 	SingletonTemplate firstSingleton;
 	SingletonTemplate secondSingleton;
-	
-    /**
-     * Test 
-     */
-    @Test
-    public void testSingleton() {
-    	
-    	firstSingleton = SingletonTemplate.getInstance();
-    	secondSingleton = SingletonTemplate.getInstance();
-    	
-        assertTrue( firstSingleton == secondSingleton );
-    }	// run SingletonExample
+
+	/**
+	 * Test 
+	 */
+	@Test
+	public void testSingleton()
+	{
+
+		firstSingleton  = SingletonTemplate.getInstance();
+		secondSingleton = SingletonTemplate.getInstance();
+
+		assertTrue(firstSingleton == secondSingleton);
+	} // run SingletonExample
 }

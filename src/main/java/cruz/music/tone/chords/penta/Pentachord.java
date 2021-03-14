@@ -32,18 +32,16 @@ import cruz.music.tone.chords.Chord;
  * 
  * @author CruzA
  */
-public class Pentachord extends Chord {
-	
+public class Pentachord extends Chord
+{
+
 	@Override
 	public int[] play()
 	{
-		return new int[] {
-				
-				Semitone.ZERO,
-				Semitone.FOUR,
-				Semitone.SEVEN,
-				Semitone.ELEVEN,
-				Semitone.TWO + Octave.ONE
+		return new int[]
+		{
+
+				Semitone.ZERO, Semitone.FOUR, Semitone.SEVEN, Semitone.ELEVEN, Semitone.TWO + Octave.ONE
 		};
 	}
 }

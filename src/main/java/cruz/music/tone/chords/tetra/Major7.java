@@ -33,14 +33,18 @@ import cruz.music.tone.chords.tri.Major;
  * 
  * @author CruzA
  */
-public class Major7 extends Major {
-	
+public class Major7 extends Major
+{
+
 	@Override
 	public int[] play()
 	{
-		int[] superScale = super.play();
-		int[] extendedNotes = { Semitone.ELEVEN };
-		
+		int[] superScale    = super.play();
+		int[] extendedNotes =
+		{
+				Semitone.ELEVEN
+		};
+
 		return Ints.concat(superScale, extendedNotes);
 	}
 }

@@ -33,8 +33,7 @@ public class Note
 {
 	private int letterName;
 	private int octave;
-	
-	
+
 	/**
 	 * Formula 1 : k is the fret number f-sub(0) = f-naught = open string = 0th fret
 	 *

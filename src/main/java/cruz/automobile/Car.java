@@ -46,8 +46,13 @@ public class Car extends AbstractAutomobile
 	 * @param backRight
 	 */
 	@Builder
-	public Car(@NonNull Engine theEngine, @NonNull Tire frontLeft, @NonNull Tire frontRight, @NonNull Tire backLeft,
-			@NonNull Tire backRight)
+	public Car(
+			@NonNull Engine theEngine,
+			@NonNull Tire frontLeft,
+			@NonNull Tire frontRight,
+			@NonNull Tire backLeft,
+			@NonNull Tire backRight
+	)
 	{
 		super(theEngine, frontLeft, frontRight, backLeft, backRight);
 	}
