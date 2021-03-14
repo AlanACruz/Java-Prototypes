@@ -22,10 +22,8 @@
 package cruz.automobile;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import cruz.automobile.Car;
 import cruz.automobile.engine.EightCylinder;
 import cruz.automobile.engine.FourCylinder;
 import cruz.automobile.tire.LargeTire;
@@ -35,7 +33,6 @@ import cruz.automobile.tire.SmallTire;
  * Configuration for testing Car's
  */
 @Configuration
-@ComponentScan(basePackages = "com.cruz.automobile")
 public class TestCarConfig
 {
 	@Bean

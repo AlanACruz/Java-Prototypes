@@ -3,40 +3,23 @@
  */
 package cruz.patterns.structural.singleton;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
 
 /**
  * @author Alan
  *
  */
-public class SingletonTest extends TestCase {
+public class SingletonTest {
 	
 	SingletonTemplate firstSingleton;
 	SingletonTemplate secondSingleton;
 	
     /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public SingletonTest( String testName ) {
-    	
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite() {
-    	
-        return new TestSuite( SingletonTest.class );
-    }
-
-    /**
      * Test 
      */
+    @Test
     public void testSingleton() {
     	
     	firstSingleton = SingletonTemplate.getInstance();

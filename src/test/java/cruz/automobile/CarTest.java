@@ -21,15 +21,14 @@
  */
 package cruz.automobile;
 
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import cruz.automobile.Car;
 import cruz.automobile.engine.EightCylinder;
 import cruz.automobile.engine.FourCylinder;
 import cruz.automobile.tire.LargeTire;
@@ -89,7 +88,7 @@ public class CarTest
 
 		assertTrue(a.getSpeed() > b.getSpeed());
 
-		assertNotEquals("Cars are equal and should not be!", a, b);
+		assertNotEquals(a, b, "Cars are equal and should not be!");
 	}
 
 	/**
@@ -101,7 +100,7 @@ public class CarTest
 		// Spring Bean
 		assertTrue(c.getSpeed() > d.getSpeed());
 
-		assertNotEquals("Cars are equal and should not be!", c, d);
+		assertNotEquals(c, d, "Cars are equal and should not be!");
 	}
 
 }
