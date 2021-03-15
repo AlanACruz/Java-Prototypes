@@ -21,6 +21,7 @@
  ******************************************************************************/
 package cruz.space;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 /*-
@@ -61,10 +62,13 @@ public class TleEntity extends EntityTypeOf<TleDto>
 	@Id
 	private long id;
 
+	@Column
 	private final String lineZero;
 
+	@Column
 	private final String lineOne;
 
+	@Column
 	private final String lineTwo;
 
 	@Override

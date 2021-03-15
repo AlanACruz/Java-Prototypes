@@ -21,8 +21,8 @@
  ******************************************************************************/
 package cruz.space;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-
 import javax.persistence.Id;
 
 import cruz.core.EntityTypeOf;
@@ -39,8 +39,10 @@ public class DerivedSpacecraftEntity extends EntityTypeOf<DerivedSpacecraftDto>
 	@Id
 	private long id;
 
+	@Column
 	private final long derivedId;
 
+	@Column
 	private final long spacecraftStateId;
 
 	@Override

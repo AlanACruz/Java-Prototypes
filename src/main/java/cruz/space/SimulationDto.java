@@ -23,21 +23,16 @@ package cruz.space;
 
 import java.time.ZonedDateTime;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
 import cruz.core.DtoTypeOf;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
-@Entity
 @RequiredArgsConstructor
 @Getter
 @EqualsAndHashCode(callSuper = false)
 public class SimulationDto extends DtoTypeOf<SimulationEntity>
 {
-	@Id
 	private long id;
 
 	private final ZonedDateTime realStartTime;

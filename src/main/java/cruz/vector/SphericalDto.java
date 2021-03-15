@@ -23,8 +23,6 @@ package cruz.vector;
 
 import java.math.BigDecimal;
 
-import javax.persistence.Id;
-
 import cruz.core.DtoTypeOf;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -38,7 +36,6 @@ import lombok.RequiredArgsConstructor;
 @EqualsAndHashCode(callSuper = false)
 public class SphericalDto extends DtoTypeOf<SphericalEntity>
 {
-	@Id
 	private long id;
 
 	// Radial/Euclidean Distance

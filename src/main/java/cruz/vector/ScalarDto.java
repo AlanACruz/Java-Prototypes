@@ -23,8 +23,6 @@ package cruz.vector;
 
 import java.math.BigDecimal;
 
-import javax.persistence.Id;
-
 import cruz.core.DtoTypeOf;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -35,7 +33,6 @@ import lombok.RequiredArgsConstructor;
 @EqualsAndHashCode(callSuper = false)
 public class ScalarDto extends DtoTypeOf<ScalarEntity>
 {
-	@Id
 	private long id;
 
 	private final BigDecimal magnitude;

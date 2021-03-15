@@ -28,6 +28,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
 
 import cruz.automobile.engine.EightCylinder;
 import cruz.automobile.engine.FourCylinder;
@@ -38,6 +39,7 @@ import cruz.automobile.tire.SmallTire;
  * Test for demonstrating Lombok Builder vs Spring Beans
  */
 @SpringBootTest
+@Import(TestCarConfig.class)
 public class CarTest
 {
 	/**
@@ -54,14 +56,14 @@ public class CarTest
 	 * Spring Car Bean Car c
 	 */
 	@Autowired
-	@Qualifier("raceCar")
+	@Qualifier("RaceCar")
 	Car c;
 
 	/**
 	 * Spring Car Bean Car d
 	 */
-	@Qualifier("familyCar")
 	@Autowired
+	@Qualifier("FamilyCar")
 	Car d;
 
 	/**
@@ -69,7 +71,7 @@ public class CarTest
 	 * large tires
 	 */
 	@Test
-	public void test_LombokRace()
+	public void test_LombokBuilder_Race()
 	{
 		// Lombok Builder
 		a = Car
@@ -99,7 +101,7 @@ public class CarTest
 	 * Spring Race Test Test to see if a race car is faster then a family car
 	 */
 	@Test
-	public void test_SpringRace()
+	public void test_SpringBean_Race()
 	{
 		// Spring Bean
 		assertTrue(c.getSpeed() > d.getSpeed());

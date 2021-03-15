@@ -23,6 +23,7 @@ package cruz.space;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -40,8 +41,10 @@ public class SpacecraftStateEntity extends EntityTypeOf<SpacecraftStateDto>
 	@Id
 	private long id;
 
+	@Column
 	private final long orbitId;
 
+	@Column(columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'")
 	private final BigDecimal massKg;
 
 	@Override

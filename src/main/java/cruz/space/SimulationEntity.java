@@ -23,6 +23,7 @@ package cruz.space;
 
 import java.time.ZonedDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -40,12 +41,24 @@ public class SimulationEntity extends EntityTypeOf<SimulationDto>
 	@Id
 	private long id;
 
+	// Timestamp only allows for 0 to 6 percision, to get 9 I need a custom class
+	// https://www.postgresql.org/docs/9.1/datatype-datetime.html
+	@Column(columnDefinition = "TIMESTAMP(9) WITH TIME ZOME")
 	private final ZonedDateTime realStartTime;
 
+	// Timestamp only allows for 0 to 6 percision, to get 9 I need a custom class
+	// https://www.postgresql.org/docs/9.1/datatype-datetime.html
+	@Column(columnDefinition = "TIMESTAMP(9) WITH TIME ZOME")
 	private final ZonedDateTime realEndTime;
 
+	// Timestamp only allows for 0 to 6 percision, to get 9 I need a custom class
+	// https://www.postgresql.org/docs/9.1/datatype-datetime.html
+	@Column(columnDefinition = "TIMESTAMP(9) WITH TIME ZOME")
 	private final ZonedDateTime simStartTime;
 
+	// Timestamp only allows for 0 to 6 percision, to get 9 I need a custom class
+	// https://www.postgresql.org/docs/9.1/datatype-datetime.html
+	@Column(columnDefinition = "TIMESTAMP(9) WITH TIME ZOME")
 	private final ZonedDateTime simEndTime;
 
 	@Override

@@ -21,6 +21,7 @@
  ******************************************************************************/
 package cruz.space;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 /*-
@@ -61,8 +62,10 @@ public class PropagatedSpacecraftEntity extends EntityTypeOf<PropagatedSpacecraf
 	@Id
 	private long id;
 
+	@Column
 	private final long tle_id;
 
+	@Column
 	private final long spacecraft_state_id;
 
 	@Override

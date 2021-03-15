@@ -43,15 +43,15 @@ class RcCircuitCalculatorTest
 	}
 
 	private final RcRelationship a = new RcRelationship(
-			BigDecimal.valueOf(1e3d),
-			BigDecimal.valueOf(2.5e5d),
-			BigDecimal.valueOf(0.6366e-9)
+			new BigDecimal("1e3"),
+			new BigDecimal("2.5e5"),
+			new BigDecimal("0.6366e-9")
 	);
 
 	private final RcRelationship b = new RcRelationship(
-			BigDecimal.valueOf(20d),
-			BigDecimal.valueOf(2.5e5d),
-			BigDecimal.valueOf(31.83e-9)
+			new BigDecimal("20"),
+			new BigDecimal("2.5e5"),
+			new BigDecimal("31.83e-9")
 	);
 
 	private final RcRelationship c = new RcRelationship(
@@ -89,25 +89,23 @@ class RcCircuitCalculatorTest
 	}
 
 	@Test
-	void test()
+	void test_250k_R_1k_Hz_For_Farads()
 	{
 		BigDecimal expectedFarads = a.getFarads();
-		BigDecimal ohms           = a.getOhms();
-		BigDecimal hz             = a.getHz();
+
+		BigDecimal ohms = a.getOhms();
+		BigDecimal hz   = a.getHz();
 
 		BigDecimal actualFarads = RcCircuitCalculator.findCapacitance(ohms, hz);
 
 		BigDecimal expectedRescaledFloored = expectedFarads.setScale(-3, RoundingMode.FLOOR);
 		BigDecimal actualResacledFloored   = actualFarads.setScale(-3, RoundingMode.FLOOR);
+
 		assertEquals(expectedRescaledFloored, actualResacledFloored);
-
-		assertEquals(expectedFarads, actualFarads);
-
-		assertEquals(expectedFarads.unscaledValue(), actualFarads.unscaledValue());
 	}
 
 	@Test
-	void test_250k_R_1k_Hz()
+	void test_250k_R_1k_Hz_For_Hz()
 	{
 		BigDecimal expectedHz = a.getHz();
 
@@ -120,7 +118,23 @@ class RcCircuitCalculatorTest
 	}
 
 	@Test
-	void test_250k_R_20_Hz()
+	void test_250k_R_20_Hz_For_Farads()
+	{
+		BigDecimal expectedFarads = b.getFarads();
+
+		BigDecimal ohms = b.getOhms();
+		BigDecimal hz   = b.getHz();
+
+		BigDecimal actualFarads = RcCircuitCalculator.findCapacitance(ohms, hz);
+
+		BigDecimal expectedRescaledFloored = expectedFarads.setScale(-3, RoundingMode.FLOOR);
+		BigDecimal actualResacledFloored   = actualFarads.setScale(-3, RoundingMode.FLOOR);
+
+		assertEquals(expectedRescaledFloored, actualResacledFloored);
+	}
+
+	@Test
+	void test_250k_R_20_Hz_For_Hz()
 	{
 		BigDecimal expectedHz = b.getHz();
 
@@ -133,7 +147,23 @@ class RcCircuitCalculatorTest
 	}
 
 	@Test
-	void test_250k_R_20k_Hz()
+	void test_250k_R_20k_Hz_For_Farads()
+	{
+		BigDecimal expectedFarads = c.getFarads();
+
+		BigDecimal ohms = c.getOhms();
+		BigDecimal hz   = c.getHz();
+
+		BigDecimal actualFarads = RcCircuitCalculator.findCapacitance(ohms, hz);
+
+		BigDecimal expectedRescaledFloored = expectedFarads.setScale(-3, RoundingMode.FLOOR);
+		BigDecimal actualResacledFloored   = actualFarads.setScale(-3, RoundingMode.FLOOR);
+
+		assertEquals(expectedRescaledFloored, actualResacledFloored);
+	}
+
+	@Test
+	void test_250k_R_20k_Hz_For_Hz()
 	{
 		BigDecimal expectedHz = c.getHz();
 
@@ -146,7 +176,23 @@ class RcCircuitCalculatorTest
 	}
 
 	@Test
-	void test_500k_R_1k_Hz()
+	void test_500k_R_1k_Hz_For_Farads()
+	{
+		BigDecimal expectedFarads = d.getFarads();
+
+		BigDecimal ohms = d.getOhms();
+		BigDecimal hz   = d.getHz();
+
+		BigDecimal actualFarads = RcCircuitCalculator.findCapacitance(ohms, hz);
+
+		BigDecimal expectedRescaledFloored = expectedFarads.setScale(-3, RoundingMode.FLOOR);
+		BigDecimal actualResacledFloored   = actualFarads.setScale(-3, RoundingMode.FLOOR);
+
+		assertEquals(expectedRescaledFloored, actualResacledFloored);
+	}
+
+	@Test
+	void test_500k_R_1k_Hz_For_Hz()
 	{
 		BigDecimal expectedHz = d.getHz();
 
@@ -159,7 +205,23 @@ class RcCircuitCalculatorTest
 	}
 
 	@Test
-	void test_500k_R_20_Hz()
+	void test_500k_R_20_Hz_For_Farads()
+	{
+		BigDecimal expectedFarads = e.getFarads();
+
+		BigDecimal ohms = e.getOhms();
+		BigDecimal hz   = e.getHz();
+
+		BigDecimal actualFarads = RcCircuitCalculator.findCapacitance(ohms, hz);
+
+		int expectedRescaledFloored = expectedFarads.setScale(4, RoundingMode.FLOOR).intValue();
+		int actualResacledFloored   = actualFarads.setScale(-4, RoundingMode.FLOOR).intValue();
+
+		assertEquals(expectedRescaledFloored, actualResacledFloored);
+	}
+
+	@Test
+	void test_500k_R_20_Hz_For_Hz()
 	{
 		BigDecimal expectedHz = e.getHz();
 
@@ -169,6 +231,22 @@ class RcCircuitCalculatorTest
 		BigDecimal actualHz = RcCircuitCalculator.findFrequency(ohms, farads);
 
 		assertEquals(expectedHz.longValue(), actualHz.longValue());
+	}
+
+	@Test
+	void test_500k_R_20k_For_Farads()
+	{
+		BigDecimal expectedFarads = f.getFarads();
+
+		BigDecimal ohms = f.getOhms();
+		BigDecimal hz   = f.getHz();
+
+		BigDecimal actualFarads = RcCircuitCalculator.findCapacitance(ohms, hz);
+
+		BigDecimal expectedRescaledFloored = expectedFarads.setScale(-3, RoundingMode.FLOOR);
+		BigDecimal actualResacledFloored   = actualFarads.setScale(-3, RoundingMode.FLOOR);
+
+		assertEquals(expectedRescaledFloored, actualResacledFloored);
 	}
 
 	@Test

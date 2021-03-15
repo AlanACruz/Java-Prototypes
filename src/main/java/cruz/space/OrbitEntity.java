@@ -23,8 +23,10 @@ package cruz.space;
 
 import java.time.ZonedDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 import cruz.core.EntityTypeOf;
 import cruz.vector.CartesianThreeEntity;
@@ -41,12 +43,18 @@ public class OrbitEntity extends EntityTypeOf<OrbitDto>
 	@Id
 	private long id;
 
+	// Timestamp only allows for 0 to 6 percision, to get 9 I need a custom class
+	// https://www.postgresql.org/docs/9.1/datatype-datetime.html
+	@Column(columnDefinition = "TIMESTAMP(9) WITH TIME ZOME")
 	private final ZonedDateTime timestamp;
 
+	@OneToOne
 	private final CartesianThreeEntity position;
 
+	@OneToOne
 	private final CartesianThreeEntity velocity;
 
+	@OneToOne
 	private final CartesianThreeEntity acceleration;
 
 	@Override

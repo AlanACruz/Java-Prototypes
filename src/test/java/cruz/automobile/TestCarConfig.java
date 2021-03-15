@@ -21,8 +21,8 @@
  ******************************************************************************/
 package cruz.automobile;
 
+import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import cruz.automobile.engine.EightCylinder;
 import cruz.automobile.engine.FourCylinder;
@@ -32,16 +32,16 @@ import cruz.automobile.tire.SmallTire;
 /**
  * Configuration for testing Car's
  */
-@Configuration
+@TestConfiguration
 public class TestCarConfig
 {
-	@Bean
+	@Bean(name = "FamilyCar")
 	public Car familyCar()
 	{
 		return new Car(new FourCylinder(), new SmallTire(), new SmallTire(), new SmallTire(), new SmallTire());
 	}
 
-	@Bean
+	@Bean(name = "RaceCar")
 	public Car raceCar()
 	{
 		return new Car(new EightCylinder(), new LargeTire(), new LargeTire(), new LargeTire(), new LargeTire());

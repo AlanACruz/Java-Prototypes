@@ -21,22 +21,16 @@
  ******************************************************************************/
 package cruz.space;
 
-import javax.persistence.Entity;
-
-import javax.persistence.Id;
-
 import cruz.core.DtoTypeOf;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
-@Entity
 @RequiredArgsConstructor
 @Getter
 @EqualsAndHashCode(callSuper = false)
 public class DerivedSpacecraftDto extends DtoTypeOf<DerivedSpacecraftEntity>
 {
-	@Id
 	private long id;
 
 	private final long derivedId;

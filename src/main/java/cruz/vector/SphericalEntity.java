@@ -23,6 +23,7 @@ package cruz.vector;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -44,12 +45,15 @@ public class SphericalEntity extends EntityTypeOf<SphericalDto>
 	private long id;
 
 	// Radial/Euclidean Distance
+	@Column(columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'")
 	private final BigDecimal radial;
 
 	// Inclination/Polar Angle
+	@Column(columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'")
 	private final BigDecimal theta;
 
 	// Azimuthal Angle
+	@Column(columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'")
 	private final BigDecimal phi;
 
 	@Override

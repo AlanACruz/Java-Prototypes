@@ -43,7 +43,7 @@ import cruz.music.tone.scale.Diatonic;
 public class MidiPlaybackTest
 {
 
-	@Disabled("File Name Here")
+	@Disabled("Need File Name Here")
 	@Test
 	public void playbackFileTest()
 	{
@@ -83,6 +83,7 @@ public class MidiPlaybackTest
 		}
 	}
 
+	@Disabled("Annoying Music Alert")
 	@Test
 	public void playbackSynthTest()
 	{
