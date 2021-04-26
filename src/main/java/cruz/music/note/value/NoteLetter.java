@@ -21,23 +21,40 @@
  ******************************************************************************/
 package cruz.music.note.value;
 
-import cruz.music.interval.Semitone;
-
 /**
  * @author CruzA
  */
-public class LetterNames
+public class NoteLetter
 {
-	public static final int C              = Semitone.ZERO;
-	public static final int C_SHARP_D_FLAT = Semitone.ONE;
-	public static final int D              = Semitone.TWO;
-	public static final int D_SHARP_E_FLAT = Semitone.THREE;
-	public static final int E              = Semitone.FOUR;
-	public static final int F              = Semitone.FIVE;
-	public static final int F_SHARP_G_FLAT = Semitone.SIX;
-	public static final int G              = Semitone.SEVEN;
-	public static final int G_SHARP_A_FLAT = Semitone.EIGHT;
-	public static final int A              = Semitone.NINE;
-	public static final int A_SHARP_B_FLAT = Semitone.TEN;
-	public static final int B              = Semitone.ELEVEN;
+	public static final String C              = "C ";
+	public static final String C_SHARP_D_FLAT = "C#";
+	public static final String D              = "D ";
+	public static final String D_SHARP_E_FLAT = "D#";
+	public static final String E              = "E ";
+	public static final String F              = "F ";
+	public static final String F_SHARP_G_FLAT = "F#";
+	public static final String G              = "G ";
+	public static final String G_SHARP_A_FLAT = "G#";
+	public static final String A              = "A ";
+	public static final String A_SHARP_B_FLAT = "A#";
+	public static final String B              = "B ";
+
+	public static String getNoteLetterFromNoteNumber(int note)
+	{
+		if (note < 0)
+		{
+			throw new IllegalArgumentException();
+		}
+
+		String[] NoteLettersArray =
+		{
+				NoteLetter.C, NoteLetter.C_SHARP_D_FLAT, NoteLetter.D, NoteLetter.D_SHARP_E_FLAT, NoteLetter.E,
+				NoteLetter.F, NoteLetter.F_SHARP_G_FLAT, NoteLetter.G, NoteLetter.G_SHARP_A_FLAT, NoteLetter.A,
+				NoteLetter.A_SHARP_B_FLAT, NoteLetter.B
+		};
+
+		int reducedNote = note % 12;
+
+		return NoteLettersArray[reducedNote];
+	}
 }
