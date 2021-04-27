@@ -39,7 +39,6 @@ public class Suspended4 extends Chord
 	{
 		return new int[]
 		{
-
 				Semitone.ZERO, Semitone.FOUR, Semitone.FIVE
 		};
 	}

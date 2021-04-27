@@ -40,7 +40,6 @@ public class Suspended4SecondInversion extends Chord
 	{
 		return new int[]
 		{
-
 				Semitone.SEVEN, Semitone.ZERO + Octave.ONE, Semitone.FIVE + Octave.ONE
 		};
 	}

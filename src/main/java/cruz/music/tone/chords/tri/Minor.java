@@ -39,7 +39,6 @@ public class Minor extends Chord
 	{
 		return new int[]
 		{
-
 				Semitone.ZERO, Semitone.FIVE, Semitone.SEVEN
 		};
 	}

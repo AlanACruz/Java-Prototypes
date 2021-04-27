@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (C) 2021 Alan Cruz
+a * Copyright (C) 2021 Alan Cruz
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -38,7 +38,6 @@ public class DyadFourth extends Chord
 	{
 		return new int[]
 		{
-
 				Semitone.ZERO, Semitone.FIVE
 		};
 	}

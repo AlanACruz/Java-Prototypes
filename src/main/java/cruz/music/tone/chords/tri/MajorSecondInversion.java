@@ -40,7 +40,6 @@ public class MajorSecondInversion extends Chord
 	{
 		return new int[]
 		{
-
 				Semitone.SEVEN, Semitone.ZERO + Octave.ONE, Semitone.FOUR + Octave.ONE
 		};
 	}
