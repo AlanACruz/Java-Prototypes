@@ -32,14 +32,15 @@ import cruz.music.tone.chords.Chord;
  * 
  * @author CruzA
  */
-public class DyadFifthInversion extends Chord {
+public class DyadFifthInversion extends Chord
+{
 
 	public int[] play()
 	{
-		return new int[] {
-				
-				Semitone.SEVEN,
-				Semitone.ZERO + Octave.ONE
+		return new int[]
+		{
+
+				Semitone.SEVEN, Semitone.ZERO + Octave.ONE
 		};
 	}
 }

@@ -40,7 +40,6 @@ public class Hexachord extends Chord
 	{
 		return new int[]
 		{
-
 				Semitone.ZERO, Semitone.FOUR, Semitone.SEVEN, Semitone.ELEVEN, Semitone.TWO + Octave.ONE,
 				Semitone.FIVE + Octave.ONE
 		};

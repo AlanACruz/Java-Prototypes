@@ -83,7 +83,7 @@ public class MidiPlaybackTest
 		}
 	}
 
-	@Disabled("Annoying Music Alert")
+	// @Disabled("Annoying Music Alert")
 	@Test
 	public void playbackSynthTest()
 	{

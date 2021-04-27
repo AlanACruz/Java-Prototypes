@@ -24,18 +24,19 @@ package cruz.music.interval;
 /**
  * @author CruzA
  */
-public class Semitone {
-	
+public class Semitone
+{
+
 	/**
 	 * Zero Semitones
 	 */
 	public static final int ZERO = 0;
-	
+
 	/**
 	 * One Semitones
 	 */
 	public static final int ONE = 1;
-	
+
 	/**
 	 * Two Semitones
 	 */
@@ -50,22 +51,22 @@ public class Semitone {
 	 * Four Semitones
 	 */
 	public static final int FOUR = 4;
-	
+
 	/**
 	 * Five Semitones
 	 */
 	public static final int FIVE = 5;
-	
+
 	/**
 	 * Six Semitones
 	 */
 	public static final int SIX = 6;
-	
+
 	/**
 	 * Seven Semitones
 	 */
 	public static final int SEVEN = 7;
-	
+
 	/**
 	 * Eight Semitones
 	 */
@@ -75,29 +76,29 @@ public class Semitone {
 	 * Nine Semitones
 	 */
 	public static final int NINE = 9;
-	
+
 	/**
 	 * Ten Semitones
 	 */
 	public static final int TEN = 10;
-	
+
 	/**
 	 * Eleven Semitones
 	 */
 	public static final int ELEVEN = 11;
-	
+
 	/**
 	 * Twelve Semitones
 	 */
-	public static final int TWELEVE = 12; ;
-	
+	public static final int TWELEVE = 12;;
+
 	/* Steps */
-	
+
 	/**
 	 * Half Step
 	 */
 	public static final int SEMITONE = ONE;
-	
+
 	/**
 	 * Whole Step
 	 */
