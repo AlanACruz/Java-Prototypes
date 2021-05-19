@@ -61,4 +61,25 @@ public class Car extends AbstractAutomobile
 	 * long serialVersionUID
 	 */
 	private static final long serialVersionUID = -4093608498144878677L;
+	
+	/**
+	 * Just checking if static code analysis catches this.
+	 */
+	public boolean obviousStringEqualBug(){
+	
+		String a = "a";
+		String b = "b";
+		
+		if ( a == b ) {
+		
+			return false;
+		}
+		
+		if ( a.equals(b) ) {
+		
+			return true
+		}
+		
+		return false;
+	}
 }
