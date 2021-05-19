@@ -65,19 +65,19 @@ public class Car extends AbstractAutomobile
 	/**
 	 * Just checking if static code analysis catches this.
 	 */
-	public boolean obviousStringEqualBug(){
-	
+	public boolean obviousStringEqualBug()
+	{
 		String a = "a";
 		String b = "b";
 		
-		if ( a == b ) {
-		
+		if ( a == b ) 
+		{
 			return false;
 		}
 		
-		if ( a.equals(b) ) {
-		
-			return true
+		if ( a.equals(b) ) 
+		{
+			return true;
 		}
 		
 		return false;
