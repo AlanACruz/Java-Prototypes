@@ -44,7 +44,7 @@ jobs:
     - uses: actions/setup-java@v2
       with:
         distribution: 'zulu' # See 'Supported distributions' for available options
-        java-version: '15'
+        java-version: '8'
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
