@@ -106,6 +106,19 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-	</build>
+	</build
+		
+	<distributionManagement>
+		<repository>
+			<id>GitHub-Releases</id>
+			<name>Releases</name>
+			<url>https://maven.pkg.github.com/AlanACruz/*</url>
+		</repository>
+		<snapshotRepository>
+			<id>sGitHub-Snapshots</id>
+			<name>Snapshot</name>
+			<url>https://maven.pkg.github.com/AlanACruz/*/url>
+		</snapshotRepository>
+	</distributionManagement>
 	
 </project>
