@@ -98,7 +98,7 @@ public class MidiPlaybackTest
 		try
 		{
 
-			/* Create a new Sythesizer and open it. Most of 
+			/* Create a new Synthesizer and open it. Most of 
 			 * the methods you will want to use to expand on this 
 			 * example can be found in the Java documentation here: 
 			 * https://docs.oracle.com/javase/7/docs/api/javax/sound/midi/Synthesizer.html
@@ -159,34 +159,42 @@ public class MidiPlaybackTest
 					modeNum = 4;
 				}
 
+				int modeOffset;
+
 				switch (modeNum)
 				{
 				default:
 				case 1:
 					scaleArray = mode.asIonian();
+					modeOffset = 0;
 					break;
 				case 2:
 					scaleArray = mode.asDorian();
+					modeOffset = 2;
 					break;
 				case 3:
 					scaleArray = mode.asPhrygian();
+					modeOffset = 4;
 					break;
 				case 4:
 					scaleArray = mode.asLydian();
+					modeOffset = 5;
 					break;
 				case 5:
 					scaleArray = mode.asMixolydian();
+					modeOffset = 7;
 					break;
 				case 6:
 					scaleArray = mode.asAeolian();
+					modeOffset = 9;
 					break;
 				case 7:
 					scaleArray = mode.asLocrian();
+					modeOffset = 11;
 					break;
 				}
 
-				int rnd      = new Random().nextInt(scaleArray.length);
-				int interval = scaleArray[rnd];
+				int rnd = new Random().nextInt(scaleArray.length);
 				int rndNote;
 
 				int melodyVelocity;
@@ -210,7 +218,7 @@ public class MidiPlaybackTest
 				}
 				else
 				{
-					rndNote = interval;
+					rndNote = scaleArray[rnd];
 
 					melodyCutoff = restCutoff - 3;
 					chordCutoff  = 0;
@@ -248,16 +256,16 @@ public class MidiPlaybackTest
 				}
 
 				// Melody
-				mChannels[4].noteOn(initialNote + interval + rndNote + Octave.ONE, melodyVelocity);
+				mChannels[4].noteOn(initialNote + modeOffset + rndNote + Octave.THREE, melodyVelocity);
 
 				// Chord
-				mChannels[0].noteOn(initialNote + interval + mode.getFirst(), chordVelocity);
-				mChannels[1].noteOn(initialNote + interval + mode.getThird(), chordVelocity);
-				mChannels[2].noteOn(initialNote + interval + mode.getFifth(), chordVelocity);
-				mChannels[3].noteOn(initialNote + interval + mode.getSeventh(), chordVelocity);
+				mChannels[0].noteOn(initialNote + modeOffset + scaleArray[0], chordVelocity);
+				mChannels[1].noteOn(initialNote + modeOffset + scaleArray[2], chordVelocity);
+				mChannels[2].noteOn(initialNote + modeOffset + scaleArray[4], chordVelocity);
+				mChannels[3].noteOn(initialNote + modeOffset + scaleArray[6], chordVelocity);
 
 				// Base Drone
-				mChannels[5].noteOn(initialNote + interval + Octave.ONE_DOWN, bassVelocity);
+				mChannels[5].noteOn(initialNote + modeOffset + Octave.TWO_DOWN, bassVelocity);
 
 				System.out
 						.println(
