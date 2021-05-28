@@ -35,16 +35,16 @@ import cruz.automobile.tire.SmallTire;
 @TestConfiguration
 public class TestCarConfig
 {
-	@Bean(name = "FamilyCar")
+	@Bean( name = "FamilyCar" )
 	public Car familyCar()
 	{
-		return new Car(new FourCylinder(), new SmallTire(), new SmallTire(), new SmallTire(), new SmallTire());
+		return new Car( new FourCylinder(), new SmallTire(), new SmallTire(), new SmallTire(), new SmallTire() );
 	}
 
-	@Bean(name = "RaceCar")
+	@Bean( name = "RaceCar" )
 	public Car raceCar()
 	{
-		return new Car(new EightCylinder(), new LargeTire(), new LargeTire(), new LargeTire(), new LargeTire());
+		return new Car( new EightCylinder(), new LargeTire(), new LargeTire(), new LargeTire(), new LargeTire() );
 	}
 
 }

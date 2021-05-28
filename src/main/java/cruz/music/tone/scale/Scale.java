@@ -29,14 +29,12 @@ import lombok.Getter;
 @Getter
 public abstract class Scale
 {
-
 	public abstract int getScaleLength();
 
 	public abstract int[] asScale();
 
 	public String getScaleName()
 	{
-
 		return getClass().getSimpleName();
 	}
 }

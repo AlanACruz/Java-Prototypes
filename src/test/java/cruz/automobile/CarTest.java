@@ -39,7 +39,7 @@ import cruz.automobile.tire.SmallTire;
  * Test for demonstrating Lombok Builder vs Spring Beans
  */
 @SpringBootTest
-@Import(TestCarConfig.class)
+@Import( TestCarConfig.class )
 public class CarTest
 {
 	/**
@@ -56,14 +56,14 @@ public class CarTest
 	 * Spring Car Bean Car c
 	 */
 	@Autowired
-	@Qualifier("RaceCar")
+	@Qualifier( "RaceCar" )
 	Car c;
 
 	/**
 	 * Spring Car Bean Car d
 	 */
 	@Autowired
-	@Qualifier("FamilyCar")
+	@Qualifier( "FamilyCar" )
 	Car d;
 
 	/**
@@ -75,26 +75,26 @@ public class CarTest
 	{
 		// Lombok Builder
 		a = Car
-				.builder()
-				.theEngine(new EightCylinder())
-				.frontLeft(new SmallTire())
-				.frontRight(new SmallTire())
-				.backLeft(new SmallTire())
-				.backRight(new SmallTire())
-				.build();
+			.builder()
+			.theEngine( new EightCylinder() )
+			.frontLeft( new SmallTire() )
+			.frontRight( new SmallTire() )
+			.backLeft( new SmallTire() )
+			.backRight( new SmallTire() )
+			.build();
 
 		b = Car
-				.builder()
-				.theEngine(new FourCylinder())
-				.frontLeft(new LargeTire())
-				.frontRight(new LargeTire())
-				.backLeft(new LargeTire())
-				.backRight(new LargeTire())
-				.build();
+			.builder()
+			.theEngine( new FourCylinder() )
+			.frontLeft( new LargeTire() )
+			.frontRight( new LargeTire() )
+			.backLeft( new LargeTire() )
+			.backRight( new LargeTire() )
+			.build();
 
-		assertTrue(a.getSpeed() > b.getSpeed());
+		assertTrue( a.getSpeed() > b.getSpeed() );
 
-		assertNotEquals(a, b, "Cars are equal and should not be!");
+		assertNotEquals( a, b, "Cars are equal and should not be!" );
 	}
 
 	/**
@@ -104,9 +104,9 @@ public class CarTest
 	public void test_SpringBean_Race()
 	{
 		// Spring Bean
-		assertTrue(c.getSpeed() > d.getSpeed());
+		assertTrue( c.getSpeed() > d.getSpeed() );
 
-		assertNotEquals(c, d, "Cars are equal and should not be!");
+		assertNotEquals( c, d, "Cars are equal and should not be!" );
 	}
 
 }

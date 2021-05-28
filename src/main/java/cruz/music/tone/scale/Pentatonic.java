@@ -40,7 +40,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Pentatonic extends Scale
 {
-
 	private final int scaleLength = 5;
 
 	private final int first  = Semitone.ZERO;
@@ -61,11 +60,9 @@ public class Pentatonic extends Scale
 	 */
 	public int[] asSemitoneZero()
 	{
-
 		return new int[]
 		{
-
-				getFirst(), getSecond(), getThird(), getFourth(), getFifth(),
+			getFirst(), getSecond(), getThird(), getFourth(), getFifth(),
 		};
 	}
 
@@ -81,14 +78,12 @@ public class Pentatonic extends Scale
 	 */
 	public int[] asSemitoneTwo()
 	{
-
 		int modeOffset = getSecond();
 
 		return new int[]
 		{
-
-				getSecond() - modeOffset, getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
-				getFirst() - modeOffset + Octave.ONE
+			getSecond() - modeOffset, getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
+			getFirst() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -104,14 +99,12 @@ public class Pentatonic extends Scale
 	 */
 	public int[] asSemitoneFour()
 	{
-
 		int modeOffset = getThird();
 
 		return new int[]
 		{
-
-				getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
-				getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE
+			getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
+			getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -127,14 +120,12 @@ public class Pentatonic extends Scale
 	 */
 	public int[] asSemitoneSeven()
 	{
-
 		int modeOffset = getFourth();
 
 		return new int[]
 		{
-
-				getFourth() - modeOffset, getFifth() - modeOffset, getFirst() - modeOffset + Octave.ONE,
-				getSecond() - modeOffset + Octave.ONE, getThird() - modeOffset + Octave.ONE
+			getFourth() - modeOffset, getFifth() - modeOffset, getFirst() - modeOffset + Octave.ONE,
+			getSecond() - modeOffset + Octave.ONE, getThird() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -150,14 +141,12 @@ public class Pentatonic extends Scale
 	 */
 	public int[] asSemitoneNine()
 	{
-
 		int modeOffset = getFifth();
 
 		return new int[]
 		{
-
-				getFifth() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
-				getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
+			getFifth() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+			getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
 		};
 	}
 
@@ -168,7 +157,6 @@ public class Pentatonic extends Scale
 	 */
 	public int[] asMajor()
 	{
-
 		return asSemitoneZero();
 	}
 
@@ -179,7 +167,6 @@ public class Pentatonic extends Scale
 	 */
 	public int[] asMinor()
 	{
-
 		return asSemitoneNine();
 	}
 
@@ -190,7 +177,6 @@ public class Pentatonic extends Scale
 	 */
 	public int[] asScale()
 	{
-
 		return asMinor();
 	}
 }

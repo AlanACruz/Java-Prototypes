@@ -34,13 +34,12 @@ import cruz.music.tone.chords.Chord;
  */
 public class Suspended4FirstInversion extends Chord
 {
-
 	@Override
 	public int[] play()
 	{
 		return new int[]
 		{
-				Semitone.FIVE, Semitone.SEVEN, Semitone.ZERO + Octave.ONE
+			Semitone.FIVE, Semitone.SEVEN, Semitone.ZERO + Octave.ONE
 		};
 	}
 }

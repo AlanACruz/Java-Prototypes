@@ -28,8 +28,8 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode(callSuper = false)
-public class TleDto extends DtoTypeOf<TleEntity>
+@EqualsAndHashCode( callSuper = false )
+public class TleDto extends DtoTypeOf< TleEntity >
 {
 	private long id;
 
@@ -42,6 +42,6 @@ public class TleDto extends DtoTypeOf<TleEntity>
 	@Override
 	public TleEntity toEntityType()
 	{
-		return new TleEntity(lineZero, lineOne, lineTwo);
+		return new TleEntity( lineZero, lineOne, lineTwo );
 	}
 }

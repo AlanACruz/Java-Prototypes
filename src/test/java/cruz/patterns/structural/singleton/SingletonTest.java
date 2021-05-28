@@ -31,7 +31,6 @@ import org.junit.jupiter.api.Test;
  */
 public class SingletonTest
 {
-
 	SingletonTemplate firstSingleton;
 	SingletonTemplate secondSingleton;
 
@@ -41,10 +40,9 @@ public class SingletonTest
 	@Test
 	public void testSingleton()
 	{
-
 		firstSingleton  = SingletonTemplate.getInstance();
 		secondSingleton = SingletonTemplate.getInstance();
 
-		assertTrue(firstSingleton == secondSingleton);
+		assertTrue( firstSingleton == secondSingleton );
 	} // run SingletonExample
 }

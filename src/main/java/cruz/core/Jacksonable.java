@@ -29,18 +29,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public interface Jacksonable
 {
-	Logger log = LoggerFactory.getLogger(Jacksonable.class);
+	Logger log = LoggerFactory.getLogger( Jacksonable.class );
 
 	public default String toJacksonString()
 	{
 		try
 		{
 			ObjectMapper objectMapper = new ObjectMapper();
-			return objectMapper.writeValueAsString(this);
+			return objectMapper.writeValueAsString( this );
 		}
-		catch (JsonProcessingException e)
+		catch ( JsonProcessingException e )
 		{
-			log.error(e.getMessage());
+			log.error( e.getMessage() );
 
 			return "{ \"error\": \"" + this.getClass().getName() + " - " + e.getMessage() + "\" }";
 		}

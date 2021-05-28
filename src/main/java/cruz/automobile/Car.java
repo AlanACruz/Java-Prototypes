@@ -34,7 +34,7 @@ import lombok.NonNull;
  * TODO Auto-generated Comment
  */
 @NoArgsConstructor
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode( callSuper = true )
 @Component
 public class Car extends AbstractAutomobile
 {
@@ -47,21 +47,21 @@ public class Car extends AbstractAutomobile
 	 */
 	@Builder
 	public Car(
-			@NonNull Engine theEngine,
-			@NonNull Tire frontLeft,
-			@NonNull Tire frontRight,
-			@NonNull Tire backLeft,
-			@NonNull Tire backRight
+		@NonNull Engine theEngine,
+		@NonNull Tire frontLeft,
+		@NonNull Tire frontRight,
+		@NonNull Tire backLeft,
+		@NonNull Tire backRight
 	)
 	{
-		super(theEngine, frontLeft, frontRight, backLeft, backRight);
+		super( theEngine, frontLeft, frontRight, backLeft, backRight );
 	}
 
 	/**
 	 * long serialVersionUID
 	 */
 	private static final long serialVersionUID = -4093608498144878677L;
-	
+
 	/**
 	 * Just checking if static code analysis catches this.
 	 */
@@ -69,17 +69,17 @@ public class Car extends AbstractAutomobile
 	{
 		String a = "a";
 		String b = "b";
-		
-		if ( a == b ) 
+
+		if ( a == b )
 		{
 			return false;
 		}
-		
-		if ( a.equals(b) ) 
+
+		if ( a.equals( b ) )
 		{
 			return true;
 		}
-		
+
 		return false;
 	}
 }

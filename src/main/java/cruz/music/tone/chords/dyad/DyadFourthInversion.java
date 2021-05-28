@@ -34,12 +34,11 @@ import cruz.music.tone.chords.Chord;
  */
 public class DyadFourthInversion extends Chord
 {
-
 	public int[] play()
 	{
 		return new int[]
 		{
-				Semitone.FIVE, Semitone.ZERO + Octave.ONE
+			Semitone.FIVE, Semitone.ZERO + Octave.ONE
 		};
 	}
 }

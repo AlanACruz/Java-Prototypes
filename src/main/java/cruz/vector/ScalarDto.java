@@ -30,8 +30,8 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode(callSuper = false)
-public class ScalarDto extends DtoTypeOf<ScalarEntity>
+@EqualsAndHashCode( callSuper = false )
+public class ScalarDto extends DtoTypeOf< ScalarEntity >
 {
 	private long id;
 
@@ -40,6 +40,6 @@ public class ScalarDto extends DtoTypeOf<ScalarEntity>
 	@Override
 	public cruz.vector.ScalarEntity toEntityType()
 	{
-		return new ScalarEntity(magnitude);
+		return new ScalarEntity( magnitude );
 	}
 }

@@ -26,6 +26,5 @@ package cruz.music.tone.chords;
  */
 public abstract class Chord
 {
-
 	public abstract int[] play();
 }

@@ -41,48 +41,48 @@ public class NoteNumbers
 	public static final int A_SHARP_B_FLAT = Semitone.TEN;
 	public static final int B              = Semitone.ELEVEN;
 
-	public static int getNoteNumberFromNoteString(String note)
+	public static int getNoteNumberFromNoteString( String note )
 	{
-		switch (note)
+		switch ( note )
 		{
-		case NoteLetter.C:
-			return NoteNumbers.C;
+			case NoteLetter.C :
+				return NoteNumbers.C;
 
-		case NoteLetter.C_SHARP_D_FLAT:
-			return NoteNumbers.C_SHARP_D_FLAT;
+			case NoteLetter.C_SHARP_D_FLAT :
+				return NoteNumbers.C_SHARP_D_FLAT;
 
-		case NoteLetter.D:
-			return NoteNumbers.D;
+			case NoteLetter.D :
+				return NoteNumbers.D;
 
-		case NoteLetter.D_SHARP_E_FLAT:
-			return NoteNumbers.D_SHARP_E_FLAT;
+			case NoteLetter.D_SHARP_E_FLAT :
+				return NoteNumbers.D_SHARP_E_FLAT;
 
-		case NoteLetter.E:
-			return NoteNumbers.E;
+			case NoteLetter.E :
+				return NoteNumbers.E;
 
-		case NoteLetter.F:
-			return NoteNumbers.F;
+			case NoteLetter.F :
+				return NoteNumbers.F;
 
-		case NoteLetter.F_SHARP_G_FLAT:
-			return NoteNumbers.F_SHARP_G_FLAT;
+			case NoteLetter.F_SHARP_G_FLAT :
+				return NoteNumbers.F_SHARP_G_FLAT;
 
-		case NoteLetter.G:
-			return NoteNumbers.G;
+			case NoteLetter.G :
+				return NoteNumbers.G;
 
-		case NoteLetter.G_SHARP_A_FLAT:
-			return NoteNumbers.G_SHARP_A_FLAT;
+			case NoteLetter.G_SHARP_A_FLAT :
+				return NoteNumbers.G_SHARP_A_FLAT;
 
-		case NoteLetter.A:
-			return NoteNumbers.A;
+			case NoteLetter.A :
+				return NoteNumbers.A;
 
-		case NoteLetter.A_SHARP_B_FLAT:
-			return NoteNumbers.A_SHARP_B_FLAT;
+			case NoteLetter.A_SHARP_B_FLAT :
+				return NoteNumbers.A_SHARP_B_FLAT;
 
-		case NoteLetter.B:
-			return NoteNumbers.B;
+			case NoteLetter.B :
+				return NoteNumbers.B;
 
-		default:
-			throw new IllegalArgumentException("Note name does not have match.");
+			default :
+				throw new IllegalArgumentException( "Note name does not have match." );
 		}
 	}
 }

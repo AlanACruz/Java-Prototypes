@@ -28,16 +28,16 @@ import java.math.RoundingMode;
 public class AlmostEquals
 {
 	public static boolean check(
-			BigDecimal a,
-			BigDecimal b
+		BigDecimal a,
+		BigDecimal b
 	)
 	{
-		int scale = Math.min(a.scale(), b.scale()) - 1;
+		int scale = Math.min( a.scale(), b.scale() ) - 1;
 
-		a = a.setScale(scale, RoundingMode.HALF_UP);
-		b = b.setScale(scale, RoundingMode.HALF_UP);
+		a = a.setScale( scale, RoundingMode.HALF_UP );
+		b = b.setScale( scale, RoundingMode.HALF_UP );
 
-		return a.compareTo(b) == 0;
+		return a.compareTo( b ) == 0;
 
 	}
 }

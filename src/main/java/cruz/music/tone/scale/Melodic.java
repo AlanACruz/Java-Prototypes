@@ -41,7 +41,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Melodic extends Scale
 {
-
 	private final int scaleLength = 7;
 
 	private final int first   = Semitone.ZERO;
@@ -64,11 +63,9 @@ public class Melodic extends Scale
 	 */
 	public int[] asSemitoneZero()
 	{
-
 		return new int[]
 		{
-
-				getFirst(), getSecond(), getThird(), getFourth(), getFifth(), getSixth(), getSeventh()
+			getFirst(), getSecond(), getThird(), getFourth(), getFifth(), getSixth(), getSeventh()
 		};
 	}
 
@@ -84,14 +81,12 @@ public class Melodic extends Scale
 	 */
 	public int[] asSemitoneTwo()
 	{
-
 		int modeOffset = getSecond();
 
 		return new int[]
 		{
-
-				getSecond() - modeOffset, getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
-				getSixth() - modeOffset, getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE
+			getSecond() - modeOffset, getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
+			getSixth() - modeOffset, getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -107,14 +102,12 @@ public class Melodic extends Scale
 	 */
 	public int[] asSemitoneFour()
 	{
-
 		int modeOffset = getThird();
 
 		return new int[]
 		{
-
-				getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset,
-				getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE
+			getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset,
+			getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -130,15 +123,13 @@ public class Melodic extends Scale
 	 */
 	public int[] asSemitoneSix()
 	{
-
 		int modeOffset = getFourth();
 
 		return new int[]
 		{
-
-				getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset, getSeventh() - modeOffset,
-				getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
-				getThird() - modeOffset + Octave.ONE
+			getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset, getSeventh() - modeOffset,
+			getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+			getThird() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -154,15 +145,13 @@ public class Melodic extends Scale
 	 */
 	public int[] asSemitoneEight()
 	{
-
 		int modeOffset = getFifth();
 
 		return new int[]
 		{
-
-				getFifth() - modeOffset, getSixth() - modeOffset, getSeventh() - modeOffset,
-				getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
-				getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
+			getFifth() - modeOffset, getSixth() - modeOffset, getSeventh() - modeOffset,
+			getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+			getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
 		};
 	}
 
@@ -178,15 +167,13 @@ public class Melodic extends Scale
 	 */
 	public int[] asSemitoneNine()
 	{
-
 		int modeOffset = getSixth();
 
 		return new int[]
 		{
-
-				getSixth() - modeOffset, getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE,
-				getSecond() - modeOffset + Octave.ONE, getThird() - modeOffset + Octave.ONE,
-				getFourth() - modeOffset + Octave.ONE, getFifth() - modeOffset + Octave.ONE
+			getSixth() - modeOffset, getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE,
+			getSecond() - modeOffset + Octave.ONE, getThird() - modeOffset + Octave.ONE,
+			getFourth() - modeOffset + Octave.ONE, getFifth() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -202,15 +189,13 @@ public class Melodic extends Scale
 	 */
 	public int[] asSemitoneEleven()
 	{
-
 		int modeOffset = getSeventh();
 
 		return new int[]
 		{
-
-				getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
-				getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
-				getFifth() - modeOffset + Octave.ONE, getSixth() - modeOffset + Octave.ONE,
+			getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+			getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
+			getFifth() - modeOffset + Octave.ONE, getSixth() - modeOffset + Octave.ONE,
 		};
 	}
 
@@ -221,7 +206,6 @@ public class Melodic extends Scale
 	 */
 	public int[] asLydianAugmented()
 	{
-
 		return asSemitoneZero();
 	}
 
@@ -232,7 +216,6 @@ public class Melodic extends Scale
 	 */
 	public int[] asLydianDominat()
 	{
-
 		return asSemitoneTwo();
 	}
 
@@ -243,7 +226,6 @@ public class Melodic extends Scale
 	 */
 	public int[] asMixolydianFlatThirteen()
 	{
-
 		return asSemitoneFour();
 	}
 
@@ -254,7 +236,6 @@ public class Melodic extends Scale
 	 */
 	public int[] asLocrianSharpTwo()
 	{
-
 		return asSemitoneSix();
 	}
 
@@ -265,7 +246,6 @@ public class Melodic extends Scale
 	 */
 	public int[] asSuperLocrian()
 	{
-
 		return asSemitoneEight();
 	}
 
@@ -276,7 +256,6 @@ public class Melodic extends Scale
 	 */
 	public int[] asMelodicMinor()
 	{
-
 		return asSemitoneNine();
 	}
 
@@ -287,7 +266,6 @@ public class Melodic extends Scale
 	 */
 	public int[] asDorianFlatNine()
 	{
-
 		return asSemitoneEleven();
 	}
 
@@ -298,7 +276,6 @@ public class Melodic extends Scale
 	 */
 	public int[] asMajor()
 	{
-
 		return asSemitoneZero();
 	}
 
@@ -309,7 +286,6 @@ public class Melodic extends Scale
 	 */
 	public int[] asMinor()
 	{
-
 		return asSemitoneNine();
 	}
 
@@ -320,7 +296,6 @@ public class Melodic extends Scale
 	 */
 	public int[] asScale()
 	{
-
 		return asMinor();
 	}
 }

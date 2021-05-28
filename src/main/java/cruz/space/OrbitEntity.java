@@ -37,15 +37,15 @@ import lombok.RequiredArgsConstructor;
 @Entity
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode(callSuper = false)
-public class OrbitEntity extends EntityTypeOf<OrbitDto>
+@EqualsAndHashCode( callSuper = false )
+public class OrbitEntity extends EntityTypeOf< OrbitDto >
 {
 	@Id
 	private long id;
 
 	// Timestamp only allows for 0 to 6 percision, to get 9 I need a custom class
 	// https://www.postgresql.org/docs/9.1/datatype-datetime.html
-	@Column(columnDefinition = "TIMESTAMP(9) WITH TIME ZOME")
+	@Column( columnDefinition = "TIMESTAMP(9) WITH TIME ZOME" )
 	private final ZonedDateTime timestamp;
 
 	@OneToOne
@@ -60,6 +60,6 @@ public class OrbitEntity extends EntityTypeOf<OrbitDto>
 	@Override
 	public OrbitDto toDtoType()
 	{
-		return new OrbitDto(timestamp, position, velocity, acceleration);
+		return new OrbitDto( timestamp, position, velocity, acceleration );
 	}
 }

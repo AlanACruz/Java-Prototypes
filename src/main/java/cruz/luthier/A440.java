@@ -36,14 +36,15 @@ import lombok.Getter;
 @Getter
 public enum A440
 {
-	C0(new BigDecimal("16.352")), A4(new BigDecimal("440"));
+	C0( new BigDecimal( "16.352" ) ), //
+	A4( new BigDecimal( "440" ) );
 
 	private BigDecimal pitchFreqHz;
 
 	/**
 	 * @param freq
 	 */
-	A440(BigDecimal freq)
+	A440( BigDecimal freq )
 	{
 		this.pitchFreqHz = freq;
 	}

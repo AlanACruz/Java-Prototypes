@@ -39,22 +39,22 @@ public class NoteLetter
 	public static final String A_SHARP_B_FLAT = "A#";
 	public static final String B              = "B ";
 
-	public static String getNoteLetterFromNoteNumber(int note)
+	public static String getNoteLetterFromNoteNumber( int note )
 	{
-		if (note < 0)
+		if ( note < 0 )
 		{
 			throw new IllegalArgumentException();
 		}
 
 		String[] NoteLettersArray =
 		{
-				NoteLetter.C, NoteLetter.C_SHARP_D_FLAT, NoteLetter.D, NoteLetter.D_SHARP_E_FLAT, NoteLetter.E,
-				NoteLetter.F, NoteLetter.F_SHARP_G_FLAT, NoteLetter.G, NoteLetter.G_SHARP_A_FLAT, NoteLetter.A,
-				NoteLetter.A_SHARP_B_FLAT, NoteLetter.B
+			NoteLetter.C, NoteLetter.C_SHARP_D_FLAT, NoteLetter.D, NoteLetter.D_SHARP_E_FLAT, NoteLetter.E,
+			NoteLetter.F, NoteLetter.F_SHARP_G_FLAT, NoteLetter.G, NoteLetter.G_SHARP_A_FLAT, NoteLetter.A,
+			NoteLetter.A_SHARP_B_FLAT, NoteLetter.B
 		};
 
 		int reducedNote = note % 12;
 
-		return NoteLettersArray[reducedNote];
+		return NoteLettersArray[ reducedNote ];
 	}
 }

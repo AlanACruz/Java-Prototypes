@@ -35,21 +35,21 @@ import lombok.RequiredArgsConstructor;
 @Entity
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode(callSuper = false)
-public class CartesianTwoEntity extends EntityTypeOf<CartesianTwoDto>
+@EqualsAndHashCode( callSuper = false )
+public class CartesianTwoEntity extends EntityTypeOf< CartesianTwoDto >
 {
 	@Id
 	private long id;
 
-	@Column(columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'")
+	@Column( columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'" )
 	private final BigDecimal x;
 
-	@Column(columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'")
+	@Column( columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'" )
 	private final BigDecimal y;
 
 	@Override
 	public CartesianTwoDto toDtoType()
 	{
-		return new CartesianTwoDto(x, y);
+		return new CartesianTwoDto( x, y );
 	}
 }

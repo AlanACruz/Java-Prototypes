@@ -21,19 +21,19 @@
  ******************************************************************************/
 package cruz.core;
 
-public abstract class EntityTypeOf<D extends DtoTypeOf<?>> implements Jacksonable, ConvertibleToDto<D>
+public abstract class EntityTypeOf< D extends DtoTypeOf< ? > > implements Jacksonable, ConvertibleToDto< D >
 {
-	private final Class<?> runtimeType;
+	private final Class< ? > runtimeType;
 
 	public EntityTypeOf()
 	{
 		this.runtimeType = this.getRuntimeType();
 	}
 
-	@SuppressWarnings("unchecked")
-	public <E extends EntityTypeOf<?>> Class<E> getRuntimeType()
+	@SuppressWarnings( "unchecked" )
+	public < E extends EntityTypeOf< ? > > Class< E > getRuntimeType()
 	{
-		return (Class<E>) this.runtimeType;
+		return ( Class< E > ) this.runtimeType;
 	}
 
 	@Override

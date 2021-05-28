@@ -40,7 +40,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Blues extends Scale
 {
-
 	private final int scaleLength = 6;
 
 	private final int first  = Semitone.ZERO;
@@ -63,10 +62,9 @@ public class Blues extends Scale
 	 */
 	public int[] asSemitoneZero()
 	{
-
 		return new int[]
 		{
-				getFirst(), getSecond(), getThird(), getFourth(), getFifth(), getSixth()
+			getFirst(), getSecond(), getThird(), getFourth(), getFifth(), getSixth()
 		};
 	}
 
@@ -82,14 +80,13 @@ public class Blues extends Scale
 	 */
 	public int[] asSemitoneTwo()
 	{
-
 		int modeOffset = getSecond();
 
 		return new int[]
 		{
 
-				getSecond() - modeOffset, getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
-				getSixth() - modeOffset, getFirst() - modeOffset + Octave.ONE
+			getSecond() - modeOffset, getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
+			getSixth() - modeOffset, getFirst() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -105,14 +102,12 @@ public class Blues extends Scale
 	 */
 	public int[] asSemitoneThree()
 	{
-
 		int modeOffset = getThird();
 
 		return new int[]
 		{
-
-				getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset,
-				getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE
+			getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset,
+			getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -128,15 +123,13 @@ public class Blues extends Scale
 	 */
 	public int[] asSemitonFour()
 	{
-
 		int modeOffset = getFourth();
 
 		return new int[]
 		{
-
-				getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset,
-				getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
-				getThird() - modeOffset + Octave.ONE
+			getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset,
+			getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+			getThird() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -152,15 +145,13 @@ public class Blues extends Scale
 	 */
 	public int[] asSemitonSeven()
 	{
-
 		int modeOffset = getFifth();
 
 		return new int[]
 		{
-
-				getFifth() - modeOffset, getSixth() - modeOffset, getFirst() - modeOffset + Octave.ONE,
-				getSecond() - modeOffset + Octave.ONE, getThird() - modeOffset + Octave.ONE,
-				getFourth() - modeOffset + Octave.ONE
+			getFifth() - modeOffset, getSixth() - modeOffset, getFirst() - modeOffset + Octave.ONE,
+			getSecond() - modeOffset + Octave.ONE, getThird() - modeOffset + Octave.ONE,
+			getFourth() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -176,15 +167,13 @@ public class Blues extends Scale
 	 */
 	public int[] asSemitonNine()
 	{
-
 		int modeOffset = getSixth();
 
 		return new int[]
 		{
-
-				getSixth() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
-				getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
-				getFifth() - modeOffset + Octave.ONE
+			getSixth() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+			getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
+			getFifth() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -195,7 +184,6 @@ public class Blues extends Scale
 	 */
 	public int[] asMajor()
 	{
-
 		return asSemitoneZero();
 	}
 
@@ -206,7 +194,6 @@ public class Blues extends Scale
 	 */
 	public int[] asMinor()
 	{
-
 		return asSemitonNine();
 	}
 
@@ -217,7 +204,6 @@ public class Blues extends Scale
 	 */
 	public int[] asScale()
 	{
-
 		return asMinor();
 	}
 }

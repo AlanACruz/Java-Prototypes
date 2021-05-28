@@ -33,12 +33,11 @@ import cruz.music.tone.chords.Chord;
  */
 public class DyadFifth extends Chord
 {
-
 	public int[] play()
 	{
 		return new int[]
 		{
-				Semitone.ZERO, Semitone.SEVEN
+			Semitone.ZERO, Semitone.SEVEN
 		};
 	}
 }

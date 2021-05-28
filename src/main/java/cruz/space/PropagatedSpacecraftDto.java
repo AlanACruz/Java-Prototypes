@@ -28,8 +28,8 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode(callSuper = false)
-public class PropagatedSpacecraftDto extends DtoTypeOf<PropagatedSpacecraftEntity>
+@EqualsAndHashCode( callSuper = false )
+public class PropagatedSpacecraftDto extends DtoTypeOf< PropagatedSpacecraftEntity >
 {
 	private long id;
 
@@ -40,6 +40,6 @@ public class PropagatedSpacecraftDto extends DtoTypeOf<PropagatedSpacecraftEntit
 	@Override
 	public PropagatedSpacecraftEntity toEntityType()
 	{
-		return new PropagatedSpacecraftEntity(tle_id, spacecraft_state_id);
+		return new PropagatedSpacecraftEntity( tle_id, spacecraft_state_id );
 	}
 }

@@ -33,8 +33,8 @@ import lombok.RequiredArgsConstructor;
  */
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode(callSuper = false)
-public class SphericalDto extends DtoTypeOf<SphericalEntity>
+@EqualsAndHashCode( callSuper = false )
+public class SphericalDto extends DtoTypeOf< SphericalEntity >
 {
 	private long id;
 
@@ -50,6 +50,6 @@ public class SphericalDto extends DtoTypeOf<SphericalEntity>
 	@Override
 	public SphericalEntity toEntityType()
 	{
-		return new SphericalEntity(radial, theta, phi);
+		return new SphericalEntity( radial, theta, phi );
 	}
 }

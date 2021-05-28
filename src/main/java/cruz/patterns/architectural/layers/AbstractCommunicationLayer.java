@@ -38,10 +38,9 @@ public abstract class AbstractCommunicationLayer
 	 * @param model
 	 * @return success
 	 */
-	public String doCreate(AbstractModel model)
+	public String doCreate( AbstractModel model )
 	{
-
-		return create(model);
+		return create( model );
 	}
 
 	/**
@@ -49,10 +48,9 @@ public abstract class AbstractCommunicationLayer
 	 * @param model
 	 * @return success
 	 */
-	public String doRead(AbstractModel model)
+	public String doRead( AbstractModel model )
 	{
-
-		return select(model);
+		return select( model );
 	}
 
 	/**
@@ -60,10 +58,9 @@ public abstract class AbstractCommunicationLayer
 	 * @param model
 	 * @return success
 	 */
-	public String doUpdate(AbstractModel model)
+	public String doUpdate( AbstractModel model )
 	{
-
-		return update(model);
+		return update( model );
 	}
 
 	/**
@@ -71,17 +68,16 @@ public abstract class AbstractCommunicationLayer
 	 * @param model
 	 * @return success
 	 */
-	public String doDelete(AbstractModel model)
+	public String doDelete( AbstractModel model )
 	{
-
-		return delete(model);
+		return delete( model );
 	}
 
-	public abstract String create(AbstractModel model);
+	public abstract String create( AbstractModel model );
 
-	public abstract String select(AbstractModel model);
+	public abstract String select( AbstractModel model );
 
-	public abstract String update(AbstractModel model);
+	public abstract String update( AbstractModel model );
 
-	public abstract String delete(AbstractModel model);
+	public abstract String delete( AbstractModel model );
 }

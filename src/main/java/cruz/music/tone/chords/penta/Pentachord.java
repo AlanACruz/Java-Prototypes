@@ -34,13 +34,12 @@ import cruz.music.tone.chords.Chord;
  */
 public class Pentachord extends Chord
 {
-
 	@Override
 	public int[] play()
 	{
 		return new int[]
 		{
-				Semitone.ZERO, Semitone.FOUR, Semitone.SEVEN, Semitone.ELEVEN, Semitone.TWO + Octave.ONE
+			Semitone.ZERO, Semitone.FOUR, Semitone.SEVEN, Semitone.ELEVEN, Semitone.TWO + Octave.ONE
 		};
 	}
 }

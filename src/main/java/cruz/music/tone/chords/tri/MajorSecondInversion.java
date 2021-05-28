@@ -34,13 +34,12 @@ import cruz.music.tone.chords.Chord;
  */
 public class MajorSecondInversion extends Chord
 {
-
 	@Override
 	public int[] play()
 	{
 		return new int[]
 		{
-				Semitone.SEVEN, Semitone.ZERO + Octave.ONE, Semitone.FOUR + Octave.ONE
+			Semitone.SEVEN, Semitone.ZERO + Octave.ONE, Semitone.FOUR + Octave.ONE
 		};
 	}
 }

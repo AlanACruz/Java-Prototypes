@@ -33,13 +33,12 @@ import cruz.music.tone.chords.Chord;
  */
 public class Suspended2 extends Chord
 {
-
 	@Override
 	public int[] play()
 	{
 		return new int[]
 		{
-				Semitone.ZERO, Semitone.TWO, Semitone.SEVEN
+			Semitone.ZERO, Semitone.TWO, Semitone.SEVEN
 		};
 	}
 }

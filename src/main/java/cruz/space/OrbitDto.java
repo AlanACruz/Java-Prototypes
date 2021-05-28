@@ -31,8 +31,8 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode(callSuper = false)
-public class OrbitDto extends DtoTypeOf<OrbitEntity>
+@EqualsAndHashCode( callSuper = false )
+public class OrbitDto extends DtoTypeOf< OrbitEntity >
 {
 	private long id;
 
@@ -47,6 +47,6 @@ public class OrbitDto extends DtoTypeOf<OrbitEntity>
 	@Override
 	public OrbitEntity toEntityType()
 	{
-		return new OrbitEntity(timestamp, position, velocity, acceleration);
+		return new OrbitEntity( timestamp, position, velocity, acceleration );
 	}
 }
