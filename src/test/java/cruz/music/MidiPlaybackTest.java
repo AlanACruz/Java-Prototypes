@@ -125,10 +125,7 @@ public class MidiPlaybackTest
 				++j;
 			}
 
-			// load an instrument
-			// midiSynth.loadInstrument(instArray[0]);
-			midiSynth.loadInstrument(instArray[222]);
-			// midiSynth.getAvailableInstruments()
+			midiSynth.loadInstrument(instArray[0]);
 
 			int l = 0;
 
