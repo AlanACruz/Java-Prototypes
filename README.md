@@ -23,7 +23,10 @@ sudo add-apt-repository \
    
 sudo apt update
 
-sudo apt install -y docker-ce docker-ce-cli containerd.io
+sudo apt install -y \
+   docker-ce \
+   docker-ce-cli \
+   containerd.io
 
 # Enable non-root docker (Chromebook)
 sudo usermod -aG docker $USER
@@ -46,7 +49,9 @@ docker run \
    mvn -f /var/maven/git/Java-Prototypes -Duser.home=/var/maven install
 
 # Run Maven build locally
-sudo apt-get install -y openjdk-11-jdk maven
+sudo apt-get install -y \
+   openjdk-11-jdk \
+   maven
 
 cd ~/git/Java-Prototypes
 
