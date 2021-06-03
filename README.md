@@ -2,9 +2,11 @@
 # Java-Prototypes
 
 # git clone
+```
 git clone git@github.com:AlanACruz/Java-Prototypes.git ~/git/
-
+```
 # install docker
+```
 sudo apt update
 
 sudo apt install -y \
@@ -27,16 +29,22 @@ sudo apt install -y \
    docker-ce \
    docker-ce-cli \
    containerd.io
+```
 
 # Enable non-root docker (Chromebook)
+```
 sudo usermod -aG docker $USER
 
 sudo chmod 666 /var/run/docker.sock
+```
 
 # Pull Maven container
+```
 docker pull maven:3-openjdk-11
+```
 
 # Run Maven build from container
+```
 docker run \
    -v ~/.m2:/var/maven/.m2 \
    -v ~/git/Java-Prototypes:/var/maven/git/Java-Prototypes \
@@ -47,8 +55,10 @@ docker run \
    -e MAVEN_CONFIG=/var/maven/.m2 \
    maven:3-openjdk-11 \
    mvn -f /var/maven/git/Java-Prototypes -Duser.home=/var/maven install
+```
 
 # Run Maven build locally
+```
 sudo apt-get install -y \
    openjdk-11-jdk \
    maven
@@ -56,3 +66,4 @@ sudo apt-get install -y \
 cd ~/git/Java-Prototypes
 
 mvn install
+```
