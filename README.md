@@ -1,5 +1,5 @@
 # Copyright (C) 2021 Alan Cruz
-# cruz-jee-proto
+# Java-Prototypes
 
 # git clone
 git clone git@github.com:AlanACruz/Java-Prototypes.git ~/git/
