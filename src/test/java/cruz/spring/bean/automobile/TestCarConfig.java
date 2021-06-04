@@ -19,15 +19,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  ******************************************************************************/
-package cruz.automobile;
+package cruz.spring.bean.automobile;
 
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 
-import cruz.automobile.engine.EightCylinder;
-import cruz.automobile.engine.FourCylinder;
-import cruz.automobile.tire.LargeTire;
-import cruz.automobile.tire.SmallTire;
+import cruz.spring.bean.automobile.Car;
+import cruz.spring.bean.automobile.engine.EightCylinder;
+import cruz.spring.bean.automobile.engine.FourCylinder;
+import cruz.spring.bean.automobile.tire.LargeTire;
+import cruz.spring.bean.automobile.tire.SmallTire;
 
 /**
  * Configuration for testing Car's
@@ -35,16 +36,16 @@ import cruz.automobile.tire.SmallTire;
 @TestConfiguration
 public class TestCarConfig
 {
-	@Bean( name = "FamilyCar" )
+	@Bean(name = "FamilyCar")
 	public Car familyCar()
 	{
-		return new Car( new FourCylinder(), new SmallTire(), new SmallTire(), new SmallTire(), new SmallTire() );
+		return new Car(new FourCylinder(), new SmallTire(), new SmallTire(), new SmallTire(), new SmallTire());
 	}
 
-	@Bean( name = "RaceCar" )
+	@Bean(name = "RaceCar")
 	public Car raceCar()
 	{
-		return new Car( new EightCylinder(), new LargeTire(), new LargeTire(), new LargeTire(), new LargeTire() );
+		return new Car(new EightCylinder(), new LargeTire(), new LargeTire(), new LargeTire(), new LargeTire());
 	}
 
 }

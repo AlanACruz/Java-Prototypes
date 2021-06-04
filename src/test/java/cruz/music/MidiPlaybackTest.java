@@ -43,7 +43,7 @@ import cruz.music.tone.scale.Diatonic;
 public class MidiPlaybackTest
 {
 
-	@Disabled( "Need File Name Here" )
+	@Disabled("Need File Name Here")
 	@Test
 	public void playbackFileTest()
 	{
@@ -54,9 +54,9 @@ public class MidiPlaybackTest
 			// Get the default Sequencer
 			Sequencer sequencer = MidiSystem.getSequencer();
 
-			if ( sequencer == null )
+			if (sequencer == null)
 			{
-				System.err.println( "Sequencer device not supported" );
+				System.err.println("Sequencer device not supported");
 				return;
 			}
 
@@ -64,25 +64,25 @@ public class MidiPlaybackTest
 			sequencer.open();
 
 			// Create sequence, the File must contain MIDI file data.
-			Sequence sequence = MidiSystem.getSequence( new File( fileName ) );
+			Sequence sequence = MidiSystem.getSequence(new File(fileName));
 
 			// Load it into sequencer
-			sequencer.setSequence( sequence );
+			sequencer.setSequence(sequence);
 
 			// Start the playback
 			sequencer.start();
 		}
-		catch ( MidiUnavailableException | InvalidMidiDataException | IOException ex )
+		catch (MidiUnavailableException | InvalidMidiDataException | IOException ex)
 		{
 			ex.printStackTrace();
 		}
 	}
 
-	// @Disabled("Annoying Music Alert")
+	@Disabled("Annoying Music Alert")
 	@Test
 	public void playbackSynthTest()
 	{
-		int msPerMin  = ( int ) 60e3;
+		int msPerMin  = (int) 60e3;
 		int bpm       = 250;
 		int msPerBeat = msPerMin / bpm;
 
@@ -103,94 +103,95 @@ public class MidiPlaybackTest
 			Instrument[] instArray = midiSynth.getDefaultSoundbank().getInstruments();
 
 			int i = 0;
-			for ( Instrument inst : instArray )
+			for (Instrument inst : instArray)
 			{
-				System.out.println( i + ":\t" + inst.getName() );
+				System.out.println(i + ":\t" + inst.getName());
 				++i;
 			}
 
 			MidiChannel[] mChannels = midiSynth.getChannels();
 
 			int j = 0;
-			for ( MidiChannel channel : mChannels )
+			for (MidiChannel channel : mChannels)
 			{
-				System.out.println( j + ":\t" + channel.toString() );
+				System.out.println(j + ":\t" + channel.toString());
 				++j;
 			}
 
-			midiSynth.loadInstrument( instArray[ 0 ] );
+			midiSynth.loadInstrument(instArray[0]);
 
 			int l = 0;
 
 			Diatonic mode       = new Diatonic();
-			int[]    scaleArray = {};
+			int[]    scaleArray =
+			{};
 
 			int lenghtOfTrack = 10000;
-			for ( int k = 0; k < lenghtOfTrack; k++ )
+			for (int k = 0; k < lenghtOfTrack; k++)
 			{
 
 				int modeNum = 1;
 
-				if ( 0 <= l && l <= 7 )
+				if (0 <= l && l <= 7)
 				{
 					modeNum = 1;
 				}
-				else if ( 8 <= l && l <= 15 )
+				else if (8 <= l && l <= 15)
 				{
 					modeNum = 5;
 				}
-				else if ( 16 <= l && l <= 23 )
+				else if (16 <= l && l <= 23)
 				{
 					modeNum = 6;
 				}
-				else if ( 24 <= l && l <= 31 )
+				else if (24 <= l && l <= 31)
 				{
 					modeNum = 4;
 				}
 
 				int modeOffset;
 
-				switch ( modeNum )
+				switch (modeNum)
 				{
-					default :
+				default:
 
-					case 1 :
-						scaleArray = mode.asIonian();
-						modeOffset = 0;
-						break;
+				case 1:
+					scaleArray = mode.asIonian();
+					modeOffset = 0;
+					break;
 
-					case 2 :
-						scaleArray = mode.asDorian();
-						modeOffset = 2;
-						break;
+				case 2:
+					scaleArray = mode.asDorian();
+					modeOffset = 2;
+					break;
 
-					case 3 :
-						scaleArray = mode.asPhrygian();
-						modeOffset = 4;
-						break;
+				case 3:
+					scaleArray = mode.asPhrygian();
+					modeOffset = 4;
+					break;
 
-					case 4 :
-						scaleArray = mode.asLydian();
-						modeOffset = 5;
-						break;
+				case 4:
+					scaleArray = mode.asLydian();
+					modeOffset = 5;
+					break;
 
-					case 5 :
-						scaleArray = mode.asMixolydian();
-						modeOffset = 7;
-						break;
+				case 5:
+					scaleArray = mode.asMixolydian();
+					modeOffset = 7;
+					break;
 
-					case 6 :
-						scaleArray = mode.asAeolian();
-						modeOffset = 9;
-						break;
+				case 6:
+					scaleArray = mode.asAeolian();
+					modeOffset = 9;
+					break;
 
-					case 7 :
-						scaleArray = mode.asLocrian();
-						modeOffset = 11;
-						break;
+				case 7:
+					scaleArray = mode.asLocrian();
+					modeOffset = 11;
+					break;
 				}
 
-				int rnd = new Random().nextInt( scaleArray.length );
+				int rnd = new Random().nextInt(scaleArray.length);
 				int rndNote;
 
 				int melodyVelocity;
@@ -202,9 +203,9 @@ public class MidiPlaybackTest
 				int chordCutoff;
 				int bassCutoff;
 
-				int rndRest = new Random().nextInt( restCutoff );
+				int rndRest = new Random().nextInt(restCutoff);
 
-				if ( l == 0 || l == 8 || l == 16 || l == 24 )
+				if (l == 0 || l == 8 || l == 16 || l == 24)
 				{
 					rndNote = mode.getFirst();
 
@@ -214,7 +215,7 @@ public class MidiPlaybackTest
 				}
 				else
 				{
-					rndNote = scaleArray[ rnd ];
+					rndNote = scaleArray[rnd];
 
 					melodyCutoff = restCutoff - 3;
 					chordCutoff  = 0;
@@ -222,7 +223,7 @@ public class MidiPlaybackTest
 				}
 
 				// Melody Rest
-				if ( rndRest <= melodyCutoff )
+				if (rndRest <= melodyCutoff)
 				{
 					melodyVelocity = initialVelocity;
 				}
@@ -232,7 +233,7 @@ public class MidiPlaybackTest
 				}
 
 				// Bass Rest
-				if ( rndRest <= ( bassCutoff ) )
+				if (rndRest <= (bassCutoff))
 				{
 					bassVelocity = initialVelocity;
 				}
@@ -242,7 +243,7 @@ public class MidiPlaybackTest
 				}
 
 				// Chord Rest
-				if ( rndRest <= ( chordCutoff ) )
+				if (rndRest <= (chordCutoff))
 				{
 					chordVelocity = initialVelocity;
 				}
@@ -252,27 +253,27 @@ public class MidiPlaybackTest
 				}
 
 				// Melody
-				mChannels[ 4 ].noteOn( initialNote + modeOffset + rndNote + Octave.THREE, melodyVelocity );
+				mChannels[4].noteOn(initialNote + modeOffset + rndNote + Octave.THREE, melodyVelocity);
 
 				// Chord
-				mChannels[ 0 ].noteOn( initialNote + modeOffset + scaleArray[ 0 ], chordVelocity );
-				mChannels[ 1 ].noteOn( initialNote + modeOffset + scaleArray[ 2 ], chordVelocity );
-				mChannels[ 2 ].noteOn( initialNote + modeOffset + scaleArray[ 4 ], chordVelocity );
-				mChannels[ 3 ].noteOn( initialNote + modeOffset + scaleArray[ 6 ], chordVelocity );
+				mChannels[0].noteOn(initialNote + modeOffset + scaleArray[0], chordVelocity);
+				mChannels[1].noteOn(initialNote + modeOffset + scaleArray[2], chordVelocity);
+				mChannels[2].noteOn(initialNote + modeOffset + scaleArray[4], chordVelocity);
+				mChannels[3].noteOn(initialNote + modeOffset + scaleArray[6], chordVelocity);
 
 				// Base Drone
-				mChannels[ 5 ].noteOn( initialNote + modeOffset + Octave.TWO_DOWN, bassVelocity );
+				mChannels[5].noteOn(initialNote + modeOffset + Octave.TWO_DOWN, bassVelocity);
 
 				System.out
-					.println(
-						"Beat: \t" + l + "\tMode: \t" + mode.getScaleName() + "\tChord Tonic: \t" +
-							( initialNote + mode.getFirst() ) + "\tRandom Note: \t" + rndNote + "\tMelody V: \t" +
-							melodyVelocity + "\tBass V: \t" + bassVelocity
-					);
+						.println(
+								"Beat: \t" + l + "\tMode: \t" + mode.getScaleName() + "\tChord Tonic: \t" +
+										(initialNote + mode.getFirst()) + "\tRandom Note: \t" + rndNote +
+										"\tMelody V: \t" + melodyVelocity + "\tBass V: \t" + bassVelocity
+						);
 
 				l = l + 1;
 
-				if ( l >= 32 )
+				if (l >= 32)
 				{
 					l = 0;
 				}
@@ -281,10 +282,10 @@ public class MidiPlaybackTest
 				{
 
 					// wait time in milliseconds to control duration
-					Thread.sleep( msPerBeat );
+					Thread.sleep(msPerBeat);
 
 				}
-				catch ( InterruptedException e )
+				catch (InterruptedException e)
 				{
 
 					e.printStackTrace();
@@ -294,7 +295,7 @@ public class MidiPlaybackTest
 				// mChannels[0].noteOff(60);
 			}
 		}
-		catch ( MidiUnavailableException e )
+		catch (MidiUnavailableException e)
 		{
 			e.printStackTrace();
 		}

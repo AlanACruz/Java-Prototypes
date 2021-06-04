@@ -19,12 +19,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  ******************************************************************************/
-package cruz.automobile;
+package cruz.spring.bean.automobile;
 
 import java.io.Serializable;
 
-import cruz.automobile.engine.Engine;
-import cruz.automobile.tire.Tire;
+import cruz.spring.bean.automobile.engine.Engine;
+import cruz.spring.bean.automobile.tire.Tire;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

@@ -19,27 +19,32 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  ******************************************************************************/
-package cruz.automobile;
+package cruz.spring.bean.automobile;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Import;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import cruz.automobile.engine.EightCylinder;
-import cruz.automobile.engine.FourCylinder;
-import cruz.automobile.tire.LargeTire;
-import cruz.automobile.tire.SmallTire;
+import cruz.spring.bean.automobile.Car;
+import cruz.spring.bean.automobile.engine.EightCylinder;
+import cruz.spring.bean.automobile.engine.FourCylinder;
+import cruz.spring.bean.automobile.tire.LargeTire;
+import cruz.spring.bean.automobile.tire.SmallTire;
 
 /**
  * Test for demonstrating Lombok Builder vs Spring Beans
  */
-@SpringBootTest
-@Import( TestCarConfig.class )
+@ExtendWith(SpringExtension.class)
+@ContextConfiguration(classes =
+{
+		TestCarConfig.class
+})
 public class CarTest
 {
 	/**
@@ -56,14 +61,14 @@ public class CarTest
 	 * Spring Car Bean Car c
 	 */
 	@Autowired
-	@Qualifier( "RaceCar" )
+	@Qualifier("RaceCar")
 	Car c;
 
 	/**
 	 * Spring Car Bean Car d
 	 */
 	@Autowired
-	@Qualifier( "FamilyCar" )
+	@Qualifier("FamilyCar")
 	Car d;
 
 	/**
@@ -75,26 +80,26 @@ public class CarTest
 	{
 		// Lombok Builder
 		a = Car
-			.builder()
-			.theEngine( new EightCylinder() )
-			.frontLeft( new SmallTire() )
-			.frontRight( new SmallTire() )
-			.backLeft( new SmallTire() )
-			.backRight( new SmallTire() )
-			.build();
+				.builder()
+				.theEngine(new EightCylinder())
+				.frontLeft(new SmallTire())
+				.frontRight(new SmallTire())
+				.backLeft(new SmallTire())
+				.backRight(new SmallTire())
+				.build();
 
 		b = Car
-			.builder()
-			.theEngine( new FourCylinder() )
-			.frontLeft( new LargeTire() )
-			.frontRight( new LargeTire() )
-			.backLeft( new LargeTire() )
-			.backRight( new LargeTire() )
-			.build();
+				.builder()
+				.theEngine(new FourCylinder())
+				.frontLeft(new LargeTire())
+				.frontRight(new LargeTire())
+				.backLeft(new LargeTire())
+				.backRight(new LargeTire())
+				.build();
 
-		assertTrue( a.getSpeed() > b.getSpeed() );
+		assertTrue(a.getSpeed() > b.getSpeed());
 
-		assertNotEquals( a, b, "Cars are equal and should not be!" );
+		assertNotEquals(a, b, "Cars are equal and should not be!");
 	}
 
 	/**
@@ -104,9 +109,9 @@ public class CarTest
 	public void test_SpringBean_Race()
 	{
 		// Spring Bean
-		assertTrue( c.getSpeed() > d.getSpeed() );
+		assertTrue(c.getSpeed() > d.getSpeed());
 
-		assertNotEquals( c, d, "Cars are equal and should not be!" );
+		assertNotEquals(c, d, "Cars are equal and should not be!");
 	}
 
 }

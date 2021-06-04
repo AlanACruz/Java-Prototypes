@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  ******************************************************************************/
-package cruz.automobile.tire;
+package cruz.spring.bean.automobile.tire;
 
 /**
  * TODO Auto-generated Comment
