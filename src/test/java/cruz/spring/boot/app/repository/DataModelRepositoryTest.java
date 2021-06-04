@@ -36,7 +36,6 @@ import cruz.spring.boot.app.domain.DataModel;
 @DataJpaTest
 class DataModelRepositoryTest
 {
-
 	/**
 	 * Entity Manager
 	 */
@@ -55,7 +54,6 @@ class DataModelRepositoryTest
 	@Test
 	public void whenFindByName_thenReturn_DataModel()
 	{
-
 		// given
 		DataModel expected = new DataModel("testModelName");
 		entityManager.persist(expected);
@@ -74,7 +72,6 @@ class DataModelRepositoryTest
 	@Test
 	public void whenFindByName_Null_thenReturn_Null()
 	{
-
 		// given
 		DataModel expected = null;
 

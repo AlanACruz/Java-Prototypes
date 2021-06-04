@@ -35,18 +35,18 @@ import lombok.RequiredArgsConstructor;
 @Entity
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode( callSuper = false )
-public class ScalarEntity extends EntityTypeOf< ScalarDto >
+@EqualsAndHashCode(callSuper = false)
+public class ScalarEntity extends EntityTypeOf<ScalarDto>
 {
 	@Id
 	private long id;
 
-	@Column( columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'" )
+	@Column(columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'")
 	private final BigDecimal magnitude;
 
 	@Override
 	public ScalarDto toDtoType()
 	{
-		return new ScalarDto( magnitude );
+		return new ScalarDto(magnitude);
 	}
 }

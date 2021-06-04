@@ -33,23 +33,22 @@ import cruz.spring.boot.app.repository.DataModelRepository;
  */
 @Service
 @Component
-public class ModelService {
-
+public class ModelService
+{
 	/**
 	 * Model Repo
 	 */
 	@Autowired
-    private DataModelRepository modelRepository;
-	
+	private DataModelRepository modelRepository;
+
 	/**
 	 * Model Details from Repo
 	 * 
 	 * @param modelName
 	 * @return
 	 */
-	public DataModel findModel(String modelName) {
-
+	public DataModel findModel(String modelName)
+	{
 		return modelRepository.findByModelName(modelName);
 	}
-
 }

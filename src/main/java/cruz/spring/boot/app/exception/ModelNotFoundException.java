@@ -28,8 +28,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * Custom Model Not Found Exception
  */
 @ResponseStatus(value = HttpStatus.NOT_FOUND)
-public class ModelNotFoundException extends RuntimeException {
-
+public class ModelNotFoundException extends RuntimeException
+{
 	/**
 	 * Serial UID
 	 */

@@ -46,5 +46,4 @@ public class TestCarConfig
 	{
 		return new Car(new EightCylinder(), new LargeTire(), new LargeTire(), new LargeTire(), new LargeTire());
 	}
-
 }

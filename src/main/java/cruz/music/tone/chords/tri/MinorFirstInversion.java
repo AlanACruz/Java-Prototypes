@@ -39,7 +39,7 @@ public class MinorFirstInversion extends Chord
 	{
 		return new int[]
 		{
-			Semitone.THREE, Semitone.SEVEN, Semitone.ZERO + Octave.ONE
+				Semitone.THREE, Semitone.SEVEN, Semitone.ZERO + Octave.ONE
 		};
 	}
 }

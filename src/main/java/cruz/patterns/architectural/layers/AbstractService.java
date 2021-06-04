@@ -41,9 +41,9 @@ public abstract class AbstractService
 	 * @param persistenceLayer
 	 */
 	public AbstractService(
-		AbstractCommunicationLayer communicationLayer,
-		AbstractBusinessLayer businessLayer,
-		AbstractPersistenceLayer persistenceLayer
+			AbstractCommunicationLayer communicationLayer,
+			AbstractBusinessLayer businessLayer,
+			AbstractPersistenceLayer persistenceLayer
 	)
 	{
 		super();
@@ -63,7 +63,7 @@ public abstract class AbstractService
 	/**
 	 * @param communicationLayer the communicationLayer to set
 	 */
-	public void setCommunicationLayer( AbstractCommunicationLayer communicationLayer )
+	public void setCommunicationLayer(AbstractCommunicationLayer communicationLayer)
 	{
 		this.communicationLayer = communicationLayer;
 	}
@@ -79,7 +79,7 @@ public abstract class AbstractService
 	/**
 	 * @param businessLayer the businessLayer to set
 	 */
-	public void setBusinessLayer( AbstractBusinessLayer businessLayer )
+	public void setBusinessLayer(AbstractBusinessLayer businessLayer)
 	{
 		this.businessLayer = businessLayer;
 	}
@@ -95,7 +95,7 @@ public abstract class AbstractService
 	/**
 	 * @param persistenceLayer the persistenceLayer to set
 	 */
-	public void setPersistenceLayer( AbstractPersistenceLayer persistenceLayer )
+	public void setPersistenceLayer(AbstractPersistenceLayer persistenceLayer)
 	{
 		this.persistenceLayer = persistenceLayer;
 	}
@@ -111,7 +111,7 @@ public abstract class AbstractService
 	/**
 	 * @param model the model to set
 	 */
-	public void setModel( AbstractModel model )
+	public void setModel(AbstractModel model)
 	{
 		this.model = model;
 	}

@@ -35,35 +35,35 @@ import lombok.RequiredArgsConstructor;
 @Entity
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode( callSuper = false )
-public class SimulationEntity extends EntityTypeOf< SimulationDto >
+@EqualsAndHashCode(callSuper = false)
+public class SimulationEntity extends EntityTypeOf<SimulationDto>
 {
 	@Id
 	private long id;
 
 	// Timestamp only allows for 0 to 6 percision, to get 9 I need a custom class
 	// https://www.postgresql.org/docs/9.1/datatype-datetime.html
-	@Column( columnDefinition = "TIMESTAMP(9) WITH TIME ZOME" )
+	@Column(columnDefinition = "TIMESTAMP(9) WITH TIME ZOME")
 	private final ZonedDateTime realStartTime;
 
 	// Timestamp only allows for 0 to 6 percision, to get 9 I need a custom class
 	// https://www.postgresql.org/docs/9.1/datatype-datetime.html
-	@Column( columnDefinition = "TIMESTAMP(9) WITH TIME ZOME" )
+	@Column(columnDefinition = "TIMESTAMP(9) WITH TIME ZOME")
 	private final ZonedDateTime realEndTime;
 
 	// Timestamp only allows for 0 to 6 percision, to get 9 I need a custom class
 	// https://www.postgresql.org/docs/9.1/datatype-datetime.html
-	@Column( columnDefinition = "TIMESTAMP(9) WITH TIME ZOME" )
+	@Column(columnDefinition = "TIMESTAMP(9) WITH TIME ZOME")
 	private final ZonedDateTime simStartTime;
 
 	// Timestamp only allows for 0 to 6 percision, to get 9 I need a custom class
 	// https://www.postgresql.org/docs/9.1/datatype-datetime.html
-	@Column( columnDefinition = "TIMESTAMP(9) WITH TIME ZOME" )
+	@Column(columnDefinition = "TIMESTAMP(9) WITH TIME ZOME")
 	private final ZonedDateTime simEndTime;
 
 	@Override
 	public SimulationDto toDtoType()
 	{
-		return new SimulationDto( realStartTime, realEndTime, simStartTime, simEndTime );
+		return new SimulationDto(realStartTime, realEndTime, simStartTime, simEndTime);
 	}
 }

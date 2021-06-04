@@ -40,7 +40,6 @@ import cruz.spring.boot.app.repository.DataModelRepository;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SpringBootRestIntegrationTest
 {
-
 	/**
 	 * Rest Template
 	 */
@@ -59,7 +58,6 @@ public class SpringBootRestIntegrationTest
 	@Test
 	public void testModelData_givenValidDataModel_returnsDataModel()
 	{
-
 		// given
 		DataModel expected = new DataModel("testModelName");
 		modelRepository.saveAndFlush(expected);

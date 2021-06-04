@@ -56,8 +56,8 @@ import lombok.RequiredArgsConstructor;
 @Entity
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode( callSuper = false )
-public class TleEntity extends EntityTypeOf< TleDto >
+@EqualsAndHashCode(callSuper = false)
+public class TleEntity extends EntityTypeOf<TleDto>
 {
 	@Id
 	private long id;
@@ -74,6 +74,6 @@ public class TleEntity extends EntityTypeOf< TleDto >
 	@Override
 	public TleDto toDtoType()
 	{
-		return new TleDto( lineZero, lineOne, lineTwo );
+		return new TleDto(lineZero, lineOne, lineTwo);
 	}
 }

@@ -37,7 +37,7 @@ public class DyadFourth extends Chord
 	{
 		return new int[]
 		{
-			Semitone.ZERO, Semitone.FIVE
+				Semitone.ZERO, Semitone.FIVE
 		};
 	}
 }

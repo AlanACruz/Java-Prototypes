@@ -42,7 +42,6 @@ import cruz.spring.boot.app.service.ModelService;
 @WebMvcTest(controllers = DataModelController.class)
 public class DataModelControllerTest
 {
-
 	/**
 	 * Service bean to go inside the controller
 	 */

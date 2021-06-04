@@ -43,6 +43,6 @@ public class SingletonTest
 		firstSingleton  = SingletonTemplate.getInstance();
 		secondSingleton = SingletonTemplate.getInstance();
 
-		assertTrue( firstSingleton == secondSingleton );
+		assertTrue(firstSingleton == secondSingleton);
 	} // run SingletonExample
 }

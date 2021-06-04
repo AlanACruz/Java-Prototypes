@@ -38,7 +38,7 @@ public class DyadOctave extends Chord
 	{
 		return new int[]
 		{
-			Semitone.ZERO, Semitone.ZERO + Octave.ONE
+				Semitone.ZERO, Semitone.ZERO + Octave.ONE
 		};
 	}
 }

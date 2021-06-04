@@ -32,17 +32,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class SpringBootRestApplicationTests
 {
-
 	/**
 	 * Spring Boot Context Load Test
 	 */
 	@Test
 	void contextLoads()
 	{
-
 		boolean contextLoaded = true;
 
 		assertTrue(contextLoaded);
 	}
-
 }

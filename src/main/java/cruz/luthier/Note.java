@@ -47,7 +47,7 @@ public class Note
 		BigDecimal r        = LuthierConstants.R;
 		BigDecimal baseFreq = A440.C0.getPitchFreqHz();
 
-		return ( r.pow( k ) ).multiply( baseFreq );
+		return (r.pow(k)).multiply(baseFreq);
 	}
 
 	/**

@@ -38,23 +38,23 @@ import lombok.RequiredArgsConstructor;
 @Entity
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode( callSuper = false )
-public class PolarEntity extends EntityTypeOf< PolarDto >
+@EqualsAndHashCode(callSuper = false)
+public class PolarEntity extends EntityTypeOf<PolarDto>
 {
 	@Id
 	private long id;
 
 	// Radial/Euclidean Distance
-	@Column( columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'" )
+	@Column(columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'")
 	private final BigDecimal radial;
 
 	// Inclination/Polar Angle
-	@Column( columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'" )
+	@Column(columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'")
 	private final BigDecimal theta;
 
 	@Override
 	public PolarDto toDtoType()
 	{
-		return new PolarDto( radial, radial );
+		return new PolarDto(radial, radial);
 	}
 }

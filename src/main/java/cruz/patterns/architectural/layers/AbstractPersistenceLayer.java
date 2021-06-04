@@ -29,12 +29,12 @@ import java.util.HashMap;
  */
 public abstract class AbstractPersistenceLayer
 {
-	private HashMap< String, AbstractDataAccessObject > daoMap = new HashMap< String, AbstractDataAccessObject >();
+	private HashMap<String, AbstractDataAccessObject> daoMap = new HashMap<String, AbstractDataAccessObject>();
 
 	/**
 	 * @return the daoMap
 	 */
-	public HashMap< String, AbstractDataAccessObject > getDaoMap()
+	public HashMap<String, AbstractDataAccessObject> getDaoMap()
 	{
 		return daoMap;
 	}
@@ -42,7 +42,7 @@ public abstract class AbstractPersistenceLayer
 	/**
 	 * @param daoMap the daoMap to set
 	 */
-	public void setDaoMap( HashMap< String, AbstractDataAccessObject > daoMap )
+	public void setDaoMap(HashMap<String, AbstractDataAccessObject> daoMap)
 	{
 		this.daoMap = daoMap;
 	}

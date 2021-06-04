@@ -64,7 +64,7 @@ public class Diatonic extends Scale
 	{
 		return new int[]
 		{
-			getFirst(), getSecond(), getThird(), getFourth(), getFifth(), getSixth(), getSeventh()
+				getFirst(), getSecond(), getThird(), getFourth(), getFifth(), getSixth(), getSeventh()
 		};
 	}
 
@@ -84,8 +84,8 @@ public class Diatonic extends Scale
 
 		return new int[]
 		{
-			getSecond() - modeOffset, getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
-			getSixth() - modeOffset, getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE
+				getSecond() - modeOffset, getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
+				getSixth() - modeOffset, getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -106,8 +106,8 @@ public class Diatonic extends Scale
 		return new int[]
 		{
 
-			getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset,
-			getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE
+				getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset,
+				getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -127,9 +127,9 @@ public class Diatonic extends Scale
 
 		return new int[]
 		{
-			getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset, getSeventh() - modeOffset,
-			getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
-			getThird() - modeOffset + Octave.ONE
+				getFourth() - modeOffset, getFifth() - modeOffset, getSixth() - modeOffset, getSeventh() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -149,9 +149,9 @@ public class Diatonic extends Scale
 
 		return new int[]
 		{
-			getFifth() - modeOffset, getSixth() - modeOffset, getSeventh() - modeOffset,
-			getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
-			getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE
+				getFifth() - modeOffset, getSixth() - modeOffset, getSeventh() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -171,9 +171,9 @@ public class Diatonic extends Scale
 
 		return new int[]
 		{
-			getSixth() - modeOffset, getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE,
-			getSecond() - modeOffset + Octave.ONE, getThird() - modeOffset + Octave.ONE,
-			getFourth() - modeOffset + Octave.ONE, getFifth() - modeOffset + Octave.ONE
+				getSixth() - modeOffset, getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE,
+				getSecond() - modeOffset + Octave.ONE, getThird() - modeOffset + Octave.ONE,
+				getFourth() - modeOffset + Octave.ONE, getFifth() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -193,9 +193,9 @@ public class Diatonic extends Scale
 
 		return new int[]
 		{
-			getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
-			getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
-			getFifth() - modeOffset + Octave.ONE, getSixth() - modeOffset + Octave.ONE
+				getSeventh() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
+				getFifth() - modeOffset + Octave.ONE, getSixth() - modeOffset + Octave.ONE
 		};
 	}
 

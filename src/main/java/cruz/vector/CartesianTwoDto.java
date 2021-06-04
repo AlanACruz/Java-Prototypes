@@ -30,8 +30,8 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode( callSuper = false )
-public class CartesianTwoDto extends DtoTypeOf< CartesianTwoEntity >
+@EqualsAndHashCode(callSuper = false)
+public class CartesianTwoDto extends DtoTypeOf<CartesianTwoEntity>
 {
 	private long id;
 
@@ -42,6 +42,6 @@ public class CartesianTwoDto extends DtoTypeOf< CartesianTwoEntity >
 	@Override
 	public CartesianTwoEntity toEntityType()
 	{
-		return new CartesianTwoEntity( x, y );
+		return new CartesianTwoEntity(x, y);
 	}
 }

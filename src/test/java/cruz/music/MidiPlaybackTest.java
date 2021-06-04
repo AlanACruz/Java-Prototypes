@@ -42,7 +42,6 @@ import cruz.music.tone.scale.Diatonic;
 
 public class MidiPlaybackTest
 {
-
 	@Disabled("Need File Name Here")
 	@Test
 	public void playbackFileTest()
@@ -280,14 +279,12 @@ public class MidiPlaybackTest
 
 				try
 				{
-
 					// wait time in milliseconds to control duration
 					Thread.sleep(msPerBeat);
 
 				}
 				catch (InterruptedException e)
 				{
-
 					e.printStackTrace();
 				}
 

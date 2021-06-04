@@ -28,16 +28,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Spring Boot Application
  */
 @SpringBootApplication
-public class SpringBootRestApplication {
-
-    /**
-     * Spring Boot Main
-     * 
-     * @param args - Strings Arguments!
-     */
-    public static void main(String[] args) {
-    	
-        SpringApplication.run(SpringBootRestApplication.class, args);
-    }
-
+public class SpringBootRestApplication
+{
+	/**
+	 * Spring Boot Main
+	 * 
+	 * @param args - Strings Arguments!
+	 */
+	public static void main(String[] args)
+	{
+		SpringApplication.run(SpringBootRestApplication.class, args);
+	}
 }

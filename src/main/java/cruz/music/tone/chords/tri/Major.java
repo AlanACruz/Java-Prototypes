@@ -38,7 +38,7 @@ public class Major extends Chord
 	{
 		return new int[]
 		{
-			Semitone.ZERO, Semitone.FOUR, Semitone.SEVEN
+				Semitone.ZERO, Semitone.FOUR, Semitone.SEVEN
 		};
 	}
 }

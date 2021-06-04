@@ -40,13 +40,13 @@ public class MidiPitchNotation
 	 * @return
 	 */
 	public static int getMidiNoteNumber(
-		int note,
-		int octave
+			int note,
+			int octave
 	)
 	{
 		int noteOrdinal   = NoteNumbers.C;
 		int octaveOrdinal = Octave.ZERO;
 
-		return ( 12 * ( octaveOrdinal ) ) + noteOrdinal;
+		return (12 * (octaveOrdinal)) + noteOrdinal;
 	}
 }

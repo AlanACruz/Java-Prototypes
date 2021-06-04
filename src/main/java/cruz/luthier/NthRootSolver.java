@@ -41,11 +41,11 @@ public class NthRootSolver
 	 * @return
 	 */
 	public static BigDecimal nthRoot(
-		final int n,
-		final BigDecimal a
+			final int n,
+			final BigDecimal a
 	)
 	{
-		return nthRoot( n, a, BigDecimal.valueOf( .1 ).movePointLeft( SCALE ) );
+		return nthRoot(n, a, BigDecimal.valueOf(.1).movePointLeft(SCALE));
 	}
 
 	/**
@@ -56,32 +56,32 @@ public class NthRootSolver
 	 * @return
 	 */
 	private static BigDecimal nthRoot(
-		final int n,
-		final BigDecimal a,
-		final BigDecimal p
+			final int n,
+			final BigDecimal a,
+			final BigDecimal p
 	)
 	{
-		if ( a.compareTo( BigDecimal.ZERO ) < 0 )
+		if (a.compareTo(BigDecimal.ZERO) < 0)
 		{
-			throw new IllegalArgumentException( "nth root can only be calculated for positive numbers" );
+			throw new IllegalArgumentException("nth root can only be calculated for positive numbers");
 		}
 
-		if ( a.equals( BigDecimal.ZERO ) )
+		if (a.equals(BigDecimal.ZERO))
 		{
 			return BigDecimal.ZERO;
 		}
 
 		BigDecimal xPrev = a;
-		BigDecimal x     = a.divide( new BigDecimal( n ), SCALE, ROUNDING_MODE ); // starting "guessed" value...
+		BigDecimal x     = a.divide(new BigDecimal(n), SCALE, ROUNDING_MODE); // starting "guessed" value...
 
-		while ( x.subtract( xPrev ).abs().compareTo( p ) > 0 )
+		while (x.subtract(xPrev).abs().compareTo(p) > 0)
 		{
 			xPrev = x;
 			x     = BigDecimal
-				.valueOf( n - 1.0 )
-				.multiply( x )
-				.add( a.divide( x.pow( n - 1 ), SCALE, ROUNDING_MODE ) )
-				.divide( new BigDecimal( n ), SCALE, ROUNDING_MODE );
+					.valueOf(n - 1.0)
+					.multiply(x)
+					.add(a.divide(x.pow(n - 1), SCALE, ROUNDING_MODE))
+					.divide(new BigDecimal(n), SCALE, ROUNDING_MODE);
 		}
 		return x;
 	}

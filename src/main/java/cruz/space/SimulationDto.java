@@ -30,8 +30,8 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode( callSuper = false )
-public class SimulationDto extends DtoTypeOf< SimulationEntity >
+@EqualsAndHashCode(callSuper = false)
+public class SimulationDto extends DtoTypeOf<SimulationEntity>
 {
 	private long id;
 
@@ -46,6 +46,6 @@ public class SimulationDto extends DtoTypeOf< SimulationEntity >
 	@Override
 	public SimulationEntity toEntityType()
 	{
-		return new SimulationEntity( realStartTime, realEndTime, simStartTime, simEndTime );
+		return new SimulationEntity(realStartTime, realEndTime, simStartTime, simEndTime);
 	}
 }

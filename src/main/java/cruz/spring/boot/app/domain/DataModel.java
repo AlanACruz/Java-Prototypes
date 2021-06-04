@@ -39,21 +39,21 @@ import lombok.Setter;
 @EqualsAndHashCode
 @Getter
 @Setter
-public class DataModel {
-	
+public class DataModel
+{
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-	
-    private String modelName;
-    
-    
-    /**
-     * Model Constructor
-     * 
-     * @param modelName
-     */
-    public DataModel(String modelName) {
-        this.modelName = modelName;
-    }
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+
+	private String modelName;
+
+	/**
+	 * Model Constructor
+	 * 
+	 * @param modelName
+	 */
+	public DataModel(String modelName)
+	{
+		this.modelName = modelName;
+	}
 }

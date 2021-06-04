@@ -35,8 +35,8 @@ import lombok.RequiredArgsConstructor;
 @Entity
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode( callSuper = false )
-public class SpacecraftStateEntity extends EntityTypeOf< SpacecraftStateDto >
+@EqualsAndHashCode(callSuper = false)
+public class SpacecraftStateEntity extends EntityTypeOf<SpacecraftStateDto>
 {
 	@Id
 	private long id;
@@ -44,12 +44,12 @@ public class SpacecraftStateEntity extends EntityTypeOf< SpacecraftStateDto >
 	@Column
 	private final long orbitId;
 
-	@Column( columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'" )
+	@Column(columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'")
 	private final BigDecimal massKg;
 
 	@Override
 	public SpacecraftStateDto toDtoType()
 	{
-		return new SpacecraftStateDto( orbitId, massKg );
+		return new SpacecraftStateDto(orbitId, massKg);
 	}
 }

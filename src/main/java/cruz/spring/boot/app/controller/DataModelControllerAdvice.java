@@ -35,8 +35,8 @@ import cruz.spring.boot.app.exception.ModelNotFoundException;
  * DataModelController Advice
  */
 @ControllerAdvice
-public class DataModelControllerAdvice extends ResponseEntityExceptionHandler {
-
+public class DataModelControllerAdvice extends ResponseEntityExceptionHandler
+{
 	/**
 	 * No matching data exception
 	 * 
@@ -45,11 +45,14 @@ public class DataModelControllerAdvice extends ResponseEntityExceptionHandler {
 	 * @return Response Entity
 	 */
 	@ExceptionHandler(value = ModelNotFoundException.class)
-	protected ResponseEntity<Object> handleNotFound(RuntimeException ex, WebRequest request) {
-		
-	        String bodyOfResponse = "{ \"error\" : \"Model Not Found\" }";
-	        HttpHeaders headers = new HttpHeaders();
-	        
-	        return handleExceptionInternal(ex, bodyOfResponse, headers, HttpStatus.NOT_FOUND, request);
+	protected ResponseEntity<Object> handleNotFound(
+			RuntimeException ex,
+			WebRequest request
+	)
+	{
+		String      bodyOfResponse = "{ \"error\" : \"Model Not Found\" }";
+		HttpHeaders headers        = new HttpHeaders();
+
+		return handleExceptionInternal(ex, bodyOfResponse, headers, HttpStatus.NOT_FOUND, request);
 	}
 }

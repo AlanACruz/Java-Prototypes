@@ -38,27 +38,27 @@ import lombok.RequiredArgsConstructor;
 @Entity
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode( callSuper = false )
-public class SphericalEntity extends EntityTypeOf< SphericalDto >
+@EqualsAndHashCode(callSuper = false)
+public class SphericalEntity extends EntityTypeOf<SphericalDto>
 {
 	@Id
 	private long id;
 
 	// Radial/Euclidean Distance
-	@Column( columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'" )
+	@Column(columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'")
 	private final BigDecimal radial;
 
 	// Inclination/Polar Angle
-	@Column( columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'" )
+	@Column(columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'")
 	private final BigDecimal theta;
 
 	// Azimuthal Angle
-	@Column( columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'" )
+	@Column(columnDefinition = "DECIMAL(30,9) DEFAULT '0.00'")
 	private final BigDecimal phi;
 
 	@Override
 	public SphericalDto toDtoType()
 	{
-		return new SphericalDto( radial, theta, phi );
+		return new SphericalDto(radial, theta, phi);
 	}
 }

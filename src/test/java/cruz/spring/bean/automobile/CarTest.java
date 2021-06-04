@@ -112,5 +112,4 @@ public class CarTest
 
 		assertNotEquals(c, d, "Cars are equal and should not be!");
 	}
-
 }

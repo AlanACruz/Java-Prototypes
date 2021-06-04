@@ -30,8 +30,8 @@ import cruz.spring.boot.app.domain.DataModel;
  * DataModel Repository
  */
 @Repository
-public interface DataModelRepository extends JpaRepository<DataModel, Long> {
-
+public interface DataModelRepository extends JpaRepository<DataModel, Long>
+{
 	/**
 	 * Find a DataModel By Name in the Repo
 	 * 

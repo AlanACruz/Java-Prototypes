@@ -62,7 +62,7 @@ public class Pentatonic extends Scale
 	{
 		return new int[]
 		{
-			getFirst(), getSecond(), getThird(), getFourth(), getFifth(),
+				getFirst(), getSecond(), getThird(), getFourth(), getFifth(),
 		};
 	}
 
@@ -82,8 +82,8 @@ public class Pentatonic extends Scale
 
 		return new int[]
 		{
-			getSecond() - modeOffset, getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
-			getFirst() - modeOffset + Octave.ONE
+				getSecond() - modeOffset, getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -103,8 +103,8 @@ public class Pentatonic extends Scale
 
 		return new int[]
 		{
-			getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
-			getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE
+				getThird() - modeOffset, getFourth() - modeOffset, getFifth() - modeOffset,
+				getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -124,8 +124,8 @@ public class Pentatonic extends Scale
 
 		return new int[]
 		{
-			getFourth() - modeOffset, getFifth() - modeOffset, getFirst() - modeOffset + Octave.ONE,
-			getSecond() - modeOffset + Octave.ONE, getThird() - modeOffset + Octave.ONE
+				getFourth() - modeOffset, getFifth() - modeOffset, getFirst() - modeOffset + Octave.ONE,
+				getSecond() - modeOffset + Octave.ONE, getThird() - modeOffset + Octave.ONE
 		};
 	}
 
@@ -145,8 +145,8 @@ public class Pentatonic extends Scale
 
 		return new int[]
 		{
-			getFifth() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
-			getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
+				getFifth() - modeOffset, getFirst() - modeOffset + Octave.ONE, getSecond() - modeOffset + Octave.ONE,
+				getThird() - modeOffset + Octave.ONE, getFourth() - modeOffset + Octave.ONE,
 		};
 	}
 

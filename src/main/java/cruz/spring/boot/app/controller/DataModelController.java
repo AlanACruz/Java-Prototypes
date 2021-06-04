@@ -35,39 +35,39 @@ import cruz.spring.boot.app.service.ModelService;
  */
 @RestController
 @RequestMapping("DataModel")
-public class DataModelController {
+public class DataModelController
+{
+	/**
+	 * Service Layer
+	 */
+	private final ModelService modelService;
 
-    /**
-     * Service Layer
-     */
-    private final ModelService modelService;
+	/**
+	 * Controller Constructor
+	 * 
+	 * @param modelService
+	 */
+	public DataModelController(ModelService modelService)
+	{
+		this.modelService = modelService;
+	}
 
-    /**
-     * Controller Constructor
-     * 
-     * @param modelService
-     */
-    public DataModelController(ModelService modelService) {
-    	
-        this.modelService = modelService;
-    }
+	/**
+	 * Get Mapping
+	 * 
+	 * @param modelName
+	 * @return Data Model
+	 */
+	@GetMapping("/{modelName}")
+	public DataModel getModel(@PathVariable String modelName)
+	{
+		DataModel modelDetails = modelService.findModel(modelName);
 
-    /**
-     * Get Mapping
-     * 
-     * @param modelName
-     * @return Data Model
-     */
-    @GetMapping("/{modelName}")
-    public DataModel getModel(@PathVariable String modelName) {
-    	
-        DataModel modelDetails = modelService.findModel(modelName);
-        
-        if (modelDetails == null) {
-            throw new ModelNotFoundException();
-        }
-        
-        return modelDetails;
-    }
-    
+		if (modelDetails == null)
+		{
+			throw new ModelNotFoundException();
+		}
+
+		return modelDetails;
+	}
 }

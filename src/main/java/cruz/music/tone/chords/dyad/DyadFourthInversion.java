@@ -38,7 +38,7 @@ public class DyadFourthInversion extends Chord
 	{
 		return new int[]
 		{
-			Semitone.FIVE, Semitone.ZERO + Octave.ONE
+				Semitone.FIVE, Semitone.ZERO + Octave.ONE
 		};
 	}
 }

@@ -26,7 +26,6 @@ package cruz.music.interval;
  */
 public class Semitone
 {
-
 	/**
 	 * Zero Semitones
 	 */

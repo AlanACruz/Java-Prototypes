@@ -38,7 +38,6 @@ import cruz.spring.boot.app.repository.DataModelRepository;
  */
 class ModelServiceTest
 {
-
 	/**
 	 * Mocked Model Repo
 	 */
@@ -57,7 +56,6 @@ class ModelServiceTest
 	@BeforeEach
 	void setup()
 	{
-
 		MockitoAnnotations.openMocks(this);
 	}
 
@@ -67,7 +65,6 @@ class ModelServiceTest
 	@Test
 	public void testModelService_givenValidDataModel_returnsDataModel()
 	{
-
 		// given
 		DataModel expected = new DataModel("testModelName");
 
@@ -86,7 +83,6 @@ class ModelServiceTest
 	@Test
 	public void testModelService_givenInvalidDataModel_returnsNull()
 	{
-
 		// given
 		DataModel expected        = null;
 		String    nonExsitantName = "testModelName";

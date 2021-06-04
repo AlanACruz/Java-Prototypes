@@ -33,8 +33,8 @@ import lombok.RequiredArgsConstructor;
  */
 @RequiredArgsConstructor
 @Getter
-@EqualsAndHashCode( callSuper = false )
-public class PolarDto extends DtoTypeOf< PolarEntity >
+@EqualsAndHashCode(callSuper = false)
+public class PolarDto extends DtoTypeOf<PolarEntity>
 {
 	private long id;
 
@@ -47,6 +47,6 @@ public class PolarDto extends DtoTypeOf< PolarEntity >
 	@Override
 	public PolarEntity toEntityType()
 	{
-		return new PolarEntity( radial, theta );
+		return new PolarEntity(radial, theta);
 	}
 }
