@@ -33,7 +33,7 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<maven.compiler.release>16</maven.compiler.release>
+		<maven.compiler.release>15</maven.compiler.release>
 	</properties>
 
 	<dependencies>
