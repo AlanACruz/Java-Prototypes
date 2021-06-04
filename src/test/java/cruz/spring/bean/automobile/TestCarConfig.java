@@ -24,7 +24,6 @@ package cruz.spring.bean.automobile;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 
-import cruz.spring.bean.automobile.Car;
 import cruz.spring.bean.automobile.engine.EightCylinder;
 import cruz.spring.bean.automobile.engine.FourCylinder;
 import cruz.spring.bean.automobile.tire.LargeTire;

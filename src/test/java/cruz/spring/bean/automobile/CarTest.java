@@ -31,7 +31,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import cruz.spring.bean.automobile.Car;
 import cruz.spring.bean.automobile.engine.EightCylinder;
 import cruz.spring.bean.automobile.engine.FourCylinder;
 import cruz.spring.bean.automobile.tire.LargeTire;

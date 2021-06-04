@@ -32,7 +32,6 @@ import org.mockito.MockitoAnnotations;
 
 import cruz.spring.boot.app.domain.DataModel;
 import cruz.spring.boot.app.repository.DataModelRepository;
-import cruz.spring.boot.app.service.ModelService;
 
 /**
  * Service Layer Test

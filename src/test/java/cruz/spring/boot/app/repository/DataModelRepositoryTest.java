@@ -29,7 +29,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
 import cruz.spring.boot.app.domain.DataModel;
-import cruz.spring.boot.app.repository.DataModelRepository;
 
 /**
  * Model Repo Slice Tests
