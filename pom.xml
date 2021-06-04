@@ -27,9 +27,9 @@
 	</parent>
 
 	<groupId>cruz</groupId>
-	<artifactId>proto</artifactId>
+	<artifactId>java-proto</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cruz-jee-proto</name>
+	<name>cruz-java-proto</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
