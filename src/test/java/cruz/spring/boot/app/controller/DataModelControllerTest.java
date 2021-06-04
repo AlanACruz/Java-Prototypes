@@ -31,8 +31,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 
-import cruz.spring.boot.app.controller.DataModelController;
 import cruz.spring.boot.app.domain.DataModel;
 import cruz.spring.boot.app.service.ModelService;
 
@@ -63,13 +63,14 @@ public class DataModelControllerTest
 	@Test
 	void whenInvalidInput_thenReturns404() throws Exception
 	{
-
 		// given
 		String name = "testModelName";
 
+		MockHttpServletRequestBuilder request = get("/DataModel/{modelName}", name).contentType("application/json");
+
 		// when
 		mockMvc
-				.perform(get("/DataModel/{modelName}", name).contentType("application/json"))
+				.perform(request)
 
 				// then
 				.andExpect(status().isNotFound()) //
@@ -84,15 +85,17 @@ public class DataModelControllerTest
 	@Test
 	void whenInvalidInput_thenReturns200() throws Exception
 	{
-
 		// given
 		DataModel expected = new DataModel("testModelName");
 
 		Mockito.when(service.findModel(expected.getModelName())).thenReturn(expected);
 
+		MockHttpServletRequestBuilder request = get("/DataModel/{modelName}", expected.getModelName())
+				.contentType("application/json");
+
 		// when
 		mockMvc
-				.perform(get("/DataModel/{modelName}", expected.getModelName()).contentType("application/json"))
+				.perform(request)
 
 				// then
 				.andExpect(status().isOk()) //
