@@ -40,7 +40,7 @@ sudo chmod 666 /var/run/docker.sock
 
 # Pull Maven container
 ```
-docker pull maven:3-openjdk-11
+docker pull maven:3-openjdk-16
 ```
 
 # Run Maven build from container
@@ -53,14 +53,14 @@ docker run \
    --rm \
    -u $UID \
    -e MAVEN_CONFIG=/var/maven/.m2 \
-   maven:3-openjdk-11 \
+   maven:3-openjdk-16 \
    mvn -f /var/maven/git/Java-Prototypes -Duser.home=/var/maven install
 ```
 
 # Run Maven build locally
 ```
 sudo apt-get install -y \
-   openjdk-11-jdk \
+   openjdk-16-jdk \
    maven
 
 cd ~/git/Java-Prototypes
