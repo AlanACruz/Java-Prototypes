@@ -38,7 +38,7 @@ sudo usermod -aG docker $USER
 sudo chmod 666 /var/run/docker.sock
 ```
 
-# Pull Maven container
+# Pull Maven image
 ```
 docker pull maven:3-openjdk-16
 ```
