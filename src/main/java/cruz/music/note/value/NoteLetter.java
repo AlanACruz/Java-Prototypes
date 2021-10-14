@@ -57,4 +57,17 @@ public class NoteLetter
 
 		return NoteLettersArray[reducedNote];
 	}
+	
+	public static String[] getNotLetterListFromNoteNumberList(int[] noteNumberList)
+	{
+		String[] returnList = new String[noteNumberList.length];
+
+		int i = 0;
+		for(int note : noteNumberList)
+		{
+			returnList[i] = getNoteLetterFromNoteNumber(note);
+		}
+
+		return returnList;
+	}
 }
