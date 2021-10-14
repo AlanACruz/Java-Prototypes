@@ -85,4 +85,17 @@ public class NoteNumbers
 			throw new IllegalArgumentException("Note name does not have match.");
 		}
 	}
+	
+	public static int[] getNoteNumberListFromNoteStringList(String[] noteList)
+	{
+		int[] returnList = new int[noteList.length];
+
+		int i = 0;
+		for(String note : noteList)
+		{
+			returnList[i] = getNoteNumberFromNoteString(note);
+		}
+
+		return returnList;
+	}
 }
