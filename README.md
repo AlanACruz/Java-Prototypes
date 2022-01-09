@@ -46,17 +46,20 @@ docker pull maven:3-openjdk-17
 # Run Maven build from container
 ```
 docker run \
-   -v ~/.m2:/var/maven/.m2 \
-   -v ~/git/Java-Prototypes:/var/maven/git/Java-Prototypes \
+   --name maven \
+   -v ~/.m2:/var/maven/.m2:Z \
+   -v ~/git/Java-Prototypes:/var/maven/git/Java-Prototypes:Z \
    -t \
    -i \
    --rm \
    -u $UID \
    -e MAVEN_CONFIG=/var/maven/.m2 \
    maven:3-openjdk-17 \
+   bash
+```
+```
    mvn -f /var/maven/git/Java-Prototypes -Duser.home=/var/maven install
 ```
-
 # Run Maven build locally
 ```
 sudo apt-get install -y \

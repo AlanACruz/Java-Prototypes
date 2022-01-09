@@ -28,6 +28,7 @@ import java.util.Random;
 import javax.sound.midi.Instrument;
 import javax.sound.midi.InvalidMidiDataException;
 import javax.sound.midi.MidiChannel;
+import javax.sound.midi.MidiDevice;
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.MidiUnavailableException;
 import javax.sound.midi.Sequence;
@@ -77,10 +78,22 @@ public class MidiPlaybackTest
 		}
 	}
 
-	@Disabled("Annoying Music Alert")
+	//@Disabled("Annoying Music Alert")
 	@Test
 	public void playbackSynthTest()
 	{
+		System.out.println("MIDI Devices");
+        MidiDevice.Info[] devices = MidiSystem.getMidiDeviceInfo();
+		if (devices.length == 0) {
+			System.out.println("No MIDI devices found");
+		} else {
+			int i = 0;
+			for (MidiDevice.Info device : devices) {
+				System.out.println("[" + i + "\t] " + device);
+				i++;
+			}
+		}
+
 		int msPerMin  = (int) 60e3;
 		int bpm       = 250;
 		int msPerBeat = msPerMin / bpm;
