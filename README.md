@@ -3,7 +3,7 @@
 
 # git clone
 ```
-git clone git@github.com:AlanACruz/Java-Prototypes.git ~/git/
+git clone git@github.com:AlanACruz/Java-Prototypes.git ~/git/Java-Prototypes
 ```
 # install docker
 ```
