@@ -1,49 +1,19 @@
 # Copyright (C) 2021 Alan Cruz
 # Java-Prototypes
 
-# git clone
+# Git Clone
 ```
 git clone git@github.com:AlanACruz/Java-Prototypes.git ~/git/Java-Prototypes
 ```
-# install docker
-```
-sudo apt update
-
-sudo apt install -y \
-   apt-transport-https \
-   ca-certificates \
-   curl \
-   gnupg2 \
-   software-properties-common
-
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/debian \
-   $(lsb_release -cs) \
-   stable"
-   
-sudo apt update
-
-sudo apt install -y \
-   docker-ce \
-   docker-ce-cli \
-   containerd.io
-```
-
-# Enable non-root docker (Chromebook)
-```
-sudo usermod -aG docker $USER
-
-sudo chmod 666 /var/run/docker.sock
-```
+# Install Docker on Chromebook
+https://github.com/AlanACruz/DevSecOps/blob/master/docker/Install-Docker-On-Chromebook.md
 
 # Pull Maven image
 ```
 docker pull maven:3-openjdk-17
 ```
 
-# Run Maven build from container
+# Run Container
 ```
 docker run \
    --name maven \
@@ -55,12 +25,13 @@ docker run \
    -u $UID \
    -e MAVEN_CONFIG=/var/maven/.m2 \
    maven:3-openjdk-17 \
-   bash
+   /bin/bash
 ```
+# Run Maven Build from Container
 ```
    mvn -f /var/maven/git/Java-Prototypes -Duser.home=/var/maven install
 ```
-# Run Maven build locally
+# Run Maven Build Locally
 ```
 sudo apt-get install -y \
    openjdk-17-jdk \
