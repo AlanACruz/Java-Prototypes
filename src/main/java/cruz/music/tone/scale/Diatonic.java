@@ -60,7 +60,7 @@ public class Diatonic extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneZero()
+	public int[] asModeZero()
 	{
 		return new int[]
 		{
@@ -78,7 +78,7 @@ public class Diatonic extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneTwo()
+	public int[] asModeTwo()
 	{
 		int modeOffset = getSecond();
 
@@ -99,7 +99,7 @@ public class Diatonic extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneFour()
+	public int[] asModeeFour()
 	{
 		int modeOffset = getThird();
 
@@ -121,7 +121,7 @@ public class Diatonic extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneFive()
+	public int[] asModeFive()
 	{
 		int modeOffset = getFourth();
 
@@ -143,7 +143,7 @@ public class Diatonic extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneSeven()
+	public int[] asModeSeven()
 	{
 		int modeOffset = getFifth();
 
@@ -165,7 +165,7 @@ public class Diatonic extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneNine()
+	public int[] asModeNine()
 	{
 		int modeOffset = getSixth();
 
@@ -187,7 +187,7 @@ public class Diatonic extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneEleven()
+	public int[] asModeEleven()
 	{
 		int modeOffset = getSeventh();
 
@@ -206,7 +206,7 @@ public class Diatonic extends Scale
 	 */
 	public int[] asIonian()
 	{
-		return asSemitoneZero();
+		return asModeZero();
 	}
 
 	/**
@@ -216,7 +216,7 @@ public class Diatonic extends Scale
 	 */
 	public int[] asDorian()
 	{
-		return asSemitoneTwo();
+		return asModeTwo();
 	}
 
 	/**
@@ -227,7 +227,7 @@ public class Diatonic extends Scale
 	public int[] asPhrygian()
 	{
 
-		return asSemitoneFour();
+		return asModeFour();
 	}
 
 	/**
@@ -237,7 +237,7 @@ public class Diatonic extends Scale
 	 */
 	public int[] asLydian()
 	{
-		return asSemitoneFive();
+		return asModeFive();
 	}
 
 	/**
@@ -247,7 +247,7 @@ public class Diatonic extends Scale
 	 */
 	public int[] asMixolydian()
 	{
-		return asSemitoneSeven();
+		return asModeSeven();
 	}
 
 	/**
@@ -257,7 +257,7 @@ public class Diatonic extends Scale
 	 */
 	public int[] asAeolian()
 	{
-		return asSemitoneNine();
+		return asModeNine();
 	}
 
 	/**
@@ -267,7 +267,7 @@ public class Diatonic extends Scale
 	 */
 	public int[] asLocrian()
 	{
-		return asSemitoneEleven();
+		return asModeEleven();
 	}
 
 	/**
@@ -277,7 +277,7 @@ public class Diatonic extends Scale
 	 */
 	public int[] asMajor()
 	{
-		return asSemitoneZero();
+		return asModeZero();
 	}
 
 	/**
@@ -287,7 +287,7 @@ public class Diatonic extends Scale
 	 */
 	public int[] asMinor()
 	{
-		return asSemitoneNine();
+		return asModeNine();
 	}
 
 	/**

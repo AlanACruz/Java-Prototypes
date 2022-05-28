@@ -61,7 +61,7 @@ public class Harmonic extends Scale
 	 *
 	 * @return scale array
 	 */
-	public int[] asSemitoneZero()
+	public int[] asModeZero()
 	{
 		return new int[]
 		{
@@ -79,7 +79,7 @@ public class Harmonic extends Scale
 	 *
 	 * @return scale array
 	 */
-	public int[] asSemitoneTwo()
+	public int[] asModeTwo()
 	{
 		int modeOffset = getSecond();
 
@@ -100,7 +100,7 @@ public class Harmonic extends Scale
 	 *
 	 * @return scale array
 	 */
-	public int[] asSemitoneFour()
+	public int[] asModeFour()
 	{
 		int modeOffset = getThird();
 
@@ -121,7 +121,7 @@ public class Harmonic extends Scale
 	 *
 	 * @return scale array
 	 */
-	public int[] asSemitoneFive()
+	public int[] asModeFive()
 	{
 		int modeOffset = getFourth();
 
@@ -143,7 +143,7 @@ public class Harmonic extends Scale
 	 *
 	 * @return scale array
 	 */
-	public int[] asSemitoneEight()
+	public int[] asModeEight()
 	{
 		int modeOffset = getFifth();
 
@@ -165,7 +165,7 @@ public class Harmonic extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneNine()
+	public int[] asModeNine()
 	{
 		int modeOffset = getSixth();
 
@@ -187,7 +187,7 @@ public class Harmonic extends Scale
 	 *
 	 * @return scale array
 	 */
-	public int[] asSemitoneEleven()
+	public int[] asModeEleven()
 	{
 		int modeOffset = getSeventh();
 
@@ -206,7 +206,7 @@ public class Harmonic extends Scale
 	 */
 	public int[] asIonianSharpFive()
 	{
-		return asSemitoneZero();
+		return asModeZero();
 	}
 
 	/**
@@ -216,7 +216,7 @@ public class Harmonic extends Scale
 	 */
 	public int[] asDorianSharpEleven()
 	{
-		return asSemitoneTwo();
+		return asModeTwo();
 	}
 
 	/**
@@ -226,7 +226,7 @@ public class Harmonic extends Scale
 	 */
 	public int[] asPhrygianDominant()
 	{
-		return asSemitoneFour();
+		return asModeFour();
 	}
 
 	/**
@@ -236,7 +236,7 @@ public class Harmonic extends Scale
 	 */
 	public int[] LydianSharpTwo()
 	{
-		return asSemitoneFive();
+		return asModeFive();
 	}
 
 	/**
@@ -246,7 +246,7 @@ public class Harmonic extends Scale
 	 */
 	public int[] SuperLocrianFlatFlatSeven()
 	{
-		return asSemitoneEight();
+		return asModeEight();
 	}
 
 	/**
@@ -256,7 +256,7 @@ public class Harmonic extends Scale
 	 */
 	public int[] asHarmonicMinor()
 	{
-		return asSemitoneNine();
+		return asModeNine();
 	}
 
 	/**
@@ -266,7 +266,7 @@ public class Harmonic extends Scale
 	 */
 	public int[] asLocrianThirteen()
 	{
-		return asSemitoneEleven();
+		return asModeEleven();
 	}
 
 	/**
@@ -276,7 +276,7 @@ public class Harmonic extends Scale
 	 */
 	public int[] asMajor()
 	{
-		return asSemitoneZero();
+		return asModeZero();
 	}
 
 	/**
@@ -286,7 +286,7 @@ public class Harmonic extends Scale
 	 */
 	public int[] asMinor()
 	{
-		return asSemitoneNine();
+		return asModeNine();
 	}
 
 	/**

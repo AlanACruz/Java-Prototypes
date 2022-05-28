@@ -58,7 +58,7 @@ public class Pentatonic extends Scale
 	 *
 	 * @return scale array
 	 */
-	public int[] asSemitoneZero()
+	public int[] asModeZero()
 	{
 		return new int[]
 		{
@@ -76,7 +76,7 @@ public class Pentatonic extends Scale
 	 *
 	 * @return scale array
 	 */
-	public int[] asSemitoneTwo()
+	public int[] asModeTwo()
 	{
 		int modeOffset = getSecond();
 
@@ -97,7 +97,7 @@ public class Pentatonic extends Scale
 	 *
 	 * @return scale array
 	 */
-	public int[] asSemitoneFour()
+	public int[] asModeFour()
 	{
 		int modeOffset = getThird();
 
@@ -118,7 +118,7 @@ public class Pentatonic extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneSeven()
+	public int[] asModeSeven()
 	{
 		int modeOffset = getFourth();
 
@@ -139,7 +139,7 @@ public class Pentatonic extends Scale
 	 *
 	 * @return scale array
 	 */
-	public int[] asSemitoneNine()
+	public int[] asModeNine()
 	{
 		int modeOffset = getFifth();
 
@@ -157,7 +157,7 @@ public class Pentatonic extends Scale
 	 */
 	public int[] asMajor()
 	{
-		return asSemitoneZero();
+		return asModeZero();
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class Pentatonic extends Scale
 	 */
 	public int[] asMinor()
 	{
-		return asSemitoneNine();
+		return asModeNine();
 	}
 
 	/**

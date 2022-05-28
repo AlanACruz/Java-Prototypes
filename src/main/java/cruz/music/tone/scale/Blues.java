@@ -60,7 +60,7 @@ public class Blues extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneZero()
+	public int[] asModeZero()
 	{
 		return new int[]
 		{
@@ -78,7 +78,7 @@ public class Blues extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneTwo()
+	public int[] asModeTwo()
 	{
 		int modeOffset = getSecond();
 
@@ -100,7 +100,7 @@ public class Blues extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitoneThree()
+	public int[] asModeThree()
 	{
 		int modeOffset = getThird();
 
@@ -121,7 +121,7 @@ public class Blues extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitonFour()
+	public int[] asModeFour()
 	{
 		int modeOffset = getFourth();
 
@@ -143,7 +143,7 @@ public class Blues extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitonSeven()
+	public int[] asModeSeven()
 	{
 		int modeOffset = getFifth();
 
@@ -165,7 +165,7 @@ public class Blues extends Scale
 	 * 
 	 * @return scale array
 	 */
-	public int[] asSemitonNine()
+	public int[] asModeNine()
 	{
 		int modeOffset = getSixth();
 
@@ -184,7 +184,7 @@ public class Blues extends Scale
 	 */
 	public int[] asMajor()
 	{
-		return asSemitoneZero();
+		return asModeZero();
 	}
 
 	/**
@@ -194,7 +194,7 @@ public class Blues extends Scale
 	 */
 	public int[] asMinor()
 	{
-		return asSemitonNine();
+		return asModeNine();
 	}
 
 	/**
